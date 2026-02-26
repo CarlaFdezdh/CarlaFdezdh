@@ -44,9 +44,9 @@ Proyecto estructurado enfocado en consolidar arquitectura y buenas prácticas en
 
 ## Actividades y voluntariado 🌸
 
-- Monitora voluntaria en talleres tecnológicos para niñas  
+- Monitora voluntaria en talleres y campamentos 
 - Apoyo a la iniciativa **STEM Girls** para promover mujeres en ciencias, tecnología, ingeniería y matemáticas  
-- Participación en hackathons y proyectos educativos locales  
+- Participación en hackathons y proyectos educativos tecnológicos nacionales 
 
 ---
 
