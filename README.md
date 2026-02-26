@@ -32,15 +32,13 @@ Además, participo como **monitora voluntaria** en actividades educativas para n
 
 ### Wonder-Wander-Valencia
 Aplicación web con contenido interactivo desarrollada con HTML, CSS, JavaScript y PHP.  
-<img src="https://raw.githubusercontent.com/CarlaFdezdh/Wonder-Wander-Valencia/main/demo.png" alt="Wonder-Wander-Valencia" width="600"/>
+
 
 ### CRUD
 Aplicación backend con Node.js, Express y Mongoose para gestión completa de datos (Create, Read, Update, Delete).  
-<img src="https://raw.githubusercontent.com/CarlaFdezdh/CRUD/main/demo.png" alt="CRUD" width="600"/>
 
 ### Byteme
 Proyecto estructurado enfocado en consolidar arquitectura y buenas prácticas en desarrollo web.  
-<img src="https://raw.githubusercontent.com/CarlaFdezdh/Byteme/main/demo.png" alt="Byteme" width="600"/>
 
 ---
 
