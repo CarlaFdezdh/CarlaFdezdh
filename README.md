@@ -42,7 +42,7 @@ Proyecto estructurado enfocado en consolidar arquitectura y buenas prácticas en
 ## Estadísticas
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=CarlaFdezdh&show_icons=true&theme=rose_pine&hide_border=true" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarlaFdezdh&layout=compact&theme=rose_pine" />
 </p>
 
 ---
