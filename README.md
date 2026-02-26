@@ -10,7 +10,7 @@ Desarrolladora Web Full-Stack | Voluntaria en educación tecnológica | Apoyo a 
 Soy una desarrolladora web apasionada por crear aplicaciones completas, funcionales y con diseño cuidado.  
 Disfruto de escribir código limpio y resolver problemas reales con soluciones elegantes.  
 
-Además, participo como **monitora voluntaria** en actividades educativas para niñas interesadas en tecnología y apoyo iniciativas como **STEM Girls**, fomentando la inclusión y la diversidad en la programación.
+Además, participo como **monitora voluntaria** en actividades educativas y apoyo iniciativas como **STEM Girls**, fomentando la inclusión y la diversidad en la programación.
 
 ---
 
