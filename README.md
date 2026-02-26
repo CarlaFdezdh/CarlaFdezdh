@@ -1,6 +1,6 @@
 <h1 align="center" style="color:#d63384;">Carla Fernández</h1>
 <p align="center">
-Desarrolladora Web Full-Stack enfocada en crear aplicaciones funcionales, claras y bien estructuradas.
+Desarrolladora Web Full-Stack enfocada en crear aplicaciones funcionales y bien estructuradas.
 </p>
 
 ---
@@ -39,17 +39,19 @@ Proyecto estructurado enfocado en consolidar arquitectura y buenas prácticas en
 
 ---
 
-## Estadísticas
+## Badges y estadísticas estables
 
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarlaFdezdh&layout=compact&theme=rose_pine" />
+<img src="https://img.shields.io/github/followers/CarlaFdezdh?label=Followers&style=flat-square&color=ff69b4&logo=github" />
+<img src="https://img.shields.io/github/languages/top/CarlaFdezdh/Wonder-Wander-Valencia?style=flat-square&color=ff69b4&logo=github" />
+<img src="https://img.shields.io/github/repo-size/CarlaFdezdh/CRUD?style=flat-square&color=ff69b4&logo=github" />
 </p>
 
 ---
 
 ## Contacto
 
-📩 Email: carlafdezdh@gmail.com
+📩 Email: carlafdezdh@gmail.com 
 LinkedIn: [linkedin.com/in/tu-perfil  ](https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/)
 Portfolio: próximamente
 
