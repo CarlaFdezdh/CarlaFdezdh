@@ -1,6 +1,6 @@
 <h1 align="center" style="color:#d63384;">Carla Fernández</h1>
 <p align="center">
-Desarrolladora Web Full-Stack | Voluntaria en educación | Apoyo a STEM Girls
+Desarrolladora Full-Stack | Voluntaria en educación | Apoyo a STEM Girls
 </p>
 
 ---
