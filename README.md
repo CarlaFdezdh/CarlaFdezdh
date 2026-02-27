@@ -64,6 +64,7 @@ Proyecto estructurado enfocado en consolidar arquitectura y buenas prácticas en
 
 📩 Email: carlafdezdh@gmail.com  
 🔗 LinkedIn: [linkedin.com/in/tu-perfil  ](https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/)
+
 🌐 Portfolio: próximamente  
 
 ---
