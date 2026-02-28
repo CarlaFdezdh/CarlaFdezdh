@@ -34,7 +34,7 @@ Además, participo como **monitora voluntaria** en actividades educativas y apoy
 Aplicación web con contenido interactivo sobre Valencia, desarrollada con HTML, CSS, JavaScript y PHP.
 
 ### 🤟 [SignoFy](https://github.com/CarlaFdezdh/SignoFy) ⭐1
-Proyecto con enfoque en accesibilidad e identidad visual, desarrollado con CSS.
+Proyecto con enfoque en accesibilidad e identidad visual.
 
 ### 🛠️ [CRUD](https://github.com/CarlaFdezdh/CRUD)
 Aplicación backend con Node.js, Express y Mongoose para gestión completa de datos (Create, Read, Update, Delete).
