@@ -9,7 +9,6 @@ Desarrolladora Full-Stack | Voluntaria en educación | Apoyo a STEM Girls
 
 Soy una desarrolladora web apasionada por crear aplicaciones completas, funcionales y con diseño cuidado.  
 Disfruto de escribir código limpio y resolver problemas reales con soluciones elegantes.  
-
 Además, participo como **monitora voluntaria** en actividades educativas y apoyo iniciativas como **STEM Girls**, fomentando la inclusión y la diversidad en la programación.
 
 ---
@@ -23,6 +22,7 @@ Además, participo como **monitora voluntaria** en actividades educativas y apoy
 <img src="https://img.shields.io/badge/MongoDB-ffc0cb?style=for-the-badge&logo=mongodb&logoColor=black" />
 <img src="https://img.shields.io/badge/HTML5-ffc0cb?style=for-the-badge&logo=html5&logoColor=black" />
 <img src="https://img.shields.io/badge/CSS3-ffc0cb?style=for-the-badge&logo=css3&logoColor=black" />
+<img src="https://img.shields.io/badge/PHP-ffc0cb?style=for-the-badge&logo=php&logoColor=black" />
 <img src="https://img.shields.io/badge/Git-ffc0cb?style=for-the-badge&logo=git&logoColor=black" />
 </p>
 
@@ -30,23 +30,25 @@ Además, participo como **monitora voluntaria** en actividades educativas y apoy
 
 ## Proyectos destacados 💗
 
-### Wonder-Wander-Valencia
-Aplicación web con contenido interactivo desarrollada con HTML, CSS, JavaScript y PHP.  
+### 🌍 [Wonder-Wander-Valencia](https://github.com/CarlaFdezdh/Wonder-Wander-Valencia) ⭐2
+Aplicación web con contenido interactivo sobre Valencia, desarrollada con HTML, CSS, JavaScript y PHP.
 
+### 🤟 [SignoFy](https://github.com/CarlaFdezdh/SignoFy) ⭐1
+Proyecto con enfoque en accesibilidad e identidad visual, desarrollado con CSS.
 
-### CRUD
-Aplicación backend con Node.js, Express y Mongoose para gestión completa de datos (Create, Read, Update, Delete).  
+### 🛠️ [CRUD](https://github.com/CarlaFdezdh/CRUD)
+Aplicación backend con Node.js, Express y Mongoose para gestión completa de datos (Create, Read, Update, Delete).
 
-### Byteme
-Proyecto estructurado enfocado en consolidar arquitectura y buenas prácticas en desarrollo web.  
+### 🔌 [PruebasAPI](https://github.com/CarlaFdezdh/PruebasAPI)
+Pruebas de conexión y consumo de APIs REST.
 
 ---
 
 ## Actividades y voluntariado 🌸
 
-- Monitora voluntaria en talleres y campamentos 
-- Apoyo a la iniciativa **STEM Girls** para promover mujeres en ciencias, tecnología, ingeniería y matemáticas  
-- Participación en hackathons y proyectos educativos tecnológicos nacionales 
+- Monitora voluntaria en talleres y campamentos
+- Apoyo a la iniciativa **STEM Girls** para promover mujeres en ciencias, tecnología, ingeniería y matemáticas
+- Participación en hackathons y proyectos educativos tecnológicos nacionales
 
 ---
 
@@ -54,8 +56,17 @@ Proyecto estructurado enfocado en consolidar arquitectura y buenas prácticas en
 
 <p align="center">
 <img src="https://img.shields.io/github/followers/CarlaFdezdh?label=Followers&style=flat-square&color=ff69b4&logo=github" />
+<img src="https://img.shields.io/github/stars/CarlaFdezdh/Wonder-Wander-Valencia?style=flat-square&color=ff69b4&logo=github&label=Stars%20W-W-V" />
 <img src="https://img.shields.io/github/languages/top/CarlaFdezdh/Wonder-Wander-Valencia?style=flat-square&color=ff69b4&logo=github" />
 <img src="https://img.shields.io/github/repo-size/CarlaFdezdh/CRUD?style=flat-square&color=ff69b4&logo=github" />
+</p>
+
+---
+
+## Logros de GitHub 🏆
+
+<p>
+🦈 Pull Shark &nbsp;|&nbsp; 👥 Pair Extraordinaire &nbsp;|&nbsp; ⚡ Quickdraw &nbsp;|&nbsp; 🎯 YOLO
 </p>
 
 ---
@@ -63,9 +74,8 @@ Proyecto estructurado enfocado en consolidar arquitectura y buenas prácticas en
 ## Contacto
 
 📩 Email: carlafdezdh@gmail.com  
-🔗 LinkedIn: [linkedin.com/in/tu-perfil  ](https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/)
-
-🌐 Portfolio: próximamente  
+🔗 LinkedIn: [linkedin.com/in/carla-fernández-de-haro](https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/)  
+🌐 Portfolio: próximamente
 
 ---
 
