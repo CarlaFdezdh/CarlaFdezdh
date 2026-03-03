@@ -1,3 +1,7 @@
+/* ══════════════════════════════════════════
+   CARLA — PORTFOLIO · style.css
+   ══════════════════════════════════════════ */
+
 :root {
   --rose: #c8536e;
   --rose-light: #f2c4cf;
@@ -155,26 +159,8 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(26, 10, 14, 0.07); }
 
 .hero-image {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
   justify-content: center;
-}
-
-.award-pill {
-  display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  background: var(--white);
-  border: 1.5px solid var(--rose-light);
-  border-radius: 100px;
-  padding: 0.5rem 1.1rem;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--rose);
-  letter-spacing: 0.02em;
-  box-shadow: 0 2px 12px rgba(200, 83, 110, 0.1);
-  white-space: nowrap;
 }
 
 .hero-img-wrap {
@@ -324,22 +310,25 @@ section {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 2rem;
+  grid-template-columns: 80px 1fr;
+  gap: 2.5rem;
   align-items: start;
 }
 
 .timeline-year {
-  font-family: var(--serif);
-  font-size: 1.1rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   color: var(--rose);
-  padding-top: 0.2rem;
+  padding-top: 0.3rem;
+  padding-right: 0.25rem;
   text-align: right;
+  line-height: 1.6;
 }
 
 .timeline-content {
   border-left: 2px solid var(--rose-light);
-  padding-left: 2rem;
+  padding-left: 1.75rem;
   position: relative;
 }
 
@@ -351,38 +340,50 @@ section {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--rose);
+  background: var(--white);
+  border: 2px solid var(--rose);
+  box-sizing: border-box;
 }
 
 .timeline-content h3 {
   font-family: var(--serif);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: var(--ink);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
 }
 
 .timeline-content p {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   line-height: 1.7;
 }
 
-/* Premio destacado */
+/* Premio destacado — discreto */
 .timeline-item.highlight .timeline-content {
-  background: var(--ink);
-  border-left: none;
-  border-radius: 16px;
-  padding: 1.25rem 1.5rem;
+  background: var(--rose-pale);
+  border-left: 2px solid var(--rose);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem 0.85rem 1.75rem;
 }
 
 .timeline-item.highlight .timeline-content::before {
-  background: var(--gold);
-  left: -2.5rem;
+  background: var(--rose);
+  border-color: var(--rose);
+  left: -5px;
 }
 
-.timeline-item.highlight .timeline-content h3 { color: var(--gold); }
-.timeline-item.highlight .timeline-content p { color: rgba(201, 168, 76, 0.75); }
-.timeline-item.highlight .timeline-year { color: var(--gold); }
+.timeline-item.highlight .timeline-content h3 {
+  color: var(--rose);
+  font-size: 0.95rem;
+}
+
+.timeline-item.highlight .timeline-content p {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.timeline-item.highlight .timeline-year { color: var(--rose); }
 
 /* ── PROJECTS ── */
 .projects-grid {
@@ -549,13 +550,12 @@ footer {
 
 /* ── ANIMATIONS ── */
 .fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1;
+  transform: none;
 }
 .fade-up.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* ── RESPONSIVE ── */
