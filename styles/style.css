@@ -1,7 +1,3 @@
-/* ══════════════════════════════════════════
-   CARLA — PORTFOLIO · style.css
-   ══════════════════════════════════════════ */
-
 :root {
   --rose: #c8536e;
   --rose-light: #f2c4cf;
@@ -581,3 +577,4 @@ footer {
 @media (max-width: 600px) {
   .nav-links { display: none; }
 }
+
