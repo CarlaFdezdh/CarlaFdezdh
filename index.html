@@ -3,14 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carla — Portfolio</title>
+<title>Carla Fernández — Desarrolladora de Software</title>
+<meta name="description" content="Portfolio de Carla Fernández, estudiante de DAM apasionada por el desarrollo de software, apps multiplataforma y tecnología con impacto.">
+<meta property="og:title" content="Carla Fernández — Desarrolladora de Software">
+<meta property="og:description" content="Portfolio de Carla Fernández, estudiante de DAM apasionada por el desarrollo de software, apps multiplataforma y tecnología con impacto.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-<nav>
+<!-- ── NAV ── -->
+<nav id="main-nav">
   <a class="nav-logo" href="#">Carla.</a>
   <ul class="nav-links">
     <li><a href="#about">Sobre mí</a></li>
@@ -18,31 +23,33 @@
     <li><a href="#experience">Experiencia</a></li>
     <li><a href="#projects">Proyectos</a></li>
     <li><a href="#contact">Contacto</a></li>
+    <li><a href="cv-carla.pdf" target="_blank" class="nav-cv">Descargar CV ↓</a></li>
   </ul>
 </nav>
 
+<!-- ── HERO ── -->
 <div id="hero">
   <div class="hero-text fade-up">
     <p class="section-label">Portfolio · DAM</p>
-    <h1>Hola, soy<br><em>Carla.</em></h1>
-    <p>Estudiante de Desarrollo de Aplicaciones Multiplataforma, apasionada por la informática y con ganas de construir cosas que importen. Cada línea de código es un paso más.</p>
+    <h1>Hola,<br>soy <em>Carla.</em></h1>
+    <p>Estudiante de Desarrollo de Aplicaciones Multiplataforma, apasionada por construir software con propósito. Premio Nacional de Robótica 2025. Cada línea de código es un paso más.</p>
     <div class="hero-actions">
-      <a href="#projects" class="btn-primary">Ver proyectos</a>
-      <a href="#contact" class="btn-outline">Contactar</a>
+      <a href="#projects" class="btn-primary">Ver proyectos →</a>
+      <a href="cv-carla.pdf" target="_blank" class="btn-outline">Descargar CV</a>
     </div>
   </div>
   <div class="hero-image fade-up">
     <div class="hero-img-wrap">
-      <img src="images/yo.jpeg" alt="Carla">
-      <div class="hero-badge">
-        <span id="edad"></span>años aprendiendo
-      </div>
+      <img src="images/yo.jpeg" alt="Carla Fernández">
+      <div class="award-badge">🏆 Premio Nacional<br>Robótica 2025</div>
+      <div class="hero-badge">Siempre aprendiendo</div>
     </div>
   </div>
 </div>
 
 <div class="divider"></div>
 
+<!-- ── ABOUT ── -->
 <section id="about">
   <div class="about-grid">
     <div class="fade-up">
@@ -51,96 +58,141 @@
     </div>
     <div class="fade-up">
       <p>Desde pequeña siempre sentí curiosidad por cómo funcionan las cosas. No fue hasta hace poco que descubrí lo mucho que me apasiona la informática — lo que empezó como un interés pasajero se convirtió en vocación.</p>
-      <p>Con 19 años, estudio Desarrollo de Aplicaciones Multiplataforma y cada día aprendo algo nuevo: desde lógica de programación hasta diseño de interfaces, pasando por bases de datos y mucho más.</p>
-      <p>Fuera del código, soy monitora voluntaria de educación no formal y apoyo iniciativas como <strong>STEM Girls</strong> para fomentar la presencia de mujeres en tecnología. Cada error es una oportunidad de aprendizaje, y cada línea de código me acerca un poco más a la persona que quiero ser.</p>
-    </div>
-  </div>
-</section>
-
-<div style="background: var(--rose-pale); padding: 5rem 3rem;">
-  <div style="max-width:1200px; margin:0 auto;">
-    <section id="skills" style="background:none; padding:0; max-width:none;">
-      <p class="section-label fade-up">Habilidades</p>
-      <h2 class="section-title fade-up">Lo que sé hacer.</h2>
-      <div class="skills-grid">
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/java.svg"></span>Java</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/c.svg"></span>C++</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/kotlin.svg"></span>Kotlin</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/javascript.svg"></span>JavaScript</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/mysql.svg"></span>MySQL</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/spring.svg"></span>Spring Boot</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/hibernate.svg"></span>Hibernate</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/html.svg"></span>HTML / CSS</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/git.svg"></span>Git</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/network.svg"></span>Redes</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/ui.svg"></span>UI / UX</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/pc.svg"></span>Hardware</div>
-      </div>
-    </section>
-  </div>
-</div>
-
-<section id="experience">
-  <p class="section-label fade-up">Experiencia</p>
-  <h2 class="section-title fade-up">Mi trayectoria.</h2>
-  <div class="timeline">
-    <div class="timeline-item fade-up">
-      <div class="timeline-year">2024 –<br>2026</div>
-      <div class="timeline-content">
-        <h3>Técnica Superior DAM · IES Abastos</h3>
-        <p>Ciclo formativo de grado superior en Desarrollo de Aplicaciones Multiplataforma. Desarrollo y análisis de software, apps móviles, bases de datos y arquitectura de aplicaciones.</p>
-      </div>
-    </div>
-    <div class="timeline-item fade-up">
-      <div class="timeline-year">05/2025</div>
-      <div class="timeline-content">
-        <h3>Prácticas — Desarrolladora de Software · Aza Logistics</h3>
-        <p>Trabajo en proyectos reales e investigación dentro del equipo de desarrollo. Sagunto, España.</p>
-      </div>
-    </div>
-    <div class="timeline-item fade-up">
-      <div class="timeline-year">10/05/2025</div>
-      <div class="timeline-content">
-        <h3>🏆 Premio Nacional de Robótica</h3>
-        <p>ASTI Robotic Challenge 24/25 — Distinción a nivel nacional en competición de robótica.</p>
-      </div>
-    </div>
-    <div class="timeline-item fade-up">
-      <div class="timeline-year">04 – 06<br>2024</div>
-      <div class="timeline-content">
-        <h3>Comercial de Telecomunicaciones · Mobile Valencia</h3>
-        <p>Mantenimiento de ordenadores, contratación de servicios, atención al cliente y gestión de tienda. Valencia, España.</p>
-      </div>
-    </div>
-    <div class="timeline-item fade-up">
-      <div class="timeline-year">2022 –<br>2024</div>
-      <div class="timeline-content">
-        <h3>Técnico CFGM SMR · IES Serpis</h3>
-        <p>Ciclo formativo en Sistemas Microinformáticos y Redes. Tecnologías de la información y la comunicación.</p>
-      </div>
-    </div>
-    <div class="timeline-item fade-up">
-      <div class="timeline-year">05/2025 –<br>actual</div>
-      <div class="timeline-content">
-        <h3>🌸 Monitora de Educación No Formal · Puçol</h3>
-        <p>Enseñanza de valores éticos a niños y niñas, realización de campamentos y actividades. Apoyo a la iniciativa STEM Girls para promover la inclusión de mujeres en tecnología.</p>
-      </div>
+      <p>Estudio Desarrollo de Aplicaciones Multiplataforma y cada día aprendo algo nuevo: desde lógica de programación hasta diseño de interfaces, pasando por bases de datos y arquitectura de software.</p>
+      <p>Fuera del código, soy monitora voluntaria de educación no formal y apoyo iniciativas como <strong>STEM Girls</strong> para fomentar la presencia de mujeres en tecnología. Cada error es una oportunidad de aprendizaje.</p>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
+<!-- ── SKILLS ── -->
+<div class="skills-section">
+  <div class="skills-inner">
+    <p class="section-label fade-up">Habilidades</p>
+    <h2 class="section-title fade-up">Lo que sé hacer.</h2>
+    <div class="skills-grid">
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/java.svg" alt="Java"></span>Java</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/c.svg" alt="C++"></span>C++</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/kotlin.svg" alt="Kotlin"></span>Kotlin</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/javascript.svg" alt="JavaScript"></span>JavaScript</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/mysql.svg" alt="MySQL"></span>MySQL</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/spring.svg" alt="Spring Boot"></span>Spring Boot</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/hibernate.svg" alt="Hibernate"></span>Hibernate</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/html.svg" alt="HTML/CSS"></span>HTML / CSS</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/git.svg" alt="Git"></span>Git</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/network.svg" alt="Node.js"></span>Node.js</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/ui.svg" alt="UI/UX"></span>UI / UX</div>
+      <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/pc.svg" alt="Docker"></span>Docker</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <p class="section-label fade-up">Trayectoria</p>
+  <h2 class="section-title fade-up">Mi camino.</h2>
+  <div class="timeline">
+
+    <div class="timeline-item fade-up">
+      <div class="timeline-year">05/2025<br>– actual</div>
+      <div class="timeline-content">
+        <h3>Prácticas — Desarrolladora de Software · Aza Logistics</h3>
+        <p>Trabajo en proyectos reales dentro del equipo de desarrollo. Sagunto, España.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item highlight fade-up">
+      <div class="timeline-year">05/2025</div>
+      <div class="timeline-content">
+        <h3>🏆 Premio Nacional de Robótica</h3>
+        <p>ASTI Robotic Challenge 24/25 — Distinción a nivel nacional. Robot siguelíneas programado en C++ con sensores infrarrojos y algoritmo de corrección propio.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-up">
+      <div class="timeline-year">05/2025<br>– actual</div>
+      <div class="timeline-content">
+        <h3>🌸 Monitora de Educación No Formal · Puçol</h3>
+        <p>Enseñanza de valores éticos, campamentos y actividades. Apoyo a la iniciativa <strong>STEM Girls</strong> para promover la inclusión de mujeres en tecnología.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-up">
+      <div class="timeline-year">2024 –<br>2026</div>
+      <div class="timeline-content">
+        <h3>Técnica Superior DAM · IES Abastos</h3>
+        <p>Ciclo formativo en Desarrollo de Aplicaciones Multiplataforma. Software, apps móviles, bases de datos y arquitectura de aplicaciones.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-up">
+      <div class="timeline-year">04 – 06<br>2024</div>
+      <div class="timeline-content">
+        <h3>Comercial de Telecomunicaciones · Mobile Valencia</h3>
+        <p>Mantenimiento de ordenadores, contratación de servicios y atención al cliente. Valencia, España.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-up">
+      <div class="timeline-year">2022 –<br>2024</div>
+      <div class="timeline-content">
+        <h3>Técnico CFGM SMR · IES Serpis</h3>
+        <p>Ciclo formativo en Sistemas Microinformáticos y Redes.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── PROJECTS ── -->
 <section id="projects">
   <p class="section-label fade-up">Proyectos</p>
   <h2 class="section-title fade-up">Lo que estoy<br>construyendo.</h2>
   <div class="projects-grid">
 
     <div class="project-card fade-up">
-      <div class="project-thumb">🗺️</div>
+      <div class="project-thumb signofy">🤟</div>
+      <div class="project-info">
+        <h3>SignoFy</h3>
+        <p>App gamificada para aprender Lengua de Signos Española (LSE) de forma gratuita y accesible. Sistema de XP, rachas, lecciones por niveles y diccionario visual construido con la comunidad sorda.</p>
+        <div class="project-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">CSS</span>
+          <span class="tag">UI/UX</span>
+          <span class="tag">Accesibilidad</span>
+        </div>
+        <div class="project-links">
+          <a href="https://carlafdezdh.github.io/CarlaFdezdh/signofy/" target="_blank" class="project-link">Ver demo →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-up">
+      <div class="project-thumb byteme"><img scr="images/robot.jpeg"></div>
+      <div class="project-info">
+        <p class="project-role">ASTI Robotic Challenge 2026</p>
+        <h3>ByteMe</h3>
+        <p>Robot multifunción competitivo para el ASTI Robotic Challenge nacional. Programado en C++ con sensores infrarrojos para detección de trayectoria, sin librerías externas. Algoritmo de corrección propio de alta precisión.</p>
+        <div class="project-tags">
+          <span class="tag">C++</span>
+          <span class="tag">Robótica</span>
+          <span class="tag">Embebido</span>
+          <span class="tag">Sensores IR</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/MarParTor/ByteMe-2026" target="_blank" class="project-link">Ver en GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-up">
+      <div class="project-thumb valencia">🗺️</div>
       <div class="project-info">
         <h3>Wonder Wander Valencia</h3>
-        <p>Aplicación web interactiva para descubrir Valencia, desarrollada como proyecto final intermodular de 1º DAM. Permite explorar rutas y lugares de la ciudad con contenido dinámico. Desplegada con Docker.</p>
+        <p>Aplicación web interactiva para descubrir Valencia. Proyecto final intermodular de 1º DAM: rutas y lugares de la ciudad con contenido dinámico. Desplegada con Docker.</p>
         <div class="project-tags">
           <span class="tag">HTML</span>
           <span class="tag">CSS</span>
@@ -148,58 +200,51 @@
           <span class="tag">PHP</span>
           <span class="tag">Docker</span>
         </div>
-        <a href="https://github.com/CarlaFdezdh/Wonder-Wander-Valencia" target="_blank" class="project-link">Ver en GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card fade-up">
-      <div class="project-thumb">🤟</div>
-      <div class="project-info">
-        <h3>SignoFy</h3>
-        <p>Una app gamificada para aprender Lengua de Signos Española (LSE) de forma gratuita y accesible. El proyecto incluye sistema de XP, rachas, lecciones por niveles y un diccionario visual construido con la comunidad sorda.</p>
-        <div class="project-tags">
-          <span class="tag">CSS</span>
-          <span class="tag">UI/UX</span>
-          <span class="tag">JavaScript</span>
+        <div class="project-links">
+          <a href="https://github.com/CarlaFdezdh/Wonder-Wander-Valencia" target="_blank" class="project-link">Ver en GitHub →</a>
         </div>
-        <a href="https://carlafdezdh.github.io/CarlaFdezdh/signofy/" target="_blank" class="project-link">Ver página web →</a>
       </div>
     </div>
 
     <div class="project-card fade-up">
-      <div class="project-thumb">✈️</div>
+      <div class="project-thumb viajes">✈️</div>
       <div class="project-info">
         <h3>Diario de Viajes</h3>
-        <p>Aplicación web fullstack para registrar y gestionar tus aventuras. Backend con Node.js, Express y Mongoose; frontend con HTML, CSS y JavaScript. Permite crear, leer, editar y eliminar entradas del diario con persistencia en MongoDB.</p>
+        <p>App fullstack para registrar y gestionar aventuras. API REST con Node.js, Express y MongoDB. CRUD completo con persistencia en base de datos.</p>
         <div class="project-tags">
           <span class="tag">Node.js</span>
           <span class="tag">Express</span>
           <span class="tag">MongoDB</span>
           <span class="tag">JavaScript</span>
         </div>
-        <a href="https://github.com/CarlaFdezdh/CRUD" target="_blank" class="project-link">Ver en GitHub →</a>
+        <div class="project-links">
+          <a href="https://github.com/CarlaFdezdh/CRUD" target="_blank" class="project-link">Ver en GitHub →</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card fade-up">
-      <div class="project-thumb">🔧</div>
+      <div class="project-thumb autolog">🔧</div>
       <div class="project-info">
+        <p class="project-role">Contribuidora — App Android (Kotlin)</p>
         <h3>AutoLog</h3>
-        <p>Plataforma multiplataforma para la gestión integral de talleres mecánicos. App Android en Kotlin, API REST con Spring Boot y aplicación de escritorio con Electron. Proyecto final de 2º DAM.</p>
+        <p>Plataforma multiplataforma para gestión de talleres mecánicos. Mi parte: app Android en Kotlin con consumo de API REST. Integra backend Spring Boot y app de escritorio Electron. Proyecto final de 2º DAM.</p>
         <div class="project-tags">
           <span class="tag">Kotlin</span>
           <span class="tag">Spring Boot</span>
           <span class="tag">Electron</span>
           <span class="tag">MySQL</span>
-          <span class="tag">Contribuidora</span>
         </div>
-        <a href="https://github.com/Raul06lp/AutoLog" target="_blank" class="project-link">Ver en GitHub →</a>
+        <div class="project-links">
+          <a href="https://github.com/Raul06lp/AutoLog" target="_blank" class="project-link">Ver en GitHub →</a>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- ── CONTACT ── -->
 <section id="contact">
   <p class="section-label fade-up">Contacto</p>
   <h2 class="section-title fade-up">¿Hablamos?</h2>
@@ -214,13 +259,29 @@
 </section>
 
 <footer>
-  <p>© 2026 Carla · Hecha con 💙 y mucho café</p>
+  <p>© 2026 Carla Fernández · Hecha con 💙 y mucho café</p>
 </footer>
 
-<script src="main.js"></script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  document.querySelectorAll('#hero .fade-up').forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 100 + i * 150);
+  });
+</script>
 </body>
-
 </html>
-
-
-
