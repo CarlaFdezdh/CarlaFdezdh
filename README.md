@@ -1,19 +1,10 @@
-<h1 align="center" style="color:#d63384;">Carla Fernández</h1>
-<p align="center">
-Desarrolladora Full-Stack | Voluntaria en educación | Apoyo a STEM Girls
-</p>
+<div align="center">
 
----
+<h1>Carla Fernández</h1>
 
-## Sobre mí
+<p>Desarrolladora Full-Stack &nbsp;·&nbsp; Voluntaria en educación &nbsp;·&nbsp; Apoyo a STEM Girls</p>
 
-Soy una desarrolladora web apasionada por crear aplicaciones completas, funcionales y con diseño cuidado.  
-Disfruto de escribir código limpio y resolver problemas reales con soluciones elegantes.  
-Además, participo como **monitora voluntaria** en actividades educativas y apoyo iniciativas como **STEM Girls**, fomentando la inclusión y la diversidad en la programación.
-
----
-
-## Tecnologías y habilidades
+<br>
 
 <p>
 <img src="https://img.shields.io/badge/JavaScript-ffc0cb?style=for-the-badge&logo=javascript&logoColor=black" />
@@ -26,59 +17,55 @@ Además, participo como **monitora voluntaria** en actividades educativas y apoy
 <img src="https://img.shields.io/badge/Git-ffc0cb?style=for-the-badge&logo=git&logoColor=black" />
 </p>
 
----
+<br>
 
-## Proyectos destacados 💗
-
-### 🌍 [Wonder-Wander-Valencia](https://github.com/CarlaFdezdh/Wonder-Wander-Valencia) ⭐2
-Aplicación web con contenido interactivo sobre Valencia, desarrollada con HTML, CSS, JavaScript y PHP.
-
-### 🤟 [SignoFy](https://github.com/CarlaFdezdh/SignoFy) ⭐1
-Proyecto con enfoque en accesibilidad e identidad visual.
-
-### 🛠️ [CRUD](https://github.com/CarlaFdezdh/CRUD)
-Aplicación backend con Node.js, Express y Mongoose para gestión completa de datos (Create, Read, Update, Delete).
-
-### 🔌 [PruebasAPI](https://github.com/CarlaFdezdh/PruebasAPI)
-Pruebas de conexión y consumo de APIs REST.
-
----
-
-## Actividades y voluntariado 🌸
-
-- Monitora voluntaria en talleres y campamentos
-- Apoyo a la iniciativa **STEM Girls** para promover mujeres en ciencias, tecnología, ingeniería y matemáticas
-- Participación en hackathons y proyectos educativos tecnológicos nacionales
-
----
-
-## Badges y estadísticas estables
-
-<p align="center">
+<p>
 <img src="https://img.shields.io/github/followers/CarlaFdezdh?label=Followers&style=flat-square&color=ff69b4&logo=github" />
 <img src="https://img.shields.io/github/stars/CarlaFdezdh/Wonder-Wander-Valencia?style=flat-square&color=ff69b4&logo=github&label=Stars%20W-W-V" />
 <img src="https://img.shields.io/github/languages/top/CarlaFdezdh/Wonder-Wander-Valencia?style=flat-square&color=ff69b4&logo=github" />
 <img src="https://img.shields.io/github/repo-size/CarlaFdezdh/CRUD?style=flat-square&color=ff69b4&logo=github" />
 </p>
 
+</div>
+
 ---
 
-## Logros de GitHub 🏆
+## Sobre mí
 
-<p>
-🦈 Pull Shark &nbsp;|&nbsp; 👥 Pair Extraordinaire &nbsp;|&nbsp; ⚡ Quickdraw &nbsp;|&nbsp; 🎯 YOLO
-</p>
+Soy una desarrolladora apasionada por construir aplicaciones completas, funcionales y con diseño cuidado. Disfruto escribir código limpio y resolver problemas reales con soluciones elegantes.
+
+Actualmente curso **Desarrollo de Aplicaciones Multiplataforma (DAM)** y compagino los estudios con mi labor como **monitora voluntaria** en educación no formal, apoyando iniciativas como **STEM Girls** para fomentar la presencia de mujeres en tecnología.
+
+---
+
+## Proyectos destacados 💗
+
+| Proyecto | Descripción | Stack |
+|----------|-------------|-------|
+| 🌍 [Wonder Wander Valencia](https://github.com/CarlaFdezdh/Wonder-Wander-Valencia) | Aplicación web interactiva para descubrir Valencia. Proyecto final intermodular de 1º DAM, desplegado con Docker. | HTML · CSS · JS · PHP |
+| 🤟 [SignoFy](https://github.com/CarlaFdezdh/SignoFy) | Landing page y lista de espera para una app gamificada de aprendizaje de Lengua de Signos Española (LSE), gratuita y accesible. | CSS · JS · UI/UX |
+| 🛠️ [Diario de Viajes](https://github.com/CarlaFdezdh/CRUD) | App fullstack para registrar y gestionar tus viajes, con API REST propia y persistencia en MongoDB. | Node.js · Express · MongoDB |
+| 🔧 [AutoLog](https://github.com/Raul06lp/AutoLog) | Plataforma multiplataforma para la gestión integral de talleres mecánicos. App Android, API REST y app de escritorio. Proyecto final de 2º DAM. | Kotlin · Spring Boot · Electron · MySQL |
+
+---
+
+## Actividades y voluntariado 🌸
+
+- Monitora voluntaria en talleres y campamentos de educación no formal
+- Apoyo a **STEM Girls** para promover la inclusión de mujeres en tecnología
+- Participación en hackathons y proyectos educativos tecnológicos nacionales
+- Premio Nacional de Robótica — ASTI Robotic Challenge 24/25
 
 ---
 
 ## Contacto
 
-📩 Email: carlafdezdh@gmail.com  
-🔗 LinkedIn: [linkedin.com/in/carla-fernández-de-haro](https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/)  
-🌐 Portfolio: https://carlafdezdh.github.io/CarlaFdezdh
+📩 carlafdezdh@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/)  
+🌐 [Portfolio](https://carlafdezdh.github.io/CarlaFdezdh)
 
 ---
 
-<p align="center" style="color:#d63384;">
+<div align="center">
 Siempre aprendiendo, construyendo y apoyando a la próxima generación de programadoras. 🚀
-</p>
+</div>
