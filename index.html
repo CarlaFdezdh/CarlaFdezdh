@@ -41,9 +41,9 @@
   <div class="hero-image fade-up">
     <div class="hero-img-wrap">
       <img src="images/yo.jpeg" alt="Carla Fernández">
-      <div class="award-badge">🏆 Premio Nacional<br>Robótica 2025</div>
       <div class="hero-badge">Siempre aprendiendo</div>
     </div>
+    <div class="award-pill">🏆 Premio Nacional de Robótica · ASTI 2025</div>
   </div>
 </div>
 
@@ -154,7 +154,9 @@
   <div class="projects-grid">
 
     <div class="project-card fade-up">
-      <div class="project-thumb signofy">🤟</div>
+      <div class="project-thumb signofy">
+        <img src="images/projects/signofy.png" alt="SignoFy">
+      </div>
       <div class="project-info">
         <h3>SignoFy</h3>
         <p>App gamificada para aprender Lengua de Signos Española (LSE) de forma gratuita y accesible. Sistema de XP, rachas, lecciones por niveles y diccionario visual construido con la comunidad sorda.</p>
@@ -171,11 +173,13 @@
     </div>
 
     <div class="project-card fade-up">
-      <div class="project-thumb byteme"><img scr="images/robot.jpeg"></div>
+      <div class="project-thumb byteme">
+        <img src="images/projects/byteme.jpg" alt="ByteMe">
+      </div>
       <div class="project-info">
-        <p class="project-role">ASTI Robotic Challenge 2026</p>
+        <p class="project-role">🏆 Premio Nacional · ASTI Robotic Challenge 2025</p>
         <h3>ByteMe</h3>
-        <p>Robot multifunción competitivo para el ASTI Robotic Challenge nacional. Programado en C++ con sensores infrarrojos para detección de trayectoria, sin librerías externas. Algoritmo de corrección propio de alta precisión.</p>
+        <p>Robot siguelíneas competitivo para el ASTI Robotic Challenge nacional. Programado en C++ con sensores infrarrojos para detección de trayectoria, sin librerías externas. Algoritmo de corrección propio de alta precisión.</p>
         <div class="project-tags">
           <span class="tag">C++</span>
           <span class="tag">Robótica</span>
@@ -189,7 +193,9 @@
     </div>
 
     <div class="project-card fade-up">
-      <div class="project-thumb valencia">🗺️</div>
+      <div class="project-thumb valencia">
+        <img src="images/projects/valencia.png" alt="Wonder Wander Valencia">
+      </div>
       <div class="project-info">
         <h3>Wonder Wander Valencia</h3>
         <p>Aplicación web interactiva para descubrir Valencia. Proyecto final intermodular de 1º DAM: rutas y lugares de la ciudad con contenido dinámico. Desplegada con Docker.</p>
@@ -207,7 +213,9 @@
     </div>
 
     <div class="project-card fade-up">
-      <div class="project-thumb viajes">✈️</div>
+      <div class="project-thumb viajes">
+        <img src="images/projects/viajes.png" alt="Diario de Viajes">
+      </div>
       <div class="project-info">
         <h3>Diario de Viajes</h3>
         <p>App fullstack para registrar y gestionar aventuras. API REST con Node.js, Express y MongoDB. CRUD completo con persistencia en base de datos.</p>
@@ -224,7 +232,9 @@
     </div>
 
     <div class="project-card fade-up">
-      <div class="project-thumb autolog">🔧</div>
+      <div class="project-thumb autolog">
+        <img src="images/projects/autolog.png" alt="AutoLog">
+      </div>
       <div class="project-info">
         <p class="project-role">Contribuidora — App Android (Kotlin)</p>
         <h3>AutoLog</h3>
@@ -251,7 +261,7 @@
   <div class="contact-box fade-up">
     <p>Estoy abierta a oportunidades, colaboraciones o simplemente a conocer gente del sector. No dudes en escribirme.</p>
     <div class="contact-links">
-      <a href="mailto:carlafdezdh@gmail.com" class="contact-link">📧 carlafdezdh@gmail.com</a>
+      <a href="/cdn-cgi/l/email-protection#83e0e2f1efe2e5e7e6f9e7ebc3e4eee2eaefade0ecee" class="contact-link">📧 <span class="__cf_email__" data-cfemail="bbd8dac9d7dadddfdec1dfd3fbdcd6dad2d795d8d4d6">[email&#160;protected]</span></a>
       <a href="https://github.com/CarlaFdezdh" target="_blank" class="contact-link">🐙 GitHub</a>
       <a href="https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/" target="_blank" class="contact-link">💼 LinkedIn</a>
     </div>
@@ -262,7 +272,7 @@
   <p>© 2026 Carla Fernández · Hecha con 💙 y mucho café</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
@@ -275,13 +285,4 @@
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
   const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 20);
-  });
-
-  document.querySelectorAll('#hero .fade-up').forEach((el, i) => {
-    setTimeout(() => el.classList.add('visible'), 100 + i * 150);
-  });
-</script>
-</body>
-</html>
+  window.addEventListener('s
