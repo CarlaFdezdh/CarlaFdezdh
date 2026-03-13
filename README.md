@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ff69b4,ff85c1,ffadd4,ffd6e8&height=220&section=header&text=Carla%20Fern%C3%A1ndez&fontSize=58&fontColor=ffffff&fontAlignY=40&desc=Full-Stack%20Developer&descSize=20&descColor=ffe4f0&descAlignY=62&animation=fadeIn" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=230&section=header&text=Carla%20Fernández&fontSize=58&fontColor=d63384&animation=fadeIn&fontAlignY=40&desc=Full%20Stack%20Developer&descAlignY=62&descColor=d63384"/>
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Pacifico&size=22&duration=3000&pause=900&color=FF69B4&center=true&vCenter=true&width=600&lines=Full-Stack+Developer;STEM+Girls+Advocate;ASTI+Robotic+Challenge+Winner;Building+useful+and+beautiful+software)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Pacifico&size=22&duration=3200&pause=900&color=FF69B4&center=true&vCenter=true&width=600&lines=Full-Stack+Developer;STEM+Girls+Advocate;ASTI+Robotic+Challenge+Winner;Building+useful+and+well-designed+software)](https://git.io/typing-svg)
 
 <br/>
 
@@ -31,11 +31,11 @@
 
 <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarlaFdezdh&layout=compact&theme=rose_pine&bg_color=fff0f5&title_color=ff69b4&text_color=d63384&border_color=ffb6d4" width="42%" />
 
-## About me
+## About Me
 
-I'm a **Full-Stack Developer** who enjoys building clean, useful and well-designed software.
+I’m a **Full-Stack Developer** focused on building clean, maintainable and well-designed applications.
 
-I’m currently studying **DAM (Multiplatform Application Development)** while working as a **volunteer monitor**, collaborating in initiatives such as **STEM Girls** to encourage more women to enter technology.
+Currently studying **Multiplatform Application Development (DAM)** while working as a **volunteer monitor**, contributing to initiatives like **STEM Girls** to encourage more women to explore careers in technology.
 
 🏆 **National Robotics Award — ASTI Robotic Challenge 2024/25**
 
@@ -70,7 +70,7 @@ I’m currently studying **DAM (Multiplatform Application Development)** while w
 
 ### 🌍 Wonder Wander Valencia
 
-Interactive web application to discover Valencia.  
+Interactive web application designed to explore and discover the city of Valencia.  
 Final project of the first year of DAM, containerized and deployed with Docker.
 
 `HTML` `CSS` `JavaScript` `PHP` `Docker`
@@ -78,11 +78,12 @@ Final project of the first year of DAM, containerized and deployed with Docker.
 [![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/CarlaFdezdh/Wonder-Wander-Valencia)
 
 </td>
+
 <td width="50%" valign="top">
 
 ### 🤟 SignoFy
 
-Gamified application to learn **Spanish Sign Language (LSE)** in an accessible way.
+Gamified application designed to help people learn **Spanish Sign Language (LSE)** in an accessible way.
 
 `CSS` `JavaScript` `UI/UX`
 
@@ -103,13 +104,14 @@ Full-stack application for managing and recording trips with a REST API and Mong
 [![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/CarlaFdezdh/CRUD)
 
 </td>
+
 <td width="50%" valign="top">
 
 ### 🔧 AutoLog
 
-Comprehensive management platform for mechanical workshops including:
+Comprehensive platform for mechanical workshop management including:
 
-- Android app  
+- Android application  
 - REST API  
 - Desktop application  
 
@@ -126,9 +128,9 @@ Comprehensive management platform for mechanical workshops including:
 ## Community & Volunteering
 
 - Volunteer monitor in **educational workshops and camps**
-- Promoter of **STEM Girls initiatives**
-- Participation in **hackathons and educational tech events**
-- 🏆 **National Robotics Award — ASTI Robotic Challenge**
+- Supporter of **STEM Girls initiatives**
+- Participation in **hackathons and national technology projects**
+- 🏆 **ASTI National Robotics Challenge Winner**
 
 ---
 
@@ -144,6 +146,8 @@ Comprehensive management platform for mechanical workshops including:
 
 <sub>Always learning, building and sharing knowledge.</sub>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ff69b4,ff85c1,ffadd4,ffd6e8&height=120&section=footer&animation=fadeIn"/>
+<br/><br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=120&section=footer"/>
 
 </div>
