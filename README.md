@@ -29,8 +29,6 @@
 
 ---
 
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarlaFdezdh&layout=compact&theme=rose_pine&bg_color=fff0f5&title_color=ff69b4&text_color=d63384&border_color=ffb6d4" width="42%" />
-
 ## About Me
 
 I’m a **Full-Stack Developer** focused on building clean, maintainable and well-designed applications.
@@ -38,8 +36,6 @@ I’m a **Full-Stack Developer** focused on building clean, maintainable and wel
 Currently studying **Multiplatform Application Development (DAM)** while working as a **volunteer monitor**, contributing to initiatives like **STEM Girls** to encourage more women to explore careers in technology.
 
 🏆 **National Robotics Award — ASTI Robotic Challenge 2024/25**
-
-<br clear="right"/>
 
 ---
 
@@ -66,45 +62,45 @@ Currently studying **Multiplatform Application Development (DAM)** while working
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%">
 
 ### 🌍 Wonder Wander Valencia
 
-Interactive web application designed to explore Valencia.
+Interactive web application to explore Valencia.
 
 `HTML` `CSS` `JavaScript` `PHP` `Docker`
 
-[![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/CarlaFdezdh/Wonder-Wander-Valencia)
+[View repo](https://github.com/CarlaFdezdh/Wonder-Wander-Valencia)
 
 </td>
 
-<td width="50%" valign="top">
+<td width="50%">
 
 ### 🤟 SignoFy
 
-Gamified application to learn Spanish Sign Language.
+Gamified application to learn **Spanish Sign Language**.
 
-`CSS` `JavaScript` `UI/UX`
+`JavaScript` `CSS` `UI/UX`
 
-[![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/CarlaFdezdh/SignoFy)
+[View repo](https://github.com/CarlaFdezdh/SignoFy)
 
 </td>
 </tr>
 
 <tr>
-<td width="50%" valign="top">
+<td width="50%">
 
 ### 🧳 Travel Diary API
 
-Full-stack travel management application.
+Full-stack travel manager with REST API and MongoDB.
 
 `Node.js` `Express` `MongoDB`
 
-[![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/CarlaFdezdh/CRUD)
+[View repo](https://github.com/CarlaFdezdh/CRUD)
 
 </td>
 
-<td width="50%" valign="top">
+<td width="50%">
 
 ### 🔧 AutoLog
 
@@ -112,7 +108,7 @@ Mechanical workshop management platform.
 
 `Kotlin` `Spring Boot` `Electron` `MySQL`
 
-[![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/Raul06lp/AutoLog)
+[View repo](https://github.com/Raul06lp/AutoLog)
 
 </td>
 </tr>
@@ -124,7 +120,7 @@ Mechanical workshop management platform.
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=CarlaFdezdh&bg_color=fff0f5&color=d63384&line=ff69b4&point=ff85c1&area=true&hide_border=true"/>
+<img src="https://raw.githubusercontent.com/CarlaFdezdh/CarlaFdezdh/main/profile-activity.svg"/>
 
 </div>
 
@@ -132,15 +128,8 @@ Mechanical workshop management platform.
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=CarlaFdezdh&show_icons=true&theme=rose_pine&bg_color=fff0f5&title_color=ff69b4&text_color=d63384&border_color=ffb6d4"/>
-
-<br/><br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com?user=CarlaFdezdh&theme=rose_pine&background=fff0f5&border=ffb6d4&stroke=ff69b4&ring=ff69b4&fire=ff85c1"/>
-
-<br/><br/>
-
-<img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" width="28"/>
+<!-- moon.svg decoration -->
+<img src="https://raw.githubusercontent.com/hmu332233/moon.svg/main/moon.svg" width="40"/>
 
 <br/><br/>
 
