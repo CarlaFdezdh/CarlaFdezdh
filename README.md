@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=e8aecc,ffc0cb,ff9ecf&height=230&section=header&text=Carla%20Fernández&fontSize=58&fontColor=d63384&animation=fadeIn&fontAlignY=40&desc=Full%20Stack%20Developer&descAlignY=62&descColor=d63384"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=300&color=ffb3d5&text=Carla%20Fernandez&fontColor=d63384"/>
 
 <br/>
 
@@ -146,6 +146,6 @@ Comprehensive platform for mechanical workshop management including:
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=e8aecc,ffc0cb,ff9ecf&height=120&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=130&color=ffb3d5&fontColor=d63384&section=footer"/>
 
 </div>
