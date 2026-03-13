@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=230&section=header&text=Carla%20Fernández&fontSize=58&fontColor=d63384&animation=fadeIn&fontAlignY=40&desc=Full%20Stack%20Developer&descAlignY=62&descColor=d63384"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=ff69b4,ff85c1,ffadd4,ffd6e8&height=220&section=header&text=Carla%20Fern%C3%A1ndez&fontSize=58&fontColor=ffffff&fontAlignY=40&desc=Full-Stack%20Developer&descSize=20&descColor=ffe4f0&descAlignY=62&animation=fadeIn"/>
 
 <br/>
 
@@ -22,12 +22,8 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/github/followers/CarlaFdezdh?label=Followers&style=flat-square&color=ff69b4&labelColor=ffe4f0&logo=github" />
-<img src="https://img.shields.io/github/stars/CarlaFdezdh/Wonder-Wander-Valencia?style=flat-square&color=ff69b4&labelColor=ffe4f0&logo=github&label=Stars" />
-
-<br/><br/>
-
-<img src="https://forthebadge.com/images/badges/built-with-love.svg"/>
+<img src="https://img.shields.io/github/followers/CarlaFdezdh?label=Followers&style=flat-square&color=ff69b4&labelColor=ffe4f0&logo=github"/>
+<img src="https://img.shields.io/github/stars/CarlaFdezdh/Wonder-Wander-Valencia?style=flat-square&color=ff69b4&labelColor=ffe4f0&logo=github&label=Stars"/>
 
 </div>
 
@@ -74,7 +70,7 @@ Currently studying **Multiplatform Application Development (DAM)** while working
 
 ### 🌍 Wonder Wander Valencia
 
-Interactive web application designed to explore and discover the city of Valencia.
+Interactive web application designed to explore Valencia.
 
 `HTML` `CSS` `JavaScript` `PHP` `Docker`
 
@@ -86,7 +82,7 @@ Interactive web application designed to explore and discover the city of Valenci
 
 ### 🤟 SignoFy
 
-Gamified application designed to help people learn **Spanish Sign Language (LSE)**.
+Gamified application to learn Spanish Sign Language.
 
 `CSS` `JavaScript` `UI/UX`
 
@@ -100,7 +96,7 @@ Gamified application designed to help people learn **Spanish Sign Language (LSE)
 
 ### 🧳 Travel Diary API
 
-Full-stack application for managing trips with REST API and MongoDB.
+Full-stack travel management application.
 
 `Node.js` `Express` `MongoDB`
 
@@ -134,15 +130,6 @@ Mechanical workshop management platform.
 
 ---
 
-## Community & Volunteering
-
-- Volunteer monitor in educational workshops  
-- STEM Girls advocate  
-- Participation in hackathons and tech initiatives  
-- 🏆 ASTI National Robotics Challenge Winner  
-
----
-
 <div align="center">
 
 <img src="https://github-readme-stats.vercel.app/api?username=CarlaFdezdh&show_icons=true&theme=rose_pine&bg_color=fff0f5&title_color=ff69b4&text_color=d63384&border_color=ffb6d4"/>
@@ -153,8 +140,11 @@ Mechanical workshop management platform.
 
 <br/><br/>
 
-<!-- moon icon -->
 <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" width="28"/>
+
+<br/><br/>
+
+<img src="https://forthebadge.com/images/badges/built-with-love.svg"/>
 
 <br/><br/>
 
@@ -162,6 +152,6 @@ Mechanical workshop management platform.
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=120&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=ff69b4,ff85c1,ffadd4,ffd6e8&height=120&section=footer"/>
 
 </div>
