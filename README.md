@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=230&section=header&text=Carla%20Fernández&fontSize=58&fontColor=d63384&animation=fadeIn&fontAlignY=40&desc=Full%20Stack%20Developer&descAlignY=62&descColor=d63384"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=e8aecc,ffc0cb,ff9ecf&height=230&section=header&text=Carla%20Fernández&fontSize=58&fontColor=d63384&animation=fadeIn&fontAlignY=40&desc=Full%20Stack%20Developer&descAlignY=62&descColor=d63384"/>
 
 <br/>
 
@@ -140,14 +140,12 @@ Comprehensive platform for mechanical workshop management including:
 
 <br/><br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com?user=CarlaFdezdh&theme=rose_pine&background=fff0f5&border=ffb6d4&stroke=ff69b4&ring=ff69b4&fire=ff85c1&currStreakNum=d63384&sideNums=d63384&currStreakLabel=ff69b4&sideLabels=ff85c1&dates=ffadd4"/>
-
 <br/><br/>
 
 <sub>Always learning, building and sharing knowledge.</sub>
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=120&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=e8aecc,ffc0cb,ff9ecf&height=120&section=footer"/>
 
 </div>
