@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=300&color=E3A6AE&text=Carla%20Fernández&fontColor=f04f9c"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=230&section=header&text=Carla%20Fernández&fontSize=58&fontColor=d63384&animation=fadeIn&fontAlignY=40&desc=Full%20Stack%20Developer&descAlignY=62&descColor=d63384"/>
 
 <br/>
 
@@ -24,6 +24,10 @@
 
 <img src="https://img.shields.io/github/followers/CarlaFdezdh?label=Followers&style=flat-square&color=ff69b4&labelColor=ffe4f0&logo=github" />
 <img src="https://img.shields.io/github/stars/CarlaFdezdh/Wonder-Wander-Valencia?style=flat-square&color=ff69b4&labelColor=ffe4f0&logo=github&label=Stars" />
+
+<br/><br/>
+
+<img src="https://forthebadge.com/images/badges/built-with-love.svg"/>
 
 </div>
 
@@ -70,8 +74,7 @@ Currently studying **Multiplatform Application Development (DAM)** while working
 
 ### 🌍 Wonder Wander Valencia
 
-Interactive web application designed to explore and discover the city of Valencia.  
-Final project of the first year of DAM, containerized and deployed with Docker.
+Interactive web application designed to explore and discover the city of Valencia.
 
 `HTML` `CSS` `JavaScript` `PHP` `Docker`
 
@@ -83,7 +86,7 @@ Final project of the first year of DAM, containerized and deployed with Docker.
 
 ### 🤟 SignoFy
 
-Gamified application designed to help people learn **Spanish Sign Language (LSE)** in an accessible way.
+Gamified application designed to help people learn **Spanish Sign Language (LSE)**.
 
 `CSS` `JavaScript` `UI/UX`
 
@@ -97,7 +100,7 @@ Gamified application designed to help people learn **Spanish Sign Language (LSE)
 
 ### 🧳 Travel Diary API
 
-Full-stack application for managing and recording trips with a REST API and MongoDB persistence.
+Full-stack application for managing trips with REST API and MongoDB.
 
 `Node.js` `Express` `MongoDB`
 
@@ -109,11 +112,7 @@ Full-stack application for managing and recording trips with a REST API and Mong
 
 ### 🔧 AutoLog
 
-Comprehensive platform for mechanical workshop management including:
-
-- Android application  
-- REST API  
-- Desktop application  
+Mechanical workshop management platform.
 
 `Kotlin` `Spring Boot` `Electron` `MySQL`
 
@@ -125,19 +124,37 @@ Comprehensive platform for mechanical workshop management including:
 
 ---
 
+## Activity
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=CarlaFdezdh&bg_color=fff0f5&color=d63384&line=ff69b4&point=ff85c1&area=true&hide_border=true"/>
+
+</div>
+
+---
+
 ## Community & Volunteering
 
-- Volunteer monitor in **educational workshops and camps**
-- Supporter of **STEM Girls initiatives**
-- Participation in **hackathons and national technology projects**
-- 🏆 **ASTI National Robotics Challenge Winner**
+- Volunteer monitor in educational workshops  
+- STEM Girls advocate  
+- Participation in hackathons and tech initiatives  
+- 🏆 ASTI National Robotics Challenge Winner  
 
 ---
 
 <div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=CarlaFdezdh&show_icons=true&theme=rose_pine&bg_color=fff0f5&title_color=ff69b4&text_color=d63384&border_color=ffb6d4"/>
+
 <br/><br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com?user=CarlaFdezdh&theme=rose_pine&background=fff0f5&border=ffb6d4&stroke=ff69b4&ring=ff69b4&fire=ff85c1&currStreakNum=d63384&sideNums=d63384&currStreakLabel=ff69b4&sideLabels=ff85c1&dates=ffadd4"/>
+<img src="https://github-readme-streak-stats.herokuapp.com?user=CarlaFdezdh&theme=rose_pine&background=fff0f5&border=ffb6d4&stroke=ff69b4&ring=ff69b4&fire=ff85c1"/>
+
+<br/><br/>
+
+<!-- moon icon -->
+<img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" width="28"/>
 
 <br/><br/>
 
@@ -145,6 +162,6 @@ Comprehensive platform for mechanical workshop management including:
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=150&color=E3A6AE&fontColor=f04f9c&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=120&section=footer"/>
 
 </div>
