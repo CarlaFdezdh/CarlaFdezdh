@@ -148,6 +148,6 @@ Comprehensive platform for mechanical workshop management including:
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=120&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=150&color=E3A6AE&fontColor=f04f9c&section=footer"/>
 
 </div>
