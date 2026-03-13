@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ff69b4,ff85c1,ffadd4,ffd6e8&height=220&section=header&text=Carla%20Fern%C3%A1ndez&fontSize=58&fontColor=ffffff&fontAlignY=40&desc=Full-Stack%20Developer&descSize=20&descColor=ffe4f0&descAlignY=62&animation=fadeIn"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=230&section=header&text=Carla%20Fernández&fontSize=58&fontColor=d63384&animation=fadeIn&fontAlignY=40&desc=Full%20Stack%20Developer&descAlignY=62&descColor=d63384"/>
 
 <br/>
 
@@ -22,12 +22,14 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/github/followers/CarlaFdezdh?label=Followers&style=flat-square&color=ff69b4&labelColor=ffe4f0&logo=github"/>
-<img src="https://img.shields.io/github/stars/CarlaFdezdh/Wonder-Wander-Valencia?style=flat-square&color=ff69b4&labelColor=ffe4f0&logo=github&label=Stars"/>
+<img src="https://img.shields.io/github/followers/CarlaFdezdh?label=Followers&style=flat-square&color=ff69b4&labelColor=ffe4f0&logo=github" />
+<img src="https://img.shields.io/github/stars/CarlaFdezdh/Wonder-Wander-Valencia?style=flat-square&color=ff69b4&labelColor=ffe4f0&logo=github&label=Stars" />
 
 </div>
 
 ---
+
+<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarlaFdezdh&layout=compact&theme=rose_pine&bg_color=fff0f5&title_color=ff69b4&text_color=d63384&border_color=ffb6d4" width="42%" />
 
 ## About Me
 
@@ -36,6 +38,8 @@ I’m a **Full-Stack Developer** focused on building clean, maintainable and wel
 Currently studying **Multiplatform Application Development (DAM)** while working as a **volunteer monitor**, contributing to initiatives like **STEM Girls** to encourage more women to explore careers in technology.
 
 🏆 **National Robotics Award — ASTI Robotic Challenge 2024/25**
+
+<br clear="right"/>
 
 ---
 
@@ -62,53 +66,58 @@ Currently studying **Multiplatform Application Development (DAM)** while working
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🌍 Wonder Wander Valencia
 
-Interactive web application to explore Valencia.
+Interactive web application designed to explore and discover the city of Valencia.  
+Final project of the first year of DAM, containerized and deployed with Docker.
 
 `HTML` `CSS` `JavaScript` `PHP` `Docker`
 
-[View repo](https://github.com/CarlaFdezdh/Wonder-Wander-Valencia)
+[![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/CarlaFdezdh/Wonder-Wander-Valencia)
 
 </td>
 
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🤟 SignoFy
 
-Gamified application to learn **Spanish Sign Language**.
+Gamified application designed to help people learn **Spanish Sign Language (LSE)** in an accessible way.
 
-`JavaScript` `CSS` `UI/UX`
+`CSS` `JavaScript` `UI/UX`
 
-[View repo](https://github.com/CarlaFdezdh/SignoFy)
+[![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/CarlaFdezdh/SignoFy)
 
 </td>
 </tr>
 
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🧳 Travel Diary API
 
-Full-stack travel manager with REST API and MongoDB.
+Full-stack application for managing and recording trips with a REST API and MongoDB persistence.
 
 `Node.js` `Express` `MongoDB`
 
-[View repo](https://github.com/CarlaFdezdh/CRUD)
+[![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/CarlaFdezdh/CRUD)
 
 </td>
 
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🔧 AutoLog
 
-Mechanical workshop management platform.
+Comprehensive platform for mechanical workshop management including:
+
+- Android application  
+- REST API  
+- Desktop application  
 
 `Kotlin` `Spring Boot` `Electron` `MySQL`
 
-[View repo](https://github.com/Raul06lp/AutoLog)
+[![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/Raul06lp/AutoLog)
 
 </td>
 </tr>
@@ -116,24 +125,22 @@ Mechanical workshop management platform.
 
 ---
 
-## Activity
+## Community & Volunteering
 
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/CarlaFdezdh/CarlaFdezdh/main/profile-activity.svg"/>
-
-</div>
+- Volunteer monitor in **educational workshops and camps**
+- Supporter of **STEM Girls initiatives**
+- Participation in **hackathons and national technology projects**
+- 🏆 **ASTI National Robotics Challenge Winner**
 
 ---
 
 <div align="center">
 
-<!-- moon.svg decoration -->
-<img src="https://raw.githubusercontent.com/hmu332233/moon.svg/main/moon.svg" width="40"/>
+<img src="https://github-readme-stats.vercel.app/api?username=CarlaFdezdh&show_icons=true&theme=rose_pine&bg_color=fff0f5&title_color=ff69b4&text_color=d63384&border_color=ffb6d4"/>
 
 <br/><br/>
 
-<img src="https://forthebadge.com/images/badges/built-with-love.svg"/>
+<img src="https://github-readme-streak-stats.herokuapp.com?user=CarlaFdezdh&theme=rose_pine&background=fff0f5&border=ffb6d4&stroke=ff69b4&ring=ff69b4&fire=ff85c1&currStreakNum=d63384&sideNums=d63384&currStreakLabel=ff69b4&sideLabels=ff85c1&dates=ffadd4"/>
 
 <br/><br/>
 
@@ -141,6 +148,6 @@ Mechanical workshop management platform.
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ff69b4,ff85c1,ffadd4,ffd6e8&height=120&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=ffe4f0,ffc0cb,ff9ecf&height=120&section=footer"/>
 
 </div>
