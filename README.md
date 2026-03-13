@@ -135,9 +135,6 @@ Comprehensive platform for mechanical workshop management including:
 ---
 
 <div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=CarlaFdezdh&show_icons=true&theme=rose_pine&bg_color=fff0f5&title_color=ff69b4&text_color=d63384&border_color=ffb6d4"/>
-
 <br/><br/>
 
 <img src="https://github-readme-streak-stats.herokuapp.com?user=CarlaFdezdh&theme=rose_pine&background=fff0f5&border=ffb6d4&stroke=ff69b4&ring=ff69b4&fire=ff85c1&currStreakNum=d63384&sideNums=d63384&currStreakLabel=ff69b4&sideLabels=ff85c1&dates=ffadd4"/>
