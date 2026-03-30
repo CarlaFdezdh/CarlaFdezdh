@@ -81,20 +81,6 @@ Final project of the first year of DAM, containerized and deployed with Docker.
 
 <td width="50%" valign="top">
 
-### 🤟 SignoFy
-
-Gamified application designed to help people learn **Spanish Sign Language (LSE)** in an accessible way.
-
-`CSS` `JavaScript` `UI/UX`
-
-[![Repo](https://img.shields.io/badge/View_repo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/CarlaFdezdh/SignoFy)
-
-</td>
-</tr>
-
-<tr>
-<td width="50%" valign="top">
-
 ### 🧳 Travel Diary API
 
 Full-stack application for managing and recording trips with a REST API and MongoDB persistence.
