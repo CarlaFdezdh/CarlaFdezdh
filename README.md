@@ -29,9 +29,8 @@
 
 ---
 
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarlaFdezdh&layout=compact&theme=rose_pine&bg_color=fff0f5&title_color=ff69b4&text_color=d63384&border_color=ffb6d4" width="42%" />
-
 ## About Me
+<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarlaFdezdh&layout=compact&theme=rose_pine&bg_color=fff0f5&title_color=ff69b4&text_color=d63384&border_color=ffb6d4" width="42%" />
 
 I’m a **Full-Stack Developer** focused on building clean, maintainable and well-designed applications.
 
@@ -66,7 +65,7 @@ Currently studying **Multiplatform Application Development (DAM)** while working
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
 ### 🌍 Wonder Wander Valencia
 
@@ -79,7 +78,7 @@ Final project of the first year of DAM, containerized and deployed with Docker.
 
 </td>
 
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
 ### 🧳 Travel Diary API
 
@@ -91,7 +90,7 @@ Full-stack application for managing and recording trips with a REST API and Mong
 
 </td>
 
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
 ### 🔧 AutoLog
 
