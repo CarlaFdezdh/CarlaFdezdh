@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASTI Robotic Challenge 2025 — Carla Fernández</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -13,154 +13,169 @@
     --pink-light: #ffb3d5;
     --pink-pale: #fff0f7;
     --dark: #1a0d12;
-    --mid: #3d1a28;
-    --text: #2d0f1f;
+    --text: #3a1822;
   }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--pink-pale);
-    color: var(--text);
+  html, body {
+    width: 100%;
     min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    background: white;
+    color: var(--text);
     overflow-x: hidden;
   }
 
-  /* ── GRAIN OVERLAY ── */
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 9999; opacity: 0.35;
-  }
-
-  .post {
-    max-width: 100%;
-    margin: 0 auto;
+  /* ── BACK BUTTON ── */
+  .back-btn {
+    position: fixed;
+    top: 24px;
+    left: 28px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     background: white;
-    box-shadow: 0 0 80px rgba(255,77,141,0.12);
+    border: 1px solid rgba(255,77,141,0.2);
+    color: var(--text);
+    border-radius: 40px;
+    padding: 10px 18px 10px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    transition: all 0.2s ease;
+  }
+  .back-btn:hover {
+    background: var(--dark);
+    color: white;
+    border-color: var(--dark);
+    transform: translateX(-2px);
+  }
+  .back-btn svg {
+    width: 14px; height: 14px;
+    flex-shrink: 0;
   }
 
   /* ── HERO ── */
   .hero {
-    position: relative;
+    width: 100%;
+    height: 520px;
     background: var(--dark);
-    overflow: hidden;
-    padding: 0;
-  }
-
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: 
-      radial-gradient(ellipse at 80% 20%, rgba(255,77,141,0.35) 0%, transparent 60%),
-      radial-gradient(ellipse at 20% 80%, rgba(255,179,213,0.2) 0%, transparent 50%),
-      var(--dark);
-  }
-
-  .hero-content {
-    position: relative; z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 420px;
-    align-items: end;
+    position: relative;
+    overflow: hidden;
   }
 
-  .hero-text-block {
-    padding: 50px 40px 50px 50px;
+  .hero-glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 35% 60%, rgba(255,77,141,0.22) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 20%, rgba(255,179,213,0.1) 0%, transparent 45%);
+    pointer-events: none;
+  }
+
+  .hero-left {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 18px;
+    padding: 80px 64px;
+    gap: 14px;
   }
 
-  .hero-label {
-    font-family: 'Syne', sans-serif;
-    font-size: 10px;
-    letter-spacing: 0.35em;
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--pink-light);
-    opacity: 0.8;
+    opacity: 0.7;
+    font-weight: 400;
   }
 
   .hero-trophy {
-    font-size: 40px;
-    line-height: 1;
-    animation: float 3s ease-in-out infinite;
+    font-size: 38px;
+    animation: float 4s ease-in-out infinite;
   }
-
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    0%,100% { transform: translateY(0); }
+    50%      { transform: translateY(-7px); }
   }
 
   .hero-title {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(28px, 5vw, 40px);
+    font-size: 58px;
     font-weight: 800;
     color: white;
-    line-height: 1.1;
+    line-height: 1.02;
   }
+  .hero-title span { color: var(--pink); }
 
-  .hero-title span {
-    color: var(--pink);
-  }
-
-  .hero-subtitle {
-    font-size: 13px;
+  .hero-sub {
+    font-size: 15px;
     font-weight: 300;
-    color: rgba(255,255,255,0.65);
-    line-height: 1.6;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.65;
+    max-width: 360px;
   }
 
-  .hero-img-block {
+  .hero-right {
     position: relative;
-    align-self: stretch;
     overflow: hidden;
   }
-
-  .hero-img-block::before {
+  .hero-right::before {
     content: '';
     position: absolute; inset: 0;
     background: linear-gradient(to right, var(--dark) 0%, transparent 40%);
     z-index: 1;
   }
-
-  .hero-img-block img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
+  .hero-right img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center top;
+    opacity: 0.65;
     display: block;
-    opacity: 0.75;
   }
 
-  /* ── PINK BANNER ── */
-  .banner {
+  /* ── STRIPE ── */
+  .stripe {
+    width: 100%;
     background: var(--pink);
-    padding: 14px 50px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    padding: 10px 0;
     overflow: hidden;
+    white-space: nowrap;
   }
-
-  .banner-text {
+  .stripe-inner {
+    display: inline-block;
+    animation: marquee 22s linear infinite;
+  }
+  .stripe-text {
     font-family: 'Syne', sans-serif;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 700;
     color: white;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
-    animation: marquee 18s linear infinite;
+    letter-spacing: 0.08em;
   }
-
   @keyframes marquee {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    to   { transform: translateX(-50%); }
   }
 
-  /* ── BODY ── */
-  .post-body {
-    padding: 50px 50px 0;
+  /* ── BODY LAYOUT ── */
+  .body-wrap {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    min-height: calc(100vh - 560px);
+  }
+
+  /* ── MAIN ── */
+  .main {
+    padding: 72px 80px 80px 120px;
+    border-right: 1px solid rgba(0,0,0,0.06);
   }
 
   .section-label {
@@ -168,485 +183,493 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--pink);
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 14px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
-
   .section-label::before {
     content: '';
-    width: 20px;
-    height: 2px;
+    width: 22px; height: 2px;
     background: var(--pink);
-    display: inline-block;
   }
 
   h2 {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(22px, 4vw, 30px);
+    font-size: 38px;
     font-weight: 800;
     color: var(--dark);
-    line-height: 1.15;
-    margin-bottom: 20px;
+    line-height: 1.1;
+    margin-bottom: 24px;
   }
-
-  h2 em {
-    font-style: italic;
-    color: var(--pink);
-  }
+  h2 em { font-style: italic; color: var(--pink); }
 
   p {
-    font-size: 15px;
-    line-height: 1.75;
+    font-size: 16px;
+    line-height: 1.8;
     color: #4a2030;
     font-weight: 300;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
+    max-width: 640px;
   }
+  p strong { font-weight: 500; color: var(--dark); }
 
-  p strong {
-    font-weight: 600;
-    color: var(--dark);
+  .divider {
+    height: 1px;
+    background: rgba(0,0,0,0.07);
+    margin: 56px 0;
   }
 
   /* ── ROBOT CARD ── */
   .robot-card {
-    margin: 40px 0;
+    margin: 36px 0;
     border-radius: 16px;
     overflow: hidden;
-    position: relative;
     background: var(--dark);
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    min-height: 280px;
+    height: 500px;
   }
-
-  .robot-card-img {
-    position: relative;
-    overflow: hidden;
-  }
-
+  .robot-card-img { overflow: hidden; }
   .robot-card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
     transition: transform 0.5s ease;
   }
-
-  .robot-card:hover .robot-card-img img {
-    transform: scale(1.04);
-  }
-
-  .robot-card-text {
-    padding: 30px 28px;
+  .robot-card:hover .robot-card-img img { transform: scale(1.04); }
+  .robot-card-body {
+    padding: 28px 28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
   }
-
   .robot-tag {
     display: inline-block;
-    background: rgba(255,77,141,0.2);
-    border: 1px solid rgba(255,77,141,0.4);
+    background: rgba(255,77,141,0.15);
+    border: 1px solid rgba(255,77,141,0.3);
     color: var(--pink-light);
     border-radius: 4px;
     padding: 4px 10px;
     font-size: 10px;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
     width: fit-content;
   }
-
   .robot-name {
     font-family: 'Syne', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
     color: white;
-    line-height: 1.2;
   }
-
   .robot-desc {
-    font-size: 12.5px;
+    font-size: 13px;
     color: rgba(255,255,255,0.55);
     line-height: 1.65;
     font-weight: 300;
-    margin: 0;
+    margin: 0; max-width: none;
   }
-
-  .tech-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 4px;
-  }
-
-  .tech-pill {
-    background: rgba(255,255,255,0.08);
+  .pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .pill {
+    background: rgba(255,255,255,0.07);
     border-radius: 20px;
-    padding: 4px 10px;
+    padding: 4px 12px;
     font-size: 11px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.5);
   }
 
-  /* ── DIVIDER ── */
-  .divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(255,77,141,0.25), transparent);
-    margin: 40px 0;
-  }
-
-  /* ── QUOTE ── */
-  .quote-block {
-    background: linear-gradient(135deg, #fff0f7, #ffe4f0);
-    border-left: 3px solid var(--pink);
-    border-radius: 0 12px 12px 0;
-    padding: 28px 30px;
-    margin: 30px 0;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .quote-block::after {
-    content: '"';
-    position: absolute;
-    right: 20px;
-    bottom: -20px;
-    font-family: 'Syne', sans-serif;
-    font-size: 100px;
-    color: rgba(255,77,141,0.1);
-    line-height: 1;
-  }
-
-  .quote-text {
-    font-family: 'Syne', sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--dark);
-    line-height: 1.5;
-    margin-bottom: 10px;
-    position: relative; z-index: 1;
-  }
-
-  .quote-author {
-    font-size: 12px;
-    color: var(--pink);
-    letter-spacing: 0.1em;
-    font-weight: 600;
-    margin: 0;
-  }
-
-  /* ── STATS ROW ── */
-  .stats-row {
+  /* ── STATS ── */
+  .stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 1px;
-    background: rgba(255,77,141,0.15);
-    border-radius: 12px;
+    background: rgba(0,0,0,0.07);
+    border-radius: 14px;
     overflow: hidden;
-    margin: 30px 0;
+    margin: 32px 0;
+    max-width: 620px;
   }
-
-  .stat-item {
+  .stat {
     background: white;
     padding: 24px 20px;
     text-align: center;
   }
-
-  .stat-num {
+  .stat-n {
     font-family: 'Syne', sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 800;
     color: var(--pink);
     display: block;
     line-height: 1;
     margin-bottom: 6px;
   }
-
-  .stat-label {
-    font-size: 11px;
+  .stat-l {
+    font-size: 11.5px;
     color: #8b5a6b;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    line-height: 1.3;
+    line-height: 1.4;
   }
 
   /* ── LEARNINGS ── */
-  .learnings {
-    margin: 30px 0;
-  }
-
-  .learning-item {
+  .learnings { margin: 28px 0; max-width: 640px; }
+  .learn {
     display: flex;
     gap: 16px;
     padding: 16px 0;
-    border-bottom: 1px solid rgba(255,77,141,0.12);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
     align-items: flex-start;
   }
-
-  .learning-item:last-child { border-bottom: none; }
-
-  .learning-num {
+  .learn:last-child { border-bottom: none; }
+  .learn-n {
     font-family: 'Syne', sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
     color: var(--pink);
     opacity: 0.5;
     min-width: 28px;
-    padding-top: 2px;
+    padding-top: 3px;
   }
-
-  .learning-text {
-    font-size: 14px;
-    line-height: 1.6;
+  .learn-t {
+    font-size: 15px;
+    line-height: 1.65;
     color: var(--text);
     font-weight: 300;
+    margin: 0; max-width: none;
+  }
+  .learn-t strong { color: var(--dark); font-weight: 500; }
+
+  /* ── QUOTE ── */
+  .quote {
+    background: var(--pink-pale);
+    border-left: 3px solid var(--pink);
+    border-radius: 0 12px 12px 0;
+    padding: 28px 32px;
+    margin: 36px 0;
+    max-width: 620px;
+  }
+  .quote-t {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .quote-a {
+    font-size: 12px;
+    color: var(--pink);
+    letter-spacing: 0.08em;
+    font-weight: 500;
     margin: 0;
   }
 
-  .learning-text strong {
-    color: var(--dark);
-    font-weight: 600;
-  }
-
-  /* ── TAGS ── */
-  .tags-row {
+  /* ── SIDEBAR ── */
+  .sidebar {
+    padding: 72px 52px 80px 48px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 40px 50px;
-    border-top: 1px solid rgba(255,77,141,0.12);
+    flex-direction: column;
+    gap: 32px;
+    background: #fafafa;
   }
 
-  .tag {
-    background: var(--pink-pale);
-    color: var(--pink);
-    border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 12px;
-    font-weight: 600;
-    border: 1px solid rgba(255,77,141,0.2);
-    transition: all 0.2s;
-    cursor: default;
-  }
-
-  .tag:hover {
-    background: var(--pink);
-    color: white;
-  }
-
-  /* ── FOOTER ── */
-  .post-footer {
-    background: var(--dark);
-    padding: 36px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  .footer-author {
+  .s-author {
     display: flex;
     align-items: center;
     gap: 14px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
   }
-
-  .footer-avatar {
-    width: 46px;
-    height: 46px;
+  .s-avatar {
+    width: 52px; height: 52px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--pink);
     flex-shrink: 0;
   }
-
-  .footer-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
+  .s-avatar img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+  .s-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  .s-role { font-size: 12px; color: #8b5a6b; margin-top: 2px; }
+  .s-badge {
+    display: inline-block;
+    background: var(--pink);
+    color: white;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: 6px;
+    letter-spacing: 0.03em;
   }
 
-  .footer-name {
+  .s-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 14px;
+  }
+  .s-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 13px;
+  }
+  .s-row:last-child { border-bottom: none; }
+  .s-key { color: #8b5a6b; font-weight: 400; }
+  .s-val { font-weight: 500; color: var(--dark); text-align: right; }
+  .s-val.pink { color: var(--pink); }
+
+  .s-photo {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+  }
+  .s-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center top;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .s-photo:hover img { transform: scale(1.04); }
+  .s-photo-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(26,13,18,0.85), transparent);
+    padding: 16px 14px 12px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag {
+    background: white;
+    color: var(--pink);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid rgba(255,77,141,0.18);
+    cursor: default;
+    transition: all 0.18s;
+  }
+  .tag:hover { background: var(--pink); color: white; }
+
+  /* ── FOOTER ── */
+  .footer {
+    width: 100%;
+    background: var(--dark);
+    padding: 36px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .f-left { display: flex; align-items: center; gap: 14px; }
+  .f-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--pink);
+    flex-shrink: 0;
+  }
+  .f-avatar img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+  .f-name {
     font-family: 'Syne', sans-serif;
     font-size: 15px;
     font-weight: 700;
     color: white;
   }
-
-  .footer-role {
-    font-size: 11.5px;
-    color: rgba(255,255,255,0.45);
-    margin-top: 2px;
-  }
-
-  .footer-badge {
-    background: linear-gradient(135deg, var(--pink), #ff85c1);
+  .f-role { font-size: 11.5px; color: rgba(255,255,255,0.38); margin-top: 2px; }
+  .f-badge {
+    background: var(--pink);
     color: white;
     border-radius: 8px;
-    padding: 10px 18px;
+    padding: 10px 20px;
     font-family: 'Syne', sans-serif;
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: 700;
     letter-spacing: 0.05em;
     text-align: center;
-    line-height: 1.4;
-  }
-
-  @media (max-width: 560px) {
-    .hero-content { grid-template-columns: 1fr; }
-    .hero-img-block { display: none; }
-    .hero-text-block { padding: 40px 30px; }
-    .post-body { padding: 36px 30px 0; }
-    .robot-card { grid-template-columns: 1fr; }
-    .robot-card-img { height: 200px; }
-    .stats-row { grid-template-columns: repeat(3, 1fr); }
-    .tags-row, .post-footer { padding: 30px; }
+    line-height: 1.5;
   }
 </style>
 </head>
 <body>
-<article class="post">
+
+  <!-- BACK BUTTON -->
+  <a href="index.html" class="back-btn">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 3L5 8l5 5"/>
+    </svg>
+    Volver
+  </a>
 
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <div class="hero-text-block">
-        <span class="hero-label">ASTI Robotic Challenge 24/25</span>
-        <div class="hero-trophy">🏆</div>
-        <h1 class="hero-title">Premio<br><span>Nacional</span><br>de Robótica</h1>
-        <p class="hero-subtitle">Un robot, un algoritmo, y mucho que aprender por el camino.</p>
-      </div>
-      <div class="hero-img-block">
-        <img src="images/asti3.jpg">
-      </div>
+    <div class="hero-glow"></div>
+    <div class="hero-left">
+      <span class="hero-eyebrow">ASTI Robotic Challenge 24/25</span>
+      <div class="hero-trophy">🏆</div>
+      <h1 class="hero-title">Premio<br><span>Nacional</span><br>de Robótica</h1>
+      <p class="hero-sub">Un robot, un algoritmo, y mucho que aprender por el camino.</p>
+    </div>
+    <div class="hero-right">
+      <img src="images/asti3.jpg" alt="ASTI Robotic Challenge">
     </div>
   </div>
 
-  <!-- MARQUEE -->
-  <div class="banner">
-    <span class="banner-text">🏆 ASTI ROBOTIC CHALLENGE 2024/25 &nbsp;·&nbsp; DISTINCIÓN NACIONAL &nbsp;·&nbsp; C++ &nbsp;·&nbsp; SENSORES INFRARROJOS &nbsp;·&nbsp; ALGORITMO PROPIO &nbsp;·&nbsp; 🏆 ASTI ROBOTIC CHALLENGE 2024/25 &nbsp;·&nbsp; DISTINCIÓN NACIONAL &nbsp;·&nbsp; C++ &nbsp;·&nbsp; SENSORES INFRARROJOS &nbsp;·&nbsp; ALGORITMO PROPIO &nbsp;·&nbsp;</span>
+  <!-- STRIPE -->
+  <div class="stripe">
+    <div class="stripe-inner">
+      <span class="stripe-text">🏆 ASTI ROBOTIC CHALLENGE 2024/25 &nbsp;·&nbsp; DISTINCIÓN NACIONAL &nbsp;·&nbsp; C++ &nbsp;·&nbsp; SENSORES INFRARROJOS &nbsp;·&nbsp; ALGORITMO PROPIO &nbsp;·&nbsp; 🏆 ASTI ROBOTIC CHALLENGE 2024/25 &nbsp;·&nbsp; DISTINCIÓN NACIONAL &nbsp;·&nbsp; C++ &nbsp;·&nbsp; SENSORES INFRARROJOS &nbsp;·&nbsp; ALGORITMO PROPIO &nbsp;·&nbsp;</span>
+    </div>
   </div>
 
   <!-- BODY -->
-  <div class="post-body">
+  <div class="body-wrap">
 
-    <p class="section-label">El inicio</p>
-    <h2>De código a<br><em>pista de competición.</em></h2>
+    <div class="main">
 
-    <p>Cuando decidí presentarme al <strong>ASTI Robotic Challenge</strong> no tenía ni idea de hasta dónde podíamos llegar. Era un reto nuevo, fuera de mi zona de confort, y eso era exactamente lo que necesitaba.</p>
+      <p class="section-label">El inicio</p>
+      <h2>De código a<br><em>pista de competición.</em></h2>
 
-    <p>El desafío: construir un robot siguelíneas funcional y programarlo desde cero. Sin librerías externas. Sin atajos. Solo <strong>C++, sensores infrarrojos, y un algoritmo de corrección propio</strong> que tuvimos que diseñar iteración a iteración.</p>
+      <p>Cuando decidí presentarme al <strong>ASTI Robotic Challenge</strong> no tenía ni idea de hasta dónde podíamos llegar. Era un reto nuevo, fuera de mi zona de confort, y eso era exactamente lo que necesitaba.</p>
 
-    <!-- ROBOT CARD -->
-    <div class="robot-card">
-      <div class="robot-card-img">
-        <img src="images/asti1.jpg" alt="Robot">
-      </div>
-      <div class="robot-card-text">
-        <span class="robot-tag">Hardware + Software</span>
-        <div class="robot-name">El robot 🤖</div>
-        <p class="robot-desc">Robot siguelíneas multifunción con Arduino. Programado íntegramente en C++ con sensores infrarrojos y un algoritmo de corrección de alta precisión diseñado desde cero.</p>
-        <div class="tech-pills">
-          <span class="tech-pill">C++</span>
-          <span class="tech-pill">Arduino</span>
-          <span class="tech-pill">IR sensors</span>
-          <span class="tech-pill">H-Bridge</span>
+      <p>El desafío: construir un robot siguelíneas funcional y programarlo desde cero. Sin librerías externas. Sin atajos. Solo <strong>C++, sensores infrarrojos, y un algoritmo de corrección propio</strong> que tuvimos que diseñar iteración a iteración.</p>
+
+      <div class="robot-card">
+        <div class="robot-card-img">
+          <img src="images/asti1.jpg" alt="Robot siguelíneas">
+        </div>
+        <div class="robot-card-body">
+          <span class="robot-tag">Hardware + Software</span>
+          <div class="robot-name">Goty</div>
+          <p class="robot-desc">Robot siguelíneas con Arduino. Programado íntegramente en C++ con sensores infrarrojos y algoritmo de corrección diseñado desde cero.</p>
+          <div class="pills">
+            <span class="pill">C++</span>
+            <span class="pill">Arduino</span>
+            <span class="pill">IR sensors</span>
+            <span class="pill">H-Bridge</span>
+          </div>
         </div>
       </div>
+
+      <div class="divider"></div>
+
+      <p class="section-label">El proceso</p>
+      <h2>Muchos fallos antes<br><em>del primer acierto.</em></h2>
+
+      <p>Lo que de fuera parece un robot pequeño, por dentro es el resultado de <strong>semanas de pruebas, ajustes y frustraciones</strong>. Cada vez que el robot se salía de la línea era una nueva hipótesis que probar.</p>
+
+      <p>Aprendí que en robótica, como en el desarrollo de software, el debugging no es el enemigo. Es el proceso. La diferencia entre un robot errático y uno preciso son unas pocas líneas de lógica bien pensada.</p>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-n">C++</span>
+          <span class="stat-l">Lenguaje de programación</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">0</span>
+          <span class="stat-l">Librerías externas</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">🥇</span>
+          <span class="stat-l">Distinción nacional</span>
+        </div>
+      </div>
+
+      <p class="section-label">Lo que me llevé</p>
+      <div class="learnings">
+        <div class="learn">
+          <span class="learn-n">01</span>
+          <p class="learn-t"><strong>La teoría sin práctica no sirve de nada.</strong> Puedes saber C++ de memoria, pero hasta que no lo ejecutas sobre hardware real no entiendes los límites del sistema.</p>
+        </div>
+        <div class="learn">
+          <span class="learn-n">02</span>
+          <p class="learn-t"><strong>Los errores son parte del diseño.</strong> Diseñamos el algoritmo fallando primero. Cada caso borde que rompía el robot nos enseñó algo.</p>
+        </div>
+        <div class="learn">
+          <span class="learn-n">03</span>
+          <p class="learn-t"><strong>Salir de la zona de confort merece la pena.</strong> Vengo del desarrollo web y las apps. La robótica era territorio desconocido. Ahora es parte de mi historia.</p>
+        </div>
+        <div class="learn">
+          <span class="learn-n">04</span>
+          <p class="learn-t"><strong>El trabajo en equipo multiplica el resultado.</strong> Este logro no habría sido posible sin las personas que lo vivieron conmigo.</p>
+        </div>
+      </div>
+
+      <div class="quote">
+        <p class="quote-t">"No necesitas ser la más experta para competir. Necesitas curiosidad, constancia, y no tenerle miedo al resultado."</p>
+        <p class="quote-a">Carla Fernández · ASTI Robotic Challenge 2025</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="section-label">Lo que sigue</p>
+      <h2>Seguir construyendo<br><em>con propósito.</em></h2>
+
+      <p>Este premio es un punto de inflexión, no un punto final. Sigo estudiando DAM, trabajando en proyectos como <strong>Signofy</strong> o <strong>AutoLog</strong> y apoyando iniciativas como <strong>STEM Girls</strong> para que más chicas vean la tecnología como un espacio que también es suyo.</p>
+
+      <p>Si estás pensando en presentarte a una competición y crees que no estás lista: ve. El aprendizaje ocurre exactamente ahí, en el momento de incomodidad.</p>
+
     </div>
 
-    <div class="divider"></div>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
 
-    <p class="section-label">El proceso</p>
-    <h2>Muchos fallos antes<br><em>del primer acierto.</em></h2>
-
-    <p>Lo que de fuera parece un robot pequeño, por dentro es el resultado de <strong>semanas de pruebas, ajustes y frustraciones</strong>. Cada vez que el robot se salía de la línea era una nueva hipótesis que probar. Cada iteración del algoritmo, un aprendizaje.</p>
-
-    <p>Aprendí que en robótica ,como en el desarrollo de software, el debugging no es el enemigo. Es el proceso. La diferencia entre un robot que da vueltas aleatorias y uno que sigue una línea con precisión son unas pocas líneas de lógica bien pensada.</p>
-
-    <!-- STATS -->
-    <div class="stats-row">
-      <div class="stat-item">
-        <span class="stat-num">C++</span>
-        <span class="stat-label">Lenguaje de programación</span>
+      <div class="s-author">
+        <div class="s-avatar">
+          <img src="images/yo.jpeg" alt="Carla Fernández">
+        </div>
+        <div>
+          <div class="s-name">Carla Fernández</div>
+          <div class="s-role">Full-Stack · DAM Student</div>
+          <div class="s-badge">🏆 Premio Nacional 2025</div>
+        </div>
       </div>
-      <div class="stat-item">
-        <span class="stat-num">0</span>
-        <span class="stat-label">Librerías externas utilizadas</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">🥇</span>
-        <span class="stat-label">Distinción nacional</span>
-      </div>
-    </div>
 
-    <!-- LEARNINGS -->
-    <div class="section-label">Lo que me llevé</div>
-    <div class="learnings">
-      <div class="learning-item">
-        <span class="learning-num">01</span>
-        <p class="learning-text"><strong>La teoría sin práctica no sirve de nada.</strong> Puedes saber C++ de memoria, pero hasta que no lo ejecutas sobre hardware real no entiendes los límites del sistema.</p>
-      </div>
-      <div class="learning-item">
-        <span class="learning-num">02</span>
-        <p class="learning-text"><strong>Los errores son parte del diseño.</strong> Diseñamos el algoritmo de corrección fallando primero. Cada caso borde que rompía el robot nos enseñó algo.</p>
-      </div>
-      <div class="learning-item">
-        <span class="learning-num">03</span>
-        <p class="learning-text"><strong>Salir de la zona de confort da miedo pero merece la pena.</strong> Vengo del desarrollo web y las apps. La robótica era territorio desconocido. Ahora es parte de mi historia.</p>
-      </div>
-      <div class="learning-item">
-        <span class="learning-num">04</span>
-        <p class="learning-text"><strong>El trabajo en equipo multiplica el resultado.</strong> Este logro no habría sido posible sin las personas que lo vivieron conmigo.</p>
-      </div>
-    </div>
-
-    <!-- QUOTE -->
-    <div class="quote-block">
-      <p class="quote-text">"No necesitas ser la más experta para competir. Necesitas curiosidad, constancia, y no tenerle miedo al resultado."</p>
-      <p class="quote-author">Carla Fernández, ASTI Robotic Challenge 2025</p>
-    </div>
-
-    <p class="section-label">Lo que sigue</p>
-    <h2>Seguir construyendo<br><em>con propósito.</em></h2>
-
-    <p>Este premio es un punto de inflexión, no un punto final. Sigo estudiando DAM, trabajando en proyectos que me apasionan como <strong>Signofy</strong> o <strong>AutoLog</strong> y apoyando iniciativas como <strong>STEM Girls</strong> para que más chicas vean la tecnología como un espacio que también es suyo.</p>
-
-    <p>Si estás pensando en presentarte a una competición y crees que no estás lista: ve. El aprendizaje ocurre exactamente ahí, en el momento de incomodidad.</p>
-
-  </div>
-
-  <!-- TAGS -->
-  <div class="tags-row">
-    <span class="tag">#Robótica</span>
-    <span class="tag">#ASTI2025</span>
-    <span class="tag">#CPlusPlus</span>
-    <span class="tag">#DAM</span>
-    <span class="tag">#STEMGirls</span>
-    <span class="tag">#PremioNacional</span>
-    <span class="tag">#Arduino</span>
-    <span class="tag">#DesarrolloSoftware</span>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="post-footer">
-    <div class="footer-author">
-      <div class="footer-avatar">
-        <img src="images/yo.jpeg" alt="Carla Fernández">
-      </div>
       <div>
-        <div class="footer-name">Carla Fernández</div>
-        <div class="footer-role">Full-Stack Developer · DAM Student</div>
+        <div class="s-title">Ficha técnica</div>
+        <div class="s-row"><span class="s-key">Competición</span><span class="s-val">ASTI Challenge 24/25</span></div>
+        <div class="s-row"><span class="s-key">Lenguaje</span><span class="s-val pink">C++</span></div>
+        <div class="s-row"><span class="s-key">Hardware</span><span class="s-val">Arduino + IR</span></div>
+        <div class="s-row"><span class="s-key">Librerías ext.</span><span class="s-val pink">0</span></div>
+        <div class="s-row"><span class="s-key">Algoritmo</span><span class="s-val">Propio</span></div>
+        <div class="s-row"><span class="s-key">Resultado</span><span class="s-val pink">🥇 Distinción Nac.</span></div>
       </div>
+
+      <div class="s-photo">
+        <img src="images/asti1.jpg" alt="El robot en pista">
+        <div class="s-photo-caption">Siguelíneas con algoritmo propio</div>
+      </div>
+
+      <div>
+        <div class="s-title">Etiquetas</div>
+        <div class="tags">
+          <span class="tag">#Robótica</span>
+          <span class="tag">#ASTI2025</span>
+          <span class="tag">#CPlusPlus</span>
+          <span class="tag">#DAM</span>
+          <span class="tag">#STEMGirls</span>
+          <span class="tag">#PremioNacional</span>
+          <span class="tag">#Arduino</span>
+        </div>
+      </div>
+
     </div>
-    <div class="footer-badge">🏆 Premio Nacional<br>Robótica 2025</div>
   </div>
 
-</article>
 </body>
 </html>
