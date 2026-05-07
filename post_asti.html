@@ -4,880 +4,161 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASTI Robotic Challenge 2025 - Carla Fernández</title>
+<meta name="description" content="Post de Carla Fernández sobre el ASTI Robotic Challenge 2025, un robot siguelíneas programado en C++ y premiado con distinción nacional.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-
-  :root {
-    --bg: #fff8fb;
-    --surface: #ffffff;
-    --surface-soft: #fff0f6;
-    --ink: #201018;
-    --muted: #765262;
-    --line: rgba(32, 16, 24, 0.12);
-    --accent: #e9357d;
-    --accent-dark: #bd1f63;
-    --dark: #160b11;
-    --radius: 8px;
-    --shadow: 0 20px 60px rgba(32, 16, 24, 0.12);
-    --max: 1120px;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: "DM Sans", Arial, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    overflow-x: hidden;
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  .back-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    min-height: 42px;
-    padding: 10px 16px 10px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.88);
-    color: var(--ink);
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(12px);
-    transition: transform 0.2s ease, background 0.2s ease;
-  }
-
-  .back-btn:hover {
-    background: #fff;
-    transform: translateX(-2px);
-  }
-
-  .back-btn svg {
-    width: 16px;
-    height: 16px;
-    flex: 0 0 auto;
-  }
-
-  .hero {
-    min-height: 620px;
-    background: var(--dark);
-    color: white;
-    position: relative;
-    isolation: isolate;
-    display: grid;
-    align-items: end;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background: url("images/asti3.jpg") center top / cover no-repeat;
-    opacity: 0.64;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background:
-      linear-gradient(90deg, rgba(22, 11, 17, 0.95) 0%, rgba(22, 11, 17, 0.68) 48%, rgba(22, 11, 17, 0.28) 100%),
-      linear-gradient(0deg, rgba(22, 11, 17, 0.96) 0%, rgba(22, 11, 17, 0.08) 64%);
-  }
-
-  .hero-inner {
-    width: min(100% - 40px, var(--max));
-    margin: 0 auto;
-    padding: 120px 0 64px;
-  }
-
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 18px;
-    color: #ffb4d2;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-  }
-
-  .eyebrow::before {
-    content: "";
-    width: 28px;
-    height: 2px;
-    background: currentColor;
-  }
-
-  h1, h2, h3, p {
-    margin: 0;
-  }
-
-  h1 {
-    max-width: 760px;
-    font-family: "Syne", Arial, sans-serif;
-    font-size: clamp(42px, 8vw, 86px);
-    line-height: 0.98;
-    letter-spacing: 0;
-  }
-
-  .hero-copy {
-    max-width: 560px;
-    margin-top: 22px;
-    color: rgba(255, 255, 255, 0.78);
-    font-size: clamp(17px, 2vw, 21px);
-    line-height: 1.6;
-  }
-
-  .hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 32px;
-  }
-
-  .meta-pill {
-    display: inline-flex;
-    align-items: center;
-    min-height: 36px;
-    padding: 8px 14px;
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.88);
-    font-size: 13px;
-    font-weight: 700;
-  }
-
-  .page {
-    width: min(100% - 40px, var(--max));
-    margin: -44px auto 0;
-    position: relative;
-    z-index: 2;
-  }
-
-  .summary {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1px;
-    overflow: hidden;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--line);
-    box-shadow: var(--shadow);
-  }
-
-  .summary-item {
-    min-height: 112px;
-    padding: 24px;
-    background: var(--surface);
-  }
-
-  .summary-label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--muted);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .summary-value {
-    color: var(--ink);
-    font-family: "Syne", Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 1.15;
-  }
-
-  .content-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
-    gap: 56px;
-    align-items: start;
-    padding: 76px 0 88px;
-  }
-
-  .article {
-    max-width: 740px;
-  }
-
-  .section {
-    padding-bottom: 56px;
-    margin-bottom: 56px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .section:last-child {
-    border-bottom: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .section-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 14px;
-    color: var(--accent);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .section-label::before {
-    content: "";
-    width: 24px;
-    height: 2px;
-    background: currentColor;
-  }
-
-  h2 {
-    max-width: 680px;
-    margin-bottom: 22px;
-    font-family: "Syne", Arial, sans-serif;
-    font-size: clamp(30px, 4vw, 48px);
-    line-height: 1.08;
-    letter-spacing: 0;
-  }
-
-  h2 em {
-    color: var(--accent);
-    font-style: normal;
-  }
-
-  .article p {
-    max-width: 680px;
-    color: #452433;
-    font-size: 17px;
-    line-height: 1.8;
-  }
-
-  .article p + p {
-    margin-top: 18px;
-  }
-
-  strong {
-    color: var(--ink);
-    font-weight: 700;
-  }
-
-  .robot-card {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 0;
-    overflow: hidden;
-    margin: 34px 0 6px;
-    border-radius: var(--radius);
-    background: var(--dark);
-    color: white;
-    box-shadow: var(--shadow);
-  }
-
-  .robot-card img {
-    width: 100%;
-    height: 100%;
-    min-height: 320px;
-    object-fit: cover;
-  }
-
-  .robot-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 14px;
-    padding: 30px;
-  }
-
-  .robot-tag {
-    width: fit-content;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: rgba(233, 53, 125, 0.18);
-    color: #ffb4d2;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .robot-name {
-    font-family: "Syne", Arial, sans-serif;
-    font-size: 28px;
-    font-weight: 800;
-  }
-
-  .robot-desc {
-    color: rgba(255, 255, 255, 0.72) !important;
-    font-size: 15px !important;
-    line-height: 1.65 !important;
-  }
-
-  .pills,
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .pill,
-  .tag {
-    display: inline-flex;
-    align-items: center;
-    min-height: 32px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-
-  .pill {
-    background: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .learnings {
-    display: grid;
-    gap: 14px;
-    margin-top: 28px;
-  }
-
-  .learn {
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 14px;
-    padding: 20px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--surface);
-  }
-
-  .learn-n {
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--surface-soft);
-    color: var(--accent);
-    font-family: "Syne", Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 800;
-  }
-
-  .learn-t {
-    font-size: 16px !important;
-    line-height: 1.65 !important;
-  }
-
-  .quote {
-    margin-top: 34px;
-    padding: 28px;
-    border-left: 4px solid var(--accent);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    background: var(--surface-soft);
-  }
-
-  .quote .quote-t {
-    color: var(--ink);
-    font-family: "Syne", Arial, sans-serif;
-    font-size: clamp(20px, 3vw, 28px);
-    font-weight: 800;
-    line-height: 1.35;
-  }
-
-  .quote .quote-a {
-    margin-top: 12px;
-    color: var(--accent-dark);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .sidebar {
-    position: sticky;
-    top: 88px;
-    display: grid;
-    gap: 18px;
-  }
-
-  .side-card {
-    padding: 22px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--surface);
-  }
-
-  .author {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .avatar {
-    width: 58px;
-    height: 58px;
-    flex: 0 0 auto;
-    overflow: hidden;
-    border: 2px solid var(--accent);
-    border-radius: 50%;
-  }
-
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-  }
-
-  .author-name {
-    font-family: "Syne", Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-  }
-
-  .author-role {
-    margin-top: 2px;
-    color: var(--muted);
-    font-size: 13px;
-  }
-
-  .side-title {
-    margin-bottom: 14px;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .fact {
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
-    padding: 11px 0;
-    border-top: 1px solid var(--line);
-    font-size: 14px;
-  }
-
-  .fact:first-of-type {
-    border-top: 0;
-    padding-top: 0;
-  }
-
-  .fact span:first-child {
-    color: var(--muted);
-  }
-
-  .fact span:last-child {
-    color: var(--ink);
-    font-weight: 800;
-    text-align: right;
-  }
-
-  .side-photo {
-    overflow: hidden;
-    padding: 0;
-  }
-
-  .side-photo img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-  }
-
-  .side-photo p {
-    padding: 14px 16px 16px;
-    color: var(--muted);
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.4;
-  }
-
-  .tag {
-    border: 1px solid rgba(233, 53, 125, 0.18);
-    background: var(--surface-soft);
-    color: var(--accent-dark);
-  }
-
-  .footer {
-    background: var(--dark);
-    color: white;
-  }
-
-  .footer-inner {
-    width: min(100% - 40px, var(--max));
-    margin: 0 auto;
-    padding: 30px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  .footer p {
-    color: rgba(255, 255, 255, 0.72);
-    line-height: 1.5;
-  }
-
-  .footer strong {
-    color: white;
-  }
-
-  .footer-badge {
-    flex: 0 0 auto;
-    padding: 10px 16px;
-    border-radius: var(--radius);
-    background: var(--accent);
-    font-size: 13px;
-    font-weight: 800;
-  }
-
-  @media (max-width: 980px) {
-    .hero {
-      min-height: 560px;
-    }
-
-    .hero::after {
-      background:
-        linear-gradient(90deg, rgba(22, 11, 17, 0.93), rgba(22, 11, 17, 0.44)),
-        linear-gradient(0deg, rgba(22, 11, 17, 0.96), rgba(22, 11, 17, 0.08));
-    }
-
-    .summary,
-    .content-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .content-grid {
-      gap: 32px;
-      padding-top: 56px;
-    }
-
-    .article {
-      max-width: none;
-    }
-
-    .sidebar {
-      position: static;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .side-photo {
-      display: none;
-    }
-  }
-
-  @media (max-width: 720px) {
-    .back-btn {
-      top: 12px;
-      left: 12px;
-      min-height: 38px;
-      padding: 8px 13px 8px 10px;
-      font-size: 13px;
-    }
-
-    .hero {
-      min-height: 540px;
-    }
-
-    .hero::before {
-      background-position: 60% top;
-      opacity: 0.5;
-    }
-
-    .hero::after {
-      background:
-        linear-gradient(0deg, rgba(22, 11, 17, 0.98) 0%, rgba(22, 11, 17, 0.72) 54%, rgba(22, 11, 17, 0.42) 100%);
-    }
-
-    .hero-inner,
-    .page,
-    .footer-inner {
-      width: min(100% - 28px, var(--max));
-    }
-
-    .hero-inner {
-      padding: 104px 0 42px;
-    }
-
-    .hero-meta {
-      gap: 8px;
-      margin-top: 24px;
-    }
-
-    .meta-pill {
-      min-height: 34px;
-      font-size: 12px;
-    }
-
-    .page {
-      margin-top: -28px;
-    }
-
-    .summary-item {
-      min-height: auto;
-      padding: 18px;
-    }
-
-    .summary-value {
-      font-size: 21px;
-    }
-
-    .content-grid {
-      padding: 46px 0 58px;
-    }
-
-    .section {
-      padding-bottom: 42px;
-      margin-bottom: 42px;
-    }
-
-    .article p {
-      font-size: 16px;
-      line-height: 1.72;
-    }
-
-    .robot-card {
-      grid-template-columns: 1fr;
-    }
-
-    .robot-card img {
-      min-height: 240px;
-      aspect-ratio: 16 / 10;
-    }
-
-    .robot-body {
-      padding: 24px;
-    }
-
-    .learn {
-      grid-template-columns: 1fr;
-      padding: 18px;
-    }
-
-    .quote {
-      padding: 22px;
-    }
-
-    .sidebar {
-      grid-template-columns: 1fr;
-    }
-
-    .footer-inner {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-  }
-
-  @media (max-width: 430px) {
-    .eyebrow {
-      font-size: 11px;
-      letter-spacing: 0.1em;
-    }
-
-    h1 {
-      font-size: 40px;
-    }
-
-    h2 {
-      font-size: 30px;
-    }
-
-    .hero-copy {
-      font-size: 16px;
-    }
-
-    .fact {
-      display: grid;
-      gap: 4px;
-    }
-
-    .fact span:last-child {
-      text-align: left;
-    }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/post.css">
 </head>
-<body>
-  <a href="index.html" class="back-btn" aria-label="Volver a la página anterior">
+<body class="post-page">
+  <a href="index.html#posts" class="post-back" aria-label="Volver al listado de posts">
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M10 3L5 8l5 5"/>
     </svg>
-    Volver
+    Posts
   </a>
 
-  <header class="hero">
-    <div class="hero-inner">
-      <span class="eyebrow">ASTI Robotic Challenge 24/25</span>
-      <h1>Premio Nacional de Robótica</h1>
-      <p class="hero-copy">Un robot siguelíneas, un algoritmo propio y muchas pruebas hasta convertir una idea en una distinción nacional.</p>
-      <div class="hero-meta" aria-label="Resumen del proyecto">
-        <span class="meta-pill">Distinción nacional 2025</span>
-        <span class="meta-pill">C++</span>
-        <span class="meta-pill">Arduino + sensores IR</span>
+  <header class="post-hero" style="--post-cover: url('images/asti3.jpg');">
+    <div class="post-hero-inner">
+      <span class="post-eyebrow">ASTI Robotic Challenge 24/25</span>
+      <h1 class="post-title">Premio Nacional de Robótica</h1>
+      <p class="post-intro">Un robot siguelíneas, un algoritmo propio y muchas pruebas hasta convertir una idea en una distinción nacional.</p>
+      <div class="post-meta" aria-label="Resumen del post">
+        <span class="post-pill">Distinción nacional 2025</span>
+        <span class="post-pill">C++</span>
+        <span class="post-pill">Arduino + sensores IR</span>
       </div>
     </div>
   </header>
 
-  <main class="page">
-    <section class="summary" aria-label="Datos principales">
-      <div class="summary-item">
-        <span class="summary-label">Reto</span>
-        <div class="summary-value">Robot siguelíneas</div>
+  <main class="post-shell">
+    <section class="post-summary" aria-label="Datos principales">
+      <div class="post-summary-item">
+        <span class="post-summary-label">Reto</span>
+        <div class="post-summary-value">Robot siguelíneas</div>
       </div>
-      <div class="summary-item">
-        <span class="summary-label">Código</span>
-        <div class="summary-value">C++ sin librerías externas</div>
+      <div class="post-summary-item">
+        <span class="post-summary-label">Código</span>
+        <div class="post-summary-value">C++ sin librerías externas</div>
       </div>
-      <div class="summary-item">
-        <span class="summary-label">Resultado</span>
-        <div class="summary-value">Distinción nacional</div>
+      <div class="post-summary-item">
+        <span class="post-summary-label">Resultado</span>
+        <div class="post-summary-value">Distinción nacional</div>
       </div>
     </section>
 
-    <div class="content-grid">
-      <article class="article">
-        <section class="section">
-          <span class="section-label">El inicio</span>
+    <div class="post-layout">
+      <article class="post-content">
+        <section class="post-section">
+          <span class="post-section-label">El inicio</span>
           <h2>De código a <em>pista de competición.</em></h2>
           <p>Cuando decidí presentarme al <strong>ASTI Robotic Challenge</strong> no tenía ni idea de hasta dónde podíamos llegar. Era un reto nuevo, fuera de mi zona de confort, y eso era exactamente lo que necesitaba.</p>
           <p>El desafío era construir un robot siguelíneas funcional y programarlo desde cero. Sin librerías externas. Sin atajos. Solo <strong>C++, sensores infrarrojos y un algoritmo de corrección propio</strong> que fuimos ajustando iteración a iteración.</p>
 
-          <div class="robot-card">
+          <div class="post-feature-card">
             <img src="images/asti1.jpg" alt="Robot siguelíneas en la pista">
-            <div class="robot-body">
-              <span class="robot-tag">Hardware + Software</span>
-              <div class="robot-name">Goty</div>
-              <p class="robot-desc">Robot siguelíneas con Arduino, programado íntegramente en C++ con sensores infrarrojos y algoritmo de corrección diseñado desde cero.</p>
-              <div class="pills" aria-label="Tecnologias usadas">
-                <span class="pill">C++</span>
-                <span class="pill">Arduino</span>
-                <span class="pill">IR sensors</span>
-                <span class="pill">H-Bridge</span>
+            <div class="post-feature-body">
+              <span class="post-tagline">Hardware + Software</span>
+              <div class="post-feature-title">Goty</div>
+              <p>Robot siguelíneas con Arduino, programado íntegramente en C++ con sensores infrarrojos y algoritmo de corrección diseñado desde cero.</p>
+              <div class="post-chip-list" aria-label="Tecnologías usadas">
+                <span class="post-chip">C++</span>
+                <span class="post-chip">Arduino</span>
+                <span class="post-chip">IR sensors</span>
+                <span class="post-chip">H-Bridge</span>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="section">
-          <span class="section-label">El proceso</span>
+        <section class="post-section">
+          <span class="post-section-label">El proceso</span>
           <h2>Muchos fallos antes <em>del primer acierto.</em></h2>
           <p>Lo que desde fuera parece un robot pequeño, por dentro es el resultado de <strong>semanas de pruebas, ajustes y frustraciones</strong>. Cada vez que el robot se salía de la línea aparecía una nueva hipótesis que probar.</p>
           <p>Aprendí que en robótica, como en desarrollo de software, el debugging no es el enemigo. Es el proceso. La diferencia entre un robot errático y uno preciso son unas pocas líneas de lógica bien pensada.</p>
         </section>
 
-        <section class="section">
-          <span class="section-label">Lo que me llevé</span>
+        <section class="post-section">
+          <span class="post-section-label">Lo que me llevé</span>
           <h2>Aprendizajes que se quedan.</h2>
-          <div class="learnings">
-            <div class="learn">
-              <span class="learn-n">01</span>
-              <p class="learn-t"><strong>La teoría sin práctica no sirve de nada.</strong> Puedes saber C++ de memoria, pero hasta que no lo ejecutas sobre hardware real no entiendes los límites del sistema.</p>
+          <div class="post-learnings">
+            <div class="post-learning">
+              <span class="post-learning-num">01</span>
+              <p><strong>La teoría sin práctica no sirve de nada.</strong> Puedes saber C++ de memoria, pero hasta que no lo ejecutas sobre hardware real no entiendes los límites del sistema.</p>
             </div>
-            <div class="learn">
-              <span class="learn-n">02</span>
-              <p class="learn-t"><strong>Los errores son parte del diseño.</strong> Diseñamos el algoritmo fallando primero. Cada caso borde que rompía el robot nos enseñó algo.</p>
+            <div class="post-learning">
+              <span class="post-learning-num">02</span>
+              <p><strong>Los errores son parte del diseño.</strong> Diseñamos el algoritmo fallando primero. Cada caso borde que rompía el robot nos enseñó algo.</p>
             </div>
-            <div class="learn">
-              <span class="learn-n">03</span>
-              <p class="learn-t"><strong>Salir de la zona de confort merece la pena.</strong> Vengo del desarrollo web y las apps. La robótica era territorio desconocido. Ahora es parte de mi historia.</p>
+            <div class="post-learning">
+              <span class="post-learning-num">03</span>
+              <p><strong>Salir de la zona de confort merece la pena.</strong> Vengo del desarrollo web y las apps. La robótica era territorio desconocido. Ahora es parte de mi historia.</p>
             </div>
-            <div class="learn">
-              <span class="learn-n">04</span>
-              <p class="learn-t"><strong>El trabajo en equipo multiplica el resultado.</strong> Este logro no habría sido posible sin las personas que lo vivieron conmigo.</p>
+            <div class="post-learning">
+              <span class="post-learning-num">04</span>
+              <p><strong>El trabajo en equipo multiplica el resultado.</strong> Este logro no habría sido posible sin las personas que lo vivieron conmigo.</p>
             </div>
           </div>
 
-          <div class="quote">
-            <p class="quote-t">"No necesitas ser la más experta para competir. Necesitas curiosidad, constancia y no tenerle miedo al resultado."</p>
-            <p class="quote-a">Carla Fernández · ASTI Robotic Challenge 2025</p>
+          <div class="post-quote">
+            <p>"No necesitas ser la más experta para competir. Necesitas curiosidad, constancia y no tenerle miedo al resultado."</p>
+            <p>Carla Fernández · ASTI Robotic Challenge 2025</p>
           </div>
         </section>
 
-        <section class="section">
-          <span class="section-label">Lo que sigue</span>
+        <section class="post-section">
+          <span class="post-section-label">Lo que sigue</span>
           <h2>Seguir construyendo <em>con propósito.</em></h2>
           <p>Este premio es un punto de inflexión, no un punto final. Sigo estudiando DAM, trabajando en proyectos como <strong>Signofy</strong> o <strong>AutoLog</strong> y apoyando iniciativas como <strong>STEM Girls</strong> para que más chicas vean la tecnología como un espacio que también es suyo.</p>
           <p>Si estás pensando en presentarte a una competición y crees que no estás lista: ve. El aprendizaje ocurre exactamente ahí, en el momento de incomodidad.</p>
         </section>
       </article>
 
-      <aside class="sidebar" aria-label="Información del proyecto">
-        <section class="side-card author">
-          <div class="avatar">
+      <aside class="post-sidebar" aria-label="Información del proyecto">
+        <section class="post-side-card post-author">
+          <div class="post-avatar">
             <img src="images/yo.jpeg" alt="Carla Fernández">
           </div>
           <div>
-            <div class="author-name">Carla Fernández</div>
-            <div class="author-role">Full-Stack · DAM Student</div>
+            <div class="post-author-name">Carla Fernández</div>
+            <div class="post-author-role">Full-Stack · DAM Student</div>
           </div>
         </section>
 
-        <section class="side-card">
-          <div class="side-title">Ficha técnica</div>
-          <div class="fact"><span>Competición</span><span>ASTI Challenge 24/25</span></div>
-          <div class="fact"><span>Lenguaje</span><span>C++</span></div>
-          <div class="fact"><span>Hardware</span><span>Arduino + IR</span></div>
-          <div class="fact"><span>Librerías ext.</span><span>0</span></div>
-          <div class="fact"><span>Algoritmo</span><span>Propio</span></div>
-          <div class="fact"><span>Resultado</span><span>Distinción nacional</span></div>
+        <section class="post-side-card">
+          <div class="post-side-title">Ficha técnica</div>
+          <div class="post-fact"><span>Competición</span><span>ASTI Challenge 24/25</span></div>
+          <div class="post-fact"><span>Lenguaje</span><span>C++</span></div>
+          <div class="post-fact"><span>Hardware</span><span>Arduino + IR</span></div>
+          <div class="post-fact"><span>Librerías ext.</span><span>0</span></div>
+          <div class="post-fact"><span>Algoritmo</span><span>Propio</span></div>
+          <div class="post-fact"><span>Resultado</span><span>Distinción nacional</span></div>
         </section>
 
-        <section class="side-card side-photo">
-          <img src="images/asti3.jpg" alt="Robot siguelíneas">
+        <section class="post-side-card post-side-photo">
+          <img src="images/asti1.jpg" alt="Robot siguelíneas">
           <p>Siguelíneas con algoritmo propio.</p>
         </section>
 
-        <section class="side-card">
-          <div class="side-title">Etiquetas</div>
-          <div class="tags">
-            <span class="tag">#Robótica</span>
-            <span class="tag">#ASTI2025</span>
-            <span class="tag">#CPlusPlus</span>
-            <span class="tag">#DAM</span>
-            <span class="tag">#STEMGirls</span>
-            <span class="tag">#Arduino</span>
+        <section class="post-side-card">
+          <div class="post-side-title">Etiquetas</div>
+          <div class="post-tags">
+            <span class="post-small-tag">#Robótica</span>
+            <span class="post-small-tag">#ASTI2025</span>
+            <span class="post-small-tag">#CPlusPlus</span>
+            <span class="post-small-tag">#DAM</span>
+            <span class="post-small-tag">#STEMGirls</span>
+            <span class="post-small-tag">#Arduino</span>
           </div>
         </section>
       </aside>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
+  <footer class="post-footer">
+    <div class="post-footer-inner">
       <p><strong>ASTI Robotic Challenge 2025</strong><br>Proyecto de robótica, aprendizaje y competición.</p>
-      <div class="footer-badge">Premio Nacional 2025</div>
+      <div class="post-footer-badge">Premio Nacional 2025</div>
     </div>
   </footer>
 </body>
