@@ -3,313 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carla Fernández - Desarrolladora de Software</title>
-<meta name="description" content="Portfolio de Carla Fernández, estudiante de DAM apasionada por el desarrollo de software, apps multiplataforma y tecnología con impacto.">
-<meta property="og:title" content="Carla Fernández - Desarrolladora de Software">
-<meta property="og:description" content="Portfolio de Carla Fernández, estudiante de DAM apasionada por el desarrollo de software, apps multiplataforma y tecnología con impacto.">
+<title>Carla Fernández · Developer & Creative Technologist</title>
+<meta name="description" content="Portfolio de Carla Fernández: desarrollo de software, interfaces, robótica y proyectos tecnológicos con propósito.">
+<meta name="theme-color" content="#fbf8f6">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Carla Fernández · Developer & Creative Technologist">
+<meta property="og:description" content="Software, interfaces y robótica con propósito. Premio Nacional de Robótica ASTI 2025.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2321191d'/%3E%3Ctext x='29' y='43' font-family='Georgia,serif' font-size='28' text-anchor='middle' fill='%23fff'%3ECF%3C/text%3E%3Ccircle cx='48' cy='43' r='3.5' fill='%23c95d78'/%3E%3C/svg%3E">
+<script>(function(){var r=document.documentElement;if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;r.classList.add("anim");try{if(!sessionStorage.getItem("cf-seen"))r.classList.add("is-loading")}catch(e){r.classList.add("is-loading")}setTimeout(function(){if(!window.__motionReady)r.classList.remove("anim","is-loading")},6000)})()</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/style.css">
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
 <script src="main.js" defer></script>
 </head>
 <body>
+<div class="loader" aria-hidden="true">
+  <div class="loader-mono"><span class="lm-mask"><span class="lm-in">CF<i>.</i></span></span></div>
+  <div class="loader-meta"><span class="loader-count">000</span><span>Portfolio 2026 · Valencia</span></div>
+  <span class="loader-bar"></span>
+</div>
+<div class="wipe" aria-hidden="true">
+  <div class="wipe-panel wp-a"></div>
+  <div class="wipe-panel wp-b"><span class="wipe-num"></span><span class="wipe-mask"><span class="wipe-label"></span></span></div>
+</div>
+<div class="section-tag" aria-hidden="true"><span class="st-num"><i>01</i></span><span class="st-name"><i>Sobre mí</i></span></div>
+<div class="noise"></div>
+<div class="page-orb orb-one"></div>
+<div class="page-orb orb-two"></div>
 
-<nav id="main-nav">
-  <a class="nav-logo" href="#">Carla.</a>
-  <ul class="nav-links">
-    <li><a href="#about">Sobre mí</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experiencia</a></li>
-    <li><a href="#projects">Proyectos</a></li>
-    <li><a href="#posts">Posts</a></li>
-    <li><a href="#contact">Contacto</a></li>
-    <li><a href="documentos/Curriculum_CarlaFernandez.pdf" target="_blank" rel="noopener" class="nav-cv">Descargar CV</a></li>
-  </ul>
+<header class="site-header" id="main-nav">
+  <a href="#top" class="brand" aria-label="Ir al inicio">CF<span>.</span></a>
+  <div class="header-status"><i></i> disponible para nuevos proyectos</div>
+  <nav aria-label="Principal">
+    <span class="nav-pill" aria-hidden="true"></span>
+    <a href="#story">Historia</a>
+    <a href="#work">Trabajo</a>
+    <a href="#journey">Trayectoria</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><span></span><span></span></button>
+  <a href="documentos/Curriculum_CarlaFernandez.pdf" target="_blank" rel="noopener" class="header-cv">CV <span>↗</span></a>
+  <span class="nav-progress" aria-hidden="true"></span>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil">
+  <a href="#story" style="--i:0"><small>01</small>Historia</a>
+  <a href="#work" style="--i:1"><small>02</small>Trabajo</a>
+  <a href="#journey" style="--i:2"><small>03</small>Trayectoria</a>
+  <a href="#contact" style="--i:3"><small>04</small>Contacto</a>
 </nav>
 
-<main>
-  <div id="hero">
-    <div class="hero-text fade-up">
-      <p class="section-label">Portfolio · DAM</p>
-      <h1>Hola,<br>soy <em>Carla.</em></h1>
-      <p>Estudiante de Desarrollo de Aplicaciones Multiplataforma, apasionada por construir software con propósito. Premio Nacional de Robótica 2025. Cada línea de código es un paso más.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">Ver proyectos</a>
-        <a href="documentos/Curriculum_CarlaFernandez.pdf" target="_blank" rel="noopener" class="btn-outline">Descargar CV</a>
+<main id="top">
+  <section class="hero-new">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-side-note">VALENCIA · SPAIN<br>SOFTWARE / UI / ROBOTICS</div>
+    <div class="hero-copy">
+      <p class="eyebrow hero-reveal">PORTFOLIO 2026 <span>✦</span></p>
+      <h1 class="hero-title" aria-label="Hola, soy Carla">
+        <span class="hero-line">Hola,</span>
+        <span class="hero-line serif">soy <em>Carla.</em></span>
+      </h1>
+      <p class="hero-description hero-reveal">Desarrollo software y diseño experiencias digitales, combinando código, producto y creatividad para construir soluciones que funcionan de verdad.</p>
+      <div class="hero-actions hero-reveal">
+        <a href="#work" class="magnetic primary-action">Explorar proyectos <span>↓</span></a>
+        <a href="documentos/Curriculum_CarlaFernandez.pdf" target="_blank" rel="noopener" class="text-action">Ver CV <span>↗</span></a>
       </div>
     </div>
-    <div class="hero-image fade-up">
-      <div class="hero-img-wrap">
+
+    <div class="hero-visual">
+      <div class="portrait-frame">
+        <div class="portrait-number">01</div>
+        <div class="portrait-ring"></div>
         <img src="images/yo.jpeg" alt="Carla Fernández">
-        <div class="hero-badge">Siempre aprendiendo</div>
+        <div class="portrait-sticker">siempre<br>aprendiendo <b>✦</b></div>
       </div>
+      <div class="hero-caption">“Cada error es<br>una oportunidad de mejora.”</div>
     </div>
-  </div>
 
-  <div class="divider"></div>
+    <div class="hero-bottom hero-reveal">
+      <span>SCROLL TO DISCOVER</span>
+      <div class="scroll-line"><i></i></div>
+      <span>01 — 06</span>
+    </div>
+  </section>
 
-  <section id="about">
-    <div class="about-grid">
-      <div class="fade-up">
-        <p class="section-label">Sobre mí</p>
-        <h2 class="section-title">Curiosidad<br>que no para.</h2>
-      </div>
-      <div class="fade-up">
-        <p>Desde pequeña siempre sentí curiosidad por cómo funcionan las cosas. No fue hasta hace poco que descubrí lo mucho que me apasiona la informática: lo que empezó como un interés pasajero se convirtió en vocación.</p>
-        <p>Estudio Desarrollo de Aplicaciones Multiplataforma y cada día aprendo algo nuevo: desde lógica de programación hasta diseño de interfaces, pasando por bases de datos y arquitectura de software.</p>
-        <p>Fuera del código, soy monitora voluntaria de educación no formal y apoyo iniciativas como <strong>STEM Girls</strong> para fomentar la presencia de mujeres en tecnología. Cada error es una oportunidad de aprendizaje.</p>
+  <section class="intro-strip" id="story">
+    <div class="strip-label">01 / SOBRE MÍ</div>
+    <div class="intro-main">
+      <p class="big-statement reveal">No me limito a <em>escribir código.</em><br>Diseño y construyo productos<br>con un <span>propósito claro.</span></p>
+      <div class="intro-aside reveal">
+        <p>Estudiante de Ingeniería Multimedia y Técnica Superior en Desarrollo de Aplicaciones Multiplataforma, con formación en programación, diseño de producto y experiencia de usuario.</p>
+        <p>Además del desarrollo, colaboro como monitora voluntaria y participo en iniciativas STEM, donde el trabajo en equipo es tan importante como la tecnología.</p>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <section class="skills-section" id="skills">
-    <div class="skills-inner">
-      <p class="section-label fade-up">Habilidades</p>
-      <h2 class="section-title fade-up">Lo que sé hacer.</h2>
-      <div class="skills-grid">
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/java.svg" alt="Java"></span>Java</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/c.svg" alt="C++"></span>C++</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/kotlin.svg" alt="Kotlin"></span>Kotlin</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/javascript.svg" alt="JavaScript"></span>JavaScript</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/mysql.svg" alt="MySQL"></span>MySQL</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/spring.svg" alt="Spring Boot"></span>Spring Boot</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/hibernate.svg" alt="Hibernate"></span>Hibernate</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/html.svg" alt="HTML/CSS"></span>HTML / CSS</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/git.svg" alt="Git"></span>Git</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/network.svg" alt="Node.js"></span>Node.js</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/ui.svg" alt="UI/UX"></span>UI / UX</div>
-        <div class="skill-chip fade-up"><span class="icon"><img src="images/icons/pc.svg" alt="Docker"></span>Docker</div>
-      </div>
+  <section class="numbers-section">
+    <div class="section-mini-title reveal">ALGUNOS DATOS</div>
+    <div class="numbers-grid">
+      <div class="number-item reveal"><strong data-count="5">5</strong><span>proyectos<br>destacados</span></div>
+      <div class="number-item reveal"><strong data-count="12">12</strong><span>tecnologías<br>en mi stack</span></div>
+      <div class="number-item reveal"><strong data-count="1">1</strong><span>premio de<br>robótica</span></div>
+      <div class="number-item reveal"><strong>∞</strong><span>aprendizaje<br>continuo</span></div>
     </div>
   </section>
 
-  <section id="experience">
-    <p class="section-label fade-up">Trayectoria</p>
-    <h2 class="section-title fade-up">Mi camino.</h2>
-    <div class="timeline">
-      <div class="timeline-item fade-up">
-        <div class="timeline-year">02/2026<br>actual</div>
-        <div class="timeline-content">
-          <h3>Prácticas: desarrollo y programación · ETSE - Universidad de Valencia. Burjassot, Valencia.</h3>
-          <p>Desarrollo, mejoras y programación de aplicaciones funcionales para su uso en la universidad.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item fade-up">
-        <div class="timeline-year">12/2025<br>02/2026</div>
-        <div class="timeline-content">
-          <h3>Auxiliar comercial · ECOPLANA SL</h3>
-          <p>Comercial de telecomunicaciones, trabajo por objetivos y atención al cliente. Puçol, Valencia.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item fade-up">
-        <div class="timeline-year">05/2025</div>
-        <div class="timeline-content">
-          <h3>Prácticas: desarrolladora de software · Aza Logistics</h3>
-          <p>Trabajo en proyectos reales dentro del equipo de desarrollo. Sagunto, Valencia.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item highlight fade-up">
-        <div class="timeline-year">05/2025</div>
-        <div class="timeline-content">
-          <h3>Premio Nacional de Robótica</h3>
-          <p>ASTI Robotic Challenge 24/25: distinción a nivel nacional. Robot siguelíneas programado en C++ con sensores infrarrojos y algoritmo de corrección propio.</p>
-          <p><a href="post_asti.html" class="project-link">Ver experiencia</a></p>
-        </div>
-      </div>
-
-      <div class="timeline-item fade-up">
-        <div class="timeline-year">04/2025<br>actual</div>
-        <div class="timeline-content">
-          <h3>Monitora de educación no formal · Puçol</h3>
-          <p>Enseñanza de valores éticos, campamentos y actividades. Apoyo a la iniciativa <strong>STEM Girls</strong> para promover la inclusión de mujeres en tecnología.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item fade-up">
-        <div class="timeline-year">2024<br>2026</div>
-        <div class="timeline-content">
-          <h3>Técnica Superior DAM · IES Abastos</h3>
-          <p>Ciclo formativo en Desarrollo de Aplicaciones Multiplataforma. Software, apps móviles, bases de datos y arquitectura de aplicaciones.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item fade-up">
-        <div class="timeline-year">04-06<br>2024</div>
-        <div class="timeline-content">
-          <h3>Comercial de telecomunicaciones · Mobile Valencia</h3>
-          <p>Mantenimiento de ordenadores, contratación de servicios y atención al cliente. Valencia.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item fade-up">
-        <div class="timeline-year">2022<br>2024</div>
-        <div class="timeline-content">
-          <h3>Técnico CFGM SMR · IES Serpis</h3>
-          <p>Ciclo formativo en Sistemas Microinformáticos y Redes.</p>
-        </div>
-      </div>
+  <section class="skills-new">
+    <div class="skills-heading reveal">
+      <div class="strip-label">02 / TOOLBOX</div>
+      <h2>Las herramientas<br>son solo el principio.</h2>
+    </div>
+    <div class="skills-cloud" aria-label="Tecnologías">
+      <span class="skill-pill large reveal"><img src="images/icons/kotlin.svg" alt=""> Kotlin</span>
+      <span class="skill-pill reveal"><img src="images/icons/java.svg" alt=""> Java</span>
+      <span class="skill-pill pink reveal">UI / UX</span>
+      <span class="skill-pill reveal"><img src="images/icons/javascript.svg" alt=""> JavaScript</span>
+      <span class="skill-pill large reveal"><img src="images/icons/c.svg" alt=""> C++</span>
+      <span class="skill-pill reveal"><img src="images/icons/mysql.svg" alt=""> MySQL</span>
+      <span class="skill-pill pink reveal">Accesibilidad</span>
+      <span class="skill-pill reveal"><img src="images/icons/network.svg" alt=""> Node.js</span>
+      <span class="skill-pill large reveal"><img src="images/icons/spring.svg" alt=""> Spring Boot</span>
+      <span class="skill-pill reveal"><img src="images/icons/git.svg" alt=""> Git</span>
+      <span class="skill-pill pink reveal">Docker</span>
+      <span class="skill-pill reveal"><img src="images/icons/hibernate.svg" alt=""> Hibernate</span>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <section id="projects">
-    <p class="section-label fade-up">Proyectos</p>
-    <h2 class="section-title fade-up">Lo que estoy<br>construyendo.</h2>
-    <div class="projects-grid">
-      <div class="project-card fade-up">
-        <div class="project-thumb signofy">
-          <img src="images/signofy.png" alt="SignoFy">
-        </div>
-        <div class="project-info">
-          <h3>SignoFy</h3>
-          <p>App gamificada para aprender Lengua de Signos Española (LSE) de forma gratuita y accesible. Sistema de XP, rachas, lecciones por niveles y diccionario visual construido con la comunidad sorda.</p>
-          <div class="project-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">CSS</span>
-            <span class="tag">UI/UX</span>
-            <span class="tag">Accesibilidad</span>
-          </div>
-          <div class="project-links">
-            <a href="https://carlafdezdh.github.io/CarlaFdezdh/signofy/" target="_blank" rel="noopener" class="project-link">Ver demo</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card fade-up">
-        <div class="project-thumb byteme">
-          <img src="images/robot.jpeg" alt="ByteMe">
-        </div>
-        <div class="project-info">
-          <h3>ByteMe</h3>
-          <p>Robot siguelíneas multifunción para el ASTI Robotic Challenge nacional. Programado en C++ con sensores infrarrojos sin librerías externas. Algoritmo de corrección propio de alta precisión.</p>
-          <div class="project-tags">
-            <span class="tag">C++</span>
-            <span class="tag">Robótica</span>
-            <span class="tag">Embebido</span>
-            <span class="tag">Sensores IR</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/MarParTor/ByteMe-2026" target="_blank" rel="noopener" class="project-link">Ver en GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card fade-up">
-        <div class="project-thumb valencia">
-          <img src="images/www.jpg" alt="Wonder Wander Valencia">
-        </div>
-        <div class="project-info">
-          <h3>Wonder Wander Valencia</h3>
-          <p>Aplicación web interactiva para descubrir Valencia. Proyecto final intermodular de 1.º DAM: rutas y lugares de la ciudad con contenido dinámico. Desplegada con Docker.</p>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">PHP</span>
-            <span class="tag">Docker</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/CarlaFdezdh/Wonder-Wander-Valencia" target="_blank" rel="noopener" class="project-link">Ver en GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card fade-up">
-        <div class="project-thumb viajes">
-          <img src="images/crud.jpg" alt="Diario de Viajes">
-        </div>
-        <div class="project-info">
-          <h3>Diario de Viajes</h3>
-          <p>App fullstack para registrar y gestionar aventuras. API REST con Node.js, Express y MongoDB. CRUD completo con persistencia en base de datos.</p>
-          <div class="project-tags">
-            <span class="tag">Node.js</span>
-            <span class="tag">Express</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/CarlaFdezdh/CRUD" target="_blank" rel="noopener" class="project-link">Ver en GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card fade-up">
-        <div class="project-thumb autolog">
-          <img src="images/autolog.jpg" alt="AutoLog">
-        </div>
-        <div class="project-info">
-          <p class="project-role">Contribuidora - App Android (Kotlin)</p>
-          <h3>AutoLog</h3>
-          <p>Plataforma multiplataforma para gestión de talleres mecánicos. Mi parte: app Android en Kotlin con consumo de API REST. Integra backend Spring Boot y app de escritorio Electron. Proyecto final de 2.º DAM.</p>
-          <div class="project-tags">
-            <span class="tag">Kotlin</span>
-            <span class="tag">Spring Boot</span>
-            <span class="tag">Electron</span>
-            <span class="tag">MySQL</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Raul06lp/AutoLog" target="_blank" rel="noopener" class="project-link">Ver en GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <section id="posts">
-    <div class="posts-heading">
+  <section class="work-section" id="work">
+    <div class="work-top reveal">
       <div>
-        <p class="section-label fade-up">Posts</p>
-        <h2 class="section-title fade-up">Historias, retos<br>y aprendizajes.</h2>
+        <div class="strip-label">03 / SELECTED WORK</div>
+        <h2>Proyectos que<br><em>hablan por mí.</em></h2>
       </div>
-      <p class="posts-intro fade-up">Un espacio para contar proyectos con más calma: qué problema había, cómo lo resolví y qué me llevé por el camino.</p>
+      <p>Selección de proyectos académicos y personales en los que he trabajado desarrollo, producto, accesibilidad, robótica y diseño de interfaz.</p>
     </div>
 
-    <div class="posts-grid">
-      <article class="post-card fade-up">
-        <a href="post_asti.html" class="post-card-link" aria-label="Leer post Premio Nacional de Robótica">
-          <div class="post-card-thumb">
-            <img src="images/asti3.jpg" alt="ASTI Robotic Challenge">
-          </div>
-          <div class="post-card-body">
-            <div class="post-card-meta">
-              <span>Robótica</span>
-              <span>2025</span>
-            </div>
-            <h3>Premio Nacional de Robótica</h3>
-            <p>Cómo construimos un robot siguelíneas con C++, Arduino y un algoritmo propio para el ASTI Robotic Challenge.</p>
-            <div class="post-card-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Arduino</span>
-              <span class="tag">ASTI</span>
-            </div>
-            <span class="post-read-more">Leer post</span>
-          </div>
-        </a>
-      </article>
+    <div class="project-bento">
+      <a class="project-feature project-signofy reveal" href="https://carlafdezdh.github.io/CarlaFdezdh/signofy/" target="_blank" rel="noopener">
+        <div class="project-image"><img src="images/signofy.png" alt="SignoFy"></div>
+        <div class="project-overlay"></div>
+        <div class="project-copy">
+          <span>01 · ACCESIBILIDAD / WEB</span>
+          <h3>SignoFy</h3>
+          <p>Aprender LSE de forma accesible, visual y gamificada.</p>
+          <b>Ver proyecto ↗</b>
+        </div>
+      </a>
+
+      <a class="project-feature project-robot reveal" href="post_asti.html">
+        <div class="project-image"><img src="images/robot.jpeg" alt="ByteMe"></div>
+        <div class="project-overlay"></div>
+        <div class="project-copy">
+          <span>02 · ROBÓTICA / C++</span>
+          <h3>ByteMe</h3>
+          <p>Un siguelíneas construido para competir y aprender.</p>
+          <b>Leer historia ↗</b>
+        </div>
+      </a>
+
+      <a class="project-mini project-wander reveal" href="https://github.com/CarlaFdezdh/Wonder-Wander-Valencia" target="_blank" rel="noopener">
+        <span class="mini-index">03</span><span class="mini-type">WEB APP</span>
+        <h3>Wonder Wander<br><em>Valencia</em></h3>
+        <span class="mini-arrow">↗</span>
+      </a>
+
+      <a class="project-mini project-travel reveal" href="https://github.com/CarlaFdezdh/CRUD" target="_blank" rel="noopener">
+        <span class="mini-index">04</span><span class="mini-type">FULLSTACK</span>
+        <h3>Diario de<br><em>Viajes</em></h3>
+        <span class="mini-arrow">↗</span>
+      </a>
+
+      <a class="project-wide project-autolog reveal" href="https://github.com/Raul06lp/AutoLog" target="_blank" rel="noopener">
+        <div><span class="mini-type">05 · ANDROID / KOTLIN</span><h3>AutoLog</h3></div>
+        <p>Gestión digital de talleres mecánicos · API REST · Spring Boot · Electron.</p>
+        <span class="mini-arrow">↗</span>
+      </a>
     </div>
   </section>
 
-  <section id="contact">
-    <p class="section-label fade-up">Contacto</p>
-    <h2 class="section-title fade-up">¿Hablamos?</h2>
-    <div class="contact-box fade-up">
-      <p>Estoy abierta a oportunidades, colaboraciones o simplemente a conocer gente del sector. No dudes en escribirme.</p>
-      <div class="contact-links">
-        <a href="mailto:carlafdezdh@gmail.com" class="contact-link">Email</a>
-        <a href="https://github.com/CarlaFdezdh" target="_blank" rel="noopener" class="contact-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+  <section class="journey-section" id="journey">
+    <div class="journey-heading reveal">
+      <div class="strip-label">04 / THE JOURNEY</div>
+      <h2>Lo que me ha traído hasta aquí.</h2>
+    </div>
+    <div class="journey-list">
+      <article class="journey-row reveal"><span class="journey-date">2026 — NOW</span><div><h3>Ingeniería Multimedia · Universitat de València</h3><p>Un siguiente paso para seguir mezclando tecnología, creatividad y producto digital.</p></div><span class="journey-mark">01</span></article>
+      <article class="journey-row reveal"><span class="journey-date">2025 — 2026</span><div><h3>Prácticas · ETSE / Aza Logistics</h3><p>Desarrollo y programación de aplicaciones en entornos profesionales.</p></div><span class="journey-mark">02</span></article>
+      <article class="journey-row highlight reveal"><span class="journey-date">2025</span><div><h3>ASTI Robotic Challenge · Premio al mejor proyecto</h3><p>Diseño, programación y puesta a punto de un robot siguelíneas con Arduino y C++.</p></div><span class="journey-mark">03</span></article>
+      <article class="journey-row reveal"><span class="journey-date">2024 — 2026</span><div><h3>Técnica Superior en DAM · IES Abastos</h3><p>Aplicaciones multiplataforma, bases de datos, APIs, arquitectura y desarrollo web.</p></div><span class="journey-mark">04</span></article>
+      <article class="journey-row reveal"><span class="journey-date">2022 — 2024</span><div><h3>Técnica SMR · IES Serpis</h3><p>El punto de partida: sistemas, redes y la curiosidad que acabaría llevándome al desarrollo.</p></div><span class="journey-mark">05</span></article>
+    </div>
+  </section>
+
+  <section class="human-section">
+    <div class="human-card reveal">
+      <div class="strip-label">05 / BEYOND CODE</div>
+      <div class="human-grid">
+        <h2>Más allá<br><em>del código.</em></h2>
+        <div>
+          <p>Colaboro como monitora voluntaria y participo en iniciativas de educación no formal como STEM Girls: experiencias que me recuerdan que la tecnología, al final, siempre trata de personas.</p>
+          <div class="human-tags"><span>Monitora</span><span>STEM Girls</span><span>Trabajo en equipo</span><span>Aprendizaje continuo</span></div>
+        </div>
       </div>
     </div>
+  </section>
+
+  <section class="journal-section">
+    <div class="journal-heading reveal">
+      <div><div class="strip-label">06 / JOURNAL</div><h2>Historias detrás<br>del código.</h2></div>
+      <a href="post_asti.html" class="text-action">Ver post <span>↗</span></a>
+    </div>
+    <a href="post_asti.html" class="journal-card reveal">
+      <div class="journal-image"><img src="images/asti3.jpg" alt="ASTI Robotic Challenge"></div>
+      <div class="journal-copy"><span>ROBÓTICA · 2025</span><h3>Diseño y desarrollo de un robot siguelíneas premiado a nivel nacional.</h3><p>El planteamiento del reto, la arquitectura de sensores, el algoritmo de control y las lecciones aprendidas durante la competición.</p><b>Leer historia completa ↗</b></div>
+    </a>
+  </section>
+
+  <section class="contact-new" id="contact">
+    <div class="contact-number">07</div>
+    <div class="strip-label">HABLEMOS</div>
+    <h2>¿Tienes un proyecto<br>en <em>mente?</em></h2>
+    <p>Estoy abierta a nuevas oportunidades, colaboraciones y proyectos donde pueda aportar valor y seguir creciendo profesionalmente.</p>
+    <a href="mailto:carlafdezdh@gmail.com" class="magnetic contact-button">carlafdezdh@gmail.com <span>↗</span></a>
+    <div class="contact-socials"><a href="https://github.com/CarlaFdezdh" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/" target="_blank" rel="noopener">LinkedIn</a><a href="documentos/Curriculum_CarlaFernandez.pdf" target="_blank" rel="noopener">CV</a></div>
   </section>
 </main>
+
+<footer><span>CARLA FERNÁNDEZ</span><span>DISEÑADO Y DESARROLLADO · 2026</span></footer>
 </body>
 </html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Título del post - Carla Fernández</title>
+<meta name="description" content="Resumen corto del post.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/post.css">
+</head>
+<body class="post-page">
+  <a href="index.html#posts" class="post-back" aria-label="Volver al listado de posts">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M10 3L5 8l5 5"/>
+    </svg>
+    Posts
+  </a>
+
+  <header class="post-hero" style="--post-cover: url('images/tu-miniatura.jpg');">
+    <div class="post-hero-inner">
+      <span class="post-eyebrow">Categoría o fecha</span>
+      <h1 class="post-title">Título del post</h1>
+      <p class="post-intro">Entradilla corta: qué pasó, por qué importa y qué va a leer la persona.</p>
+      <div class="post-meta" aria-label="Resumen del post">
+        <span class="post-pill">Etiqueta 1</span>
+        <span class="post-pill">Etiqueta 2</span>
+        <span class="post-pill">Etiqueta 3</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="post-shell">
+    <section class="post-summary" aria-label="Datos principales">
+      <div class="post-summary-item">
+        <span class="post-summary-label">Dato</span>
+        <div class="post-summary-value">Valor destacado</div>
+      </div>
+      <div class="post-summary-item">
+        <span class="post-summary-label">Stack</span>
+        <div class="post-summary-value">Tecnologías</div>
+      </div>
+      <div class="post-summary-item">
+        <span class="post-summary-label">Resultado</span>
+        <div class="post-summary-value">Qué conseguiste</div>
+      </div>
+    </section>
+
+    <div class="post-layout">
+      <article class="post-content">
+        <section class="post-section">
+          <span class="post-section-label">Contexto</span>
+          <h2>Subtítulo con <em>algo de intención.</em></h2>
+          <p>Primer párrafo del post. Cuenta la situación inicial, el reto o la idea.</p>
+          <p>Segundo párrafo. Aquí puedes explicar decisiones, límites o aprendizajes.</p>
+
+          <div class="post-feature-card">
+            <img src="images/tu-imagen.jpg" alt="Descripción de la imagen">
+            <div class="post-feature-body">
+              <span class="post-tagline">Destacado</span>
+              <div class="post-feature-title">Nombre del proyecto</div>
+              <p>Texto corto para acompañar la imagen destacada.</p>
+              <div class="post-chip-list">
+                <span class="post-chip">Tag</span>
+                <span class="post-chip">Tag</span>
+                <span class="post-chip">Tag</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="post-section">
+          <span class="post-section-label">Proceso</span>
+          <h2>Qué hiciste y <em>cómo lo resolviste.</em></h2>
+          <p>Explica el proceso, los problemas y las decisiones importantes.</p>
+        </section>
+
+        <section class="post-section">
+          <span class="post-section-label">Aprendizajes</span>
+          <h2>Lo que te llevas.</h2>
+          <div class="post-learnings">
+            <div class="post-learning">
+              <span class="post-learning-num">01</span>
+              <p><strong>Idea clave.</strong> Desarrollo breve del aprendizaje.</p>
+            </div>
+            <div class="post-learning">
+              <span class="post-learning-num">02</span>
+              <p><strong>Otra idea clave.</strong> Desarrollo breve del aprendizaje.</p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <aside class="post-sidebar" aria-label="Información del post">
+        <section class="post-side-card post-author">
+          <div class="post-avatar">
+            <img src="images/yo.jpeg" alt="Carla Fernández">
+          </div>
+          <div>
+            <div class="post-author-name">Carla Fernández</div>
+            <div class="post-author-role">Desarrolladora junior · DAM</div>
+          </div>
+        </section>
+
+        <section class="post-side-card">
+          <div class="post-side-title">Ficha rápida</div>
+          <div class="post-fact"><span>Tipo</span><span>Proyecto</span></div>
+          <div class="post-fact"><span>Fecha</span><span>2026</span></div>
+          <div class="post-fact"><span>Stack</span><span>HTML · CSS</span></div>
+        </section>
+
+        <section class="post-side-card">
+          <div class="post-side-title">Etiquetas</div>
+          <div class="post-tags">
+            <span class="post-small-tag">#Etiqueta</span>
+            <span class="post-small-tag">#Proyecto</span>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

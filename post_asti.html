@@ -5,12 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASTI Robotic Challenge 2025 - Carla Fernández</title>
 <meta name="description" content="Post de Carla Fernández sobre el ASTI Robotic Challenge 2025, un robot siguelíneas programado en C++ y premiado con distinción nacional.">
+<meta name="theme-color" content="#fbf8f6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ASTI Robotic Challenge 2025 · Carla Fernández">
+<meta property="og:description" content="Un robot siguelíneas, un algoritmo propio y una distinción nacional.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2321191d'/%3E%3Ctext x='29' y='43' font-family='Georgia,serif' font-size='28' text-anchor='middle' fill='%23fff'%3ECF%3C/text%3E%3Ccircle cx='48' cy='43' r='3.5' fill='%23c95d78'/%3E%3C/svg%3E">
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("anim");setTimeout(function(){if(!window.__motionReady)document.documentElement.classList.remove("anim")},3500)}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/post.css">
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="main.js" defer></script>
 </head>
 <body class="post-page">
+  <div class="post-progress" aria-hidden="true"></div>
   <a href="index.html#posts" class="post-back" aria-label="Volver al listado de posts">
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M10 3L5 8l5 5"/>
@@ -18,7 +27,8 @@
     Posts
   </a>
 
-  <header class="post-hero" style="--post-cover: url('images/asti3.jpg');">
+  <header class="post-hero">
+    <img class="post-hero-bg" src="images/asti3-hero.jpg" alt="" fetchpriority="high" decoding="async">
     <div class="post-hero-inner">
       <span class="post-eyebrow">ASTI Robotic Challenge 24/25</span>
       <h1 class="post-title">Premio Nacional de Robótica</h1>
@@ -49,14 +59,14 @@
 
     <div class="post-layout">
       <article class="post-content">
-        <section class="post-section">
+        <section class="post-section" id="inicio">
           <span class="post-section-label">El inicio</span>
           <h2>De código a <em>pista de competición.</em></h2>
           <p>Cuando decidí presentarme al <strong>ASTI Robotic Challenge</strong> no tenía ni idea de hasta dónde podíamos llegar. Era un reto nuevo, fuera de mi zona de confort, y eso era exactamente lo que necesitaba.</p>
           <p>El desafío era construir un robot siguelíneas funcional y programarlo desde cero. Sin librerías externas. Sin atajos. Solo <strong>C++, sensores infrarrojos y un algoritmo de corrección propio</strong> que fuimos ajustando iteración a iteración.</p>
 
           <div class="post-feature-card">
-            <img src="images/asti1.jpg" alt="Robot siguelíneas en la pista">
+            <img src="images/asti1-1000.jpg" alt="Robot siguelíneas en la pista" loading="lazy" decoding="async">
             <div class="post-feature-body">
               <span class="post-tagline">Hardware + Software</span>
               <div class="post-feature-title">Goty</div>
@@ -71,14 +81,14 @@
           </div>
         </section>
 
-        <section class="post-section">
+        <section class="post-section" id="proceso">
           <span class="post-section-label">El proceso</span>
           <h2>Muchos fallos antes <em>del primer acierto.</em></h2>
           <p>Lo que desde fuera parece un robot pequeño, por dentro es el resultado de <strong>semanas de pruebas, ajustes y frustraciones</strong>. Cada vez que el robot se salía de la línea aparecía una nueva hipótesis que probar.</p>
           <p>Aprendí que en robótica, como en desarrollo de software, el debugging no es el enemigo. Es el proceso. La diferencia entre un robot errático y uno preciso son unas pocas líneas de lógica bien pensada.</p>
         </section>
 
-        <section class="post-section">
+        <section class="post-section" id="aprendizajes">
           <span class="post-section-label">Lo que me llevé</span>
           <h2>Aprendizajes que se quedan.</h2>
           <div class="post-learnings">
@@ -106,7 +116,7 @@
           </div>
         </section>
 
-        <section class="post-section">
+        <section class="post-section" id="siguiente">
           <span class="post-section-label">Lo que sigue</span>
           <h2>Seguir construyendo <em>con propósito.</em></h2>
           <p>Este premio es un punto de inflexión, no un punto final. Sigo estudiando DAM, trabajando en proyectos como <strong>Signofy</strong> o <strong>AutoLog</strong> y apoyando iniciativas como <strong>STEM Girls</strong> para que más chicas vean la tecnología como un espacio que también es suyo.</p>
@@ -125,6 +135,17 @@
           </div>
         </section>
 
+        <section class="post-side-card post-toc">
+          <div class="post-side-title">En este post</div>
+          <nav class="post-toc-list" aria-label="Secciones del post">
+            <span class="post-toc-ind" aria-hidden="true"></span>
+            <a href="#inicio">El inicio</a>
+            <a href="#proceso">El proceso</a>
+            <a href="#aprendizajes">Lo que me llevé</a>
+            <a href="#siguiente">Lo que sigue</a>
+          </nav>
+        </section>
+
         <section class="post-side-card">
           <div class="post-side-title">Ficha técnica</div>
           <div class="post-fact"><span>Competición</span><span>ASTI Challenge 24/25</span></div>
@@ -136,7 +157,7 @@
         </section>
 
         <section class="post-side-card post-side-photo">
-          <img src="images/asti3.jpg" alt="Robot siguelíneas">
+          <img src="images/asti3-800.jpg" alt="Robot siguelíneas" loading="lazy" decoding="async">
           <p>Siguelíneas con algoritmo propio.</p>
         </section>
 
