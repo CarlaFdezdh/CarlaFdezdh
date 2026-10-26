@@ -56,34 +56,68 @@
   initHeadings();
   initSectionTag();
   initWipe();
+  initCursor();
+  initTicker();
+  initScramble();
+  initDepth();
+  initJourney();
   if (root.classList.contains('is-loading')) runLoader(initIntro); else initIntro();
 
-  /* ================= CARGA: monograma + contador + cortina curva =================
-     Solo en la primera visita de la sesión; al volver desde un post entra directo. */
+  /* ================= LA PISTA: Goty, el robot siguelíneas, hace de hilo conductor =================
+     Mismo robot en la carga y en las transiciones del menú. */
+  function botSVG() { return '<rect x="-27" y="-17" width="54" height="34" rx="11" fill="#cdbcf2" stroke="#2a1f26" stroke-width="2.5"/><rect x="-20" y="-24" width="16" height="7" rx="2.5" fill="#2a1f26"/><rect x="-20" y="17" width="16" height="7" rx="2.5" fill="#2a1f26"/><circle cx="18" cy="-8" r="6.5" fill="#fff" stroke="#2a1f26" stroke-width="2.5"/><circle cx="18" cy="8" r="6.5" fill="#fff" stroke="#2a1f26" stroke-width="2.5"/><path d="M-6 6L-13-1A4 4 0 0 1-6-4A4 4 0 0 1 1-1Z" fill="#c95d78"/>'; }
+  function trackD(W, H, rev) {
+    const x = v => (rev ? W - v : v).toFixed(1);
+    return `M${x(-80)} ${H * .62} C${x(W * .14)} ${H * .62} ${x(W * .16)} ${H * .36} ${x(W * .36)} ${H * .36} S${x(W * .52)} ${H * .68} ${x(W * .68)} ${H * .68} S${x(W * .84)} ${H * .4} ${x(W + 80)} ${H * .4}`;
+  };
+  function rideAt(path, len, p, bot, s) {
+    const l = len * p, l0 = Math.max(0, l - 2), l1 = Math.min(len, l0 + 4);
+    const a = path.getPointAtLength(l), b0 = path.getPointAtLength(l0), b1 = path.getPointAtLength(l1);
+    const ang = Math.atan2(b1.y - b0.y, b1.x - b0.x) * 180 / Math.PI;
+    bot.setAttribute('transform', `translate(${a.x.toFixed(1)} ${a.y.toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${s})`);
+  };
+  function botScale(w) { return Math.max(.75, Math.min(1.25, w / 1100)); }
+
+  /* ================= CARGA: el robot recorre la pista y el contador sube con él ================= */
   function runLoader(done) {
-    const L = $('.loader'), count = $('.loader-count'), bar = $('.loader-bar');
+    const L = $('.loader'), count = $('.loader-count');
+    const W = innerWidth, H = innerHeight, s = botScale(W);
+    L.insertAdjacentHTML('afterbegin', `<svg class="loader-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><path class="lt-base" d="${trackD(W, H)}"/><path class="lt-line" d="${trackD(W, H)}"/><g class="lt-bot">${botSVG()}</g></svg>`);
+    const line = $('.lt-line', L), bot = $('.lt-bot', L), len = line.getTotalLength();
+    line.style.strokeDasharray = len;
+    line.style.strokeDashoffset = len;
+    rideAt(line, len, 0, bot, s);
     const o = { v: 0 };
     try { sessionStorage.setItem('cf-seen', '1'); } catch (e) {}
     anime({ targets: '.lm-in', translateY: ['110%', '0%'], duration: 1100, delay: 150, easing: 'easeOutExpo' });
-    anime({ targets: '.loader-meta', opacity: [0, 1], duration: 700, delay: 300, easing: 'linear' });
+    anime({ targets: ['.loader-meta', '.lt-base'], opacity: [0, 1], duration: 700, delay: 300, easing: 'linear' });
     anime({
-      targets: o, v: 100, duration: 1900, delay: 200, easing: 'easeInOutQuart', round: 1,
-      update: () => { count.textContent = String(o.v).padStart(3, '0'); bar.style.transform = `scaleX(${o.v / 100})`; },
+      targets: o, v: 100, duration: 2700, delay: 450, easing: 'easeInOutSine',
+      update: () => {
+        const p = o.v / 100;
+        line.style.strokeDashoffset = len * (1 - p);
+        rideAt(line, len, p, bot, s);
+        count.textContent = String(Math.round(o.v)).padStart(3, '0');
+      },
       complete: () => Promise.race([document.fonts ? document.fonts.ready : 0, new Promise(r => setTimeout(r, 1200))]).then(exit)
     });
     function exit() {
-      setTimeout(done, 820); // el hero arranca cuando la cortina va por la mitad
+      setTimeout(done, 820);
       anime.timeline({ easing: 'easeInOutExpo' })
-        .add({ targets: ['.loader-meta', '.loader-bar'], opacity: 0, duration: 300, easing: 'linear' }, 0)
+        .add({ targets: ['.loader-meta', '.loader-svg'], opacity: 0, duration: 350, easing: 'linear' }, 0)
         .add({ targets: '.lm-in', translateY: ['0%', '-110%'], duration: 750 }, 0)
         .add({ targets: L, translateY: ['0%', '-120%'], duration: 1150, complete: () => { L.remove(); root.classList.remove('is-loading'); } }, 380);
     }
   }
 
-  /* ================= TRANSICIÓN ENTRE SECCIONES (clic en el menú) ================= */
+  /* ================= TRANSICIÓN (clic en el menú): el robot traza la pista, la línea engorda
+     hasta cubrir la pantalla, se salta a la sección y la línea se "pellizca" hasta desaparecer.
+     Si la sección queda por encima, el robot circula en sentido contrario. ================= */
   function initWipe() {
     const W = $('.wipe'); if (!W) return;
-    const A = $('.wp-a', W), B = $('.wp-b', W), lab = $('.wipe-label', W), num = $('.wipe-num', W);
+    const svg = $('.wipe-svg', W), A = $('.wl-a', W), B = $('.wl-b', W), bot = $('.wipe-bot', W);
+    const lab = $('.wipe-label', W), num = $('.wipe-num', W);
+    bot.innerHTML = botSVG();
     const names = { '#top': ['00', 'Inicio'], '#story': ['01', 'Sobre mí'], '#work': ['03', 'Trabajo'], '#journey': ['04', 'Trayectoria'], '#contact': ['07', 'Contacto'] };
     let busy = false;
     document.addEventListener('click', e => {
@@ -93,30 +127,204 @@
       e.preventDefault();
       if (busy) return;
       busy = true;
+      const w = innerWidth, h = innerHeight, s = botScale(w), big = h * 1.7;
+      const rev = target.getBoundingClientRect().top + scrollY < scrollY;
+      svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+      [A, B].forEach(p => p.setAttribute('d', trackD(w, h, rev)));
+      const len = A.getTotalLength();
+      const st = { phase: 'in', draw: 0, out: 0, wa: 8, wb: 8 };
+      const render = () => {
+        const inn = st.phase === 'in';
+        const vis = (p, k) => { p.style.strokeDasharray = `${len} ${len}`; p.style.strokeDashoffset = inn ? len * (1 - k) : -len * k; };
+        vis(A, inn ? st.draw : st.out);
+        vis(B, inn ? Math.max(0, st.draw - .12) : st.out);
+        A.style.strokeWidth = st.wa; B.style.strokeWidth = st.wb;
+        rideAt(A, len, inn ? st.draw : st.out, bot, s);
+      };
       lab.textContent = info[1]; num.textContent = info[0];
-      W.classList.add('on');
-      anime.set([A, B], { translateY: '112%' });
-      anime.set(lab, { translateY: '110%' });
+      anime.set(lab, { translateY: '145%' });
       anime.set(num, { opacity: 0 });
-      anime.timeline({ easing: 'easeInOutExpo' })
-        .add({ targets: A, translateY: '0%', duration: 700 }, 0)
-        .add({ targets: B, translateY: '0%', duration: 700 }, 110)
-        .add({ targets: lab, translateY: '0%', duration: 800, easing: 'easeOutExpo' }, 560)
-        .add({ targets: num, opacity: 1, duration: 400, easing: 'linear' }, 620)
+      render();
+      W.classList.add('on');
+      anime.timeline({ update: render })
+        .add({ targets: st, draw: 1, duration: 700, easing: 'easeInOutSine' }, 0)
+        .add({ targets: st, wa: big, duration: 750, easing: 'easeInOutExpo' }, 480)
+        .add({ targets: st, wb: big, duration: 750, easing: 'easeInOutExpo' }, 620)
+        .add({ targets: lab, translateY: '0%', duration: 800, easing: 'easeOutExpo' }, 1050)
+        .add({ targets: num, opacity: 1, duration: 400, easing: 'linear' }, 1100)
         .finished.then(() => {
           const sm = parseInt(getComputedStyle(target).scrollMarginTop) || 0;
           scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + scrollY - sm), behavior: 'instant' });
           history.replaceState(null, '', href);
           target.setAttribute('tabindex', '-1');
           target.focus({ preventScroll: true });
-          return new Promise(r => setTimeout(r, 280));
-        }).then(() => anime.timeline({ easing: 'easeInOutExpo' })
-          .add({ targets: lab, translateY: '-110%', duration: 600 }, 0)
-          .add({ targets: num, opacity: 0, duration: 300, easing: 'linear' }, 0)
-          .add({ targets: B, translateY: '-112%', duration: 800 }, 150)
-          .add({ targets: A, translateY: '-112%', duration: 800 }, 270).finished)
-        .then(() => { W.classList.remove('on'); busy = false; });
+          return new Promise(r => setTimeout(r, 250));
+        }).then(() => {
+          st.phase = 'out'; st.out = 0;
+          return anime.timeline({ update: render })
+            .add({ targets: lab, translateY: '-145%', duration: 500, easing: 'easeInOutExpo' }, 0)
+            .add({ targets: num, opacity: 0, duration: 250, easing: 'linear' }, 0)
+            .add({ targets: st, wb: 8, duration: 700, easing: 'easeInOutExpo' }, 80)
+            .add({ targets: st, wa: 8, duration: 700, easing: 'easeInOutExpo' }, 200)
+            .add({ targets: st, out: 1, duration: 650, easing: 'easeInOutSine' }, 780).finished;
+        }).then(() => { W.classList.remove('on'); busy = false; });
     });
+  }
+
+  /* ================= GOTY, COMPAÑERO DEL CURSOR: te sigue con inercia, gira hacia donde vas,
+     se agranda sobre lo clicable y pone etiqueta sobre las tarjetas ================= */
+  function initCursor() {
+    if (!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+    const c = document.createElement('div');
+    c.className = 'cursor';
+    c.setAttribute('aria-hidden', 'true');
+    c.innerHTML = `<div class="cursor-in"><svg class="cursor-bot" viewBox="-32 -28 64 56">${botSVG()}</svg><span class="cursor-label"></span></div>`;
+    document.body.appendChild(c);
+    const svg = $('.cursor-bot', c), label = $('.cursor-label', c);
+    const HOT = 'a,button,.project-feature,.project-mini,.project-wide,.journal-card';
+    const CARD = '.project-feature,.project-mini,.project-wide,.journal-card';
+    let mx = 0, my = 0, x = 0, y = 0, ang = 0, seen = false;
+    addEventListener('pointermove', e => {
+      mx = e.clientX; my = e.clientY;
+      if (!seen) { seen = true; x = mx; y = my; }
+      c.classList.add('on');
+    }, { passive: true });
+    document.documentElement.addEventListener('pointerleave', () => c.classList.remove('on'));
+    document.addEventListener('pointerover', e => {
+      const card = e.target.closest(CARD);
+      c.classList.toggle('hot', !!e.target.closest(HOT));
+      c.classList.toggle('label', !!card);
+      if (card) label.textContent = card.matches('.journal-card') ? 'Leer' : 'Ver';
+    });
+    document.addEventListener('pointerdown', () => anime({ targets: svg, scale: [1, .78, 1.15, 1], duration: 450, easing: 'easeOutQuad' }));
+    (function tick() {
+      const dx = mx + 30 - x, dy = my + 24 - y;
+      x += dx * .16; y += dy * .16;
+      if (Math.hypot(dx, dy) > 1.5) {
+        let d = Math.atan2(dy, dx) * 180 / Math.PI - ang;
+        d = ((d + 540) % 360) - 180;
+        ang += d * .2;
+      }
+      c.style.translate = `${x.toFixed(1)}px ${y.toFixed(1)}px`;
+      svg.style.rotate = ang.toFixed(1) + 'deg';
+      requestAnimationFrame(tick);
+    })();
+  }
+
+  /* ================= CINTA: avanza sola, acelera con el scroll, invierte el sentido
+     al subir y se inclina según la velocidad ================= */
+  function initTicker() {
+    const sec = $('.ticker'); if (!sec) return;
+    const track = $('.ticker-track', sec), set = $('.tk-set', track);
+    const sw = () => set.getBoundingClientRect().width;
+    const fill = () => { while (track.children.length < Math.ceil(innerWidth / sw()) + 2) track.appendChild(set.cloneNode(true)); };
+    fill();
+    addEventListener('resize', fill);
+    let x = 0, v = 0, last = scrollY, dir = -1, vis = false;
+    new IntersectionObserver(es => { vis = es[0].isIntersecting; }).observe(sec);
+    (function tick() {
+      const dy = scrollY - last; last = scrollY;
+      v += (dy - v) * .12;
+      if (Math.abs(v) > .5) dir = v > 0 ? -1 : 1;
+      if (vis) {
+        const w = sw();
+        x += dir * (.7 + Math.min(Math.abs(v) * .9, 28));
+        if (x <= -w) x += w;
+        if (x > 0) x -= w;
+        const sk = Math.max(-8, Math.min(8, -v * .35));
+        track.style.transform = `translateX(${x.toFixed(1)}px) skewX(${sk.toFixed(2)}deg)`;
+      }
+      requestAnimationFrame(tick);
+    })();
+  }
+
+  /* ================= MENÚ: el texto se "descifra" al pasar el ratón ================= */
+  function initScramble() {
+    const chars = 'ABCDEFGHJKLMNPRSTUVXYZ01<>/_';
+    $$('.site-header nav a').forEach(a => {
+      const txt = a.textContent; let raf = 0;
+      a.setAttribute('aria-label', txt);
+      a.addEventListener('pointerenter', () => {
+        cancelAnimationFrame(raf);
+        a.style.minWidth = a.offsetWidth + 'px';
+        const t0 = performance.now(), dur = 420;
+        const step = now => {
+          const p = Math.min(1, (now - t0) / dur), fixed = Math.floor(p * txt.length);
+          a.textContent = txt.split('').map((ch, i) => (i < fixed || ch === ' ') ? ch : chars[Math.random() * chars.length | 0]).join('');
+          if (p < 1) raf = requestAnimationFrame(step); else a.textContent = txt;
+        };
+        raf = requestAnimationFrame(step);
+      });
+    });
+  }
+
+  /* ================= PROFUNDIDAD: cortina en las imágenes de las tarjetas, zoom que se asienta
+     y parallax con el scroll (solo en imágenes "cover", para no recortar logos) ================= */
+  function initDepth() {
+    const items = [];
+    $$('.project-feature,.project-mini,.project-wide,.journal-card').forEach(card => {
+      const wrap = $('.project-image,.journal-image', card), img = wrap && $('img', wrap);
+      if (!wrap || !img) return;
+      card.classList.add('has-depth');
+      if (getComputedStyle(img).objectFit === 'cover') { img.classList.add('depth-img'); items.push({ card, img }); }
+      const io = new IntersectionObserver(es => { if (es[0].isIntersecting) { io.disconnect(); wrap.classList.add('is-in'); } }, { threshold: .2 });
+      io.observe(card);
+    });
+    let tk = false;
+    const upd = () => {
+      tk = false;
+      items.forEach(({ card, img }) => {
+        const r = card.getBoundingClientRect();
+        if (r.bottom < -120 || r.top > innerHeight + 120) return;
+        const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+        img.style.translate = `0 ${(-p * r.height * .07).toFixed(1)}px`;
+      });
+    };
+    addEventListener('scroll', () => { if (!tk) { tk = true; requestAnimationFrame(upd); } }, { passive: true });
+    addEventListener('resize', upd);
+    upd();
+  }
+
+  /* ================= TRAYECTORIA: cada fila dibuja su línea y descifra la fecha al entrar ================= */
+  function initJourney() {
+    $$('.journey-row').forEach(row => {
+      const d = $('.journey-date', row); if (!d) return;
+      const txt = d.textContent;
+      const io = new IntersectionObserver(es => {
+        if (!es[0].isIntersecting) return;
+        io.disconnect();
+        row.classList.add('is-drawn');
+        const t0 = performance.now(), dur = 900;
+        const step = now => {
+          const p = Math.min(1, (now - t0) / dur), fixed = Math.floor(p * txt.length);
+          d.textContent = txt.split('').map((ch, i) => (i < fixed || !/\d/.test(ch)) ? ch : (Math.random() * 10 | 0)).join('');
+          if (p < 1) requestAnimationFrame(step); else d.textContent = txt;
+        };
+        requestAnimationFrame(step);
+      }, { threshold: .6 });
+      io.observe(row);
+    });
+  }
+
+  /* ================= TITULAR DE CONTACTO: las letras se levantan al acercarse el cursor ================= */
+  function letterWave(h) {
+    if (!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+    const ls = [];
+    $$('.w-in', h).forEach(w => {
+      const t = w.textContent; w.textContent = '';
+      [...t].forEach(ch => { const s = document.createElement('span'); s.className = 'lw'; s.textContent = ch; w.appendChild(s); ls.push(s); });
+    });
+    const R = 150;
+    h.addEventListener('pointermove', e => {
+      ls.forEach(s => {
+        const r = s.getBoundingClientRect();
+        const dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+        const k = Math.max(0, 1 - Math.hypot(dx, dy) / R);
+        s.style.translate = `0 ${(-k * 22).toFixed(1)}px`;
+        s.style.rotate = `${(-dx / R * k * 10).toFixed(1)}deg`;
+      });
+    });
+    h.addEventListener('pointerleave', () => ls.forEach(s => { s.style.translate = ''; s.style.rotate = ''; }));
   }
 
   /* ================= INDICADOR DE SECCIÓN (rueda al cambiar) ================= */
@@ -155,10 +363,11 @@
   function initHeadings() {
     $$('.skills-heading h2,.work-top h2,.journey-heading h2,.human-grid h2,.journal-heading h2,.contact-new h2').forEach(h => {
       const words = splitWords(h);
+      if (h.matches('.contact-new h2')) letterWave(h);
       const io = new IntersectionObserver(es => {
         if (!es[0].isIntersecting) return;
         io.disconnect();
-        anime({ targets: words, translateY: ['115%', '0%'], rotate: ['4deg', '0deg'], duration: 1150, delay: anime.stagger(60), easing: 'easeOutExpo' });
+        anime({ targets: words, translateY: ['115%', '0%'], rotate: ['4deg', '0deg'], duration: 1150, delay: anime.stagger(60), easing: 'easeOutExpo', complete: () => h.classList.add('words-done') });
       }, { threshold: .4 });
       io.observe(h);
     });

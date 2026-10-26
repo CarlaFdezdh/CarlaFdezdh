@@ -123,9 +123,9 @@ section[id],#top{scroll-margin-top:96px}
 .loader,.wipe,.section-tag{display:none}
 html.is-loading{overflow:hidden}
 .is-loading .loader{display:flex}
-.loader{position:fixed;inset:0;z-index:100;background:var(--ink);color:#fff;flex-direction:column;justify-content:center;align-items:center}
+.loader{position:fixed;inset:0;z-index:100;background:var(--ink);color:#fff;flex-direction:column;justify-content:flex-start;align-items:center;padding-top:8vh}
 .loader::after{content:'';position:absolute;left:-12%;right:-12%;top:calc(100% - 1px);height:18vh;background:var(--ink);border-radius:0 0 50% 50%/0 0 100% 100%}
-.loader-mono{font:clamp(6rem,18vw,14rem)/1 var(--serif);letter-spacing:-.04em}
+.loader-mono{font:clamp(5rem,15vw,12rem)/1 var(--serif);letter-spacing:-.04em}
 .lm-mask{display:block;overflow:hidden;padding:.05em .1em .2em}
 .lm-in{display:block;will-change:transform;transform:translateY(110%)}
 .lm-in i{color:var(--rose);font-style:normal}
@@ -135,10 +135,6 @@ html.is-loading{overflow:hidden}
 
 .anim .wipe{display:block;position:fixed;inset:0;z-index:90;pointer-events:none;visibility:hidden;overflow:hidden}
 .wipe.on{visibility:visible;pointer-events:all}
-.wipe-panel{position:absolute;inset:0;transform:translateY(112%);will-change:transform}
-.wipe-panel::before{content:'';position:absolute;left:-12%;right:-12%;bottom:calc(100% - 1px);height:12vh;background:inherit;border-radius:50% 50% 0 0/100% 100% 0 0}
-.wp-a{background:var(--pink)}
-.wp-b{background:var(--ink);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px}
 .wipe-num{font:700 12px var(--sans);letter-spacing:.2em;color:var(--rose-2)}
 .wipe-mask{display:block;overflow:hidden;font:clamp(3.4rem,11vw,9rem)/1 var(--serif);letter-spacing:-.04em;padding:.05em .12em .3em;margin-bottom:-.2em}
 .wipe-label{display:block;will-change:transform}
@@ -155,3 +151,56 @@ html.is-loading{overflow:hidden}
 @media(min-width:1400px){.anim .section-tag{display:flex}}
 
 .journey-heading h2{text-wrap:balance}
+
+/* ---------- La pista: el robot siguelíneas (Goty) ---------- */
+.loader-svg,.wipe-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.loader-mono{position:relative;z-index:1}
+.lt-base,.lt-line,.wl-a,.wl-b{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.lt-base{stroke:rgba(255,255,255,.1);stroke-width:8;opacity:0}
+.lt-line{stroke:var(--rose);stroke-width:8}
+.wl-a{stroke:var(--pink);stroke-width:8}
+.wl-b{stroke:var(--ink);stroke-width:8}
+.wipe-text{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;color:#fff;pointer-events:none}
+.nav-bot{position:absolute;bottom:-5px;left:calc(28px + (100% - 56px) * var(--p,0));width:15px;height:10px;margin-left:-8px;border-radius:3.5px;background:#cdbcf2;box-shadow:0 0 0 1.5px var(--ink);pointer-events:none;
+  background-image:radial-gradient(circle at 78% 30%,#fff 0 1.7px,transparent 2px),radial-gradient(circle at 78% 70%,#fff 0 1.7px,transparent 2px)}
+
+/* el foco programático tras un salto de sección no debe pintar un marco */
+main[tabindex="-1"]:focus,section[tabindex="-1"]:focus{outline:none}
+
+/* ---------- Goty, compañero del cursor ---------- */
+.cursor{display:none}
+@media(hover:hover) and (pointer:fine){
+  .anim .cursor{display:block;position:fixed;left:0;top:0;z-index:95;margin:-23px 0 0 -26px;pointer-events:none;opacity:0;transition:opacity .4s}
+  .anim .is-loading .cursor,.is-loading .cursor{display:none}
+  .cursor.on{opacity:1}
+}
+.cursor-in{position:relative;transition:transform .4s cubic-bezier(.3,1.5,.5,1)}
+.cursor.hot .cursor-in{transform:scale(1.4)}
+.cursor-bot{display:block;width:52px;height:46px;overflow:visible;filter:drop-shadow(0 6px 8px rgba(33,25,29,.22))}
+.cursor-label{position:absolute;left:38px;top:-8px;padding:6px 11px;border-radius:999px;background:var(--ink);color:#fff;font:700 11px var(--sans);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;opacity:0;transform:scale(.5);transform-origin:left center;transition:opacity .2s,transform .35s cubic-bezier(.3,1.5,.5,1)}
+.cursor.label .cursor-label{opacity:1;transform:scale(1)}
+
+/* ---------- Cinta de texto que reacciona al scroll ---------- */
+.ticker{overflow:hidden;padding:clamp(26px,4vw,52px) 0;border-block:1px solid var(--line);background:var(--paper)}
+.ticker-track{display:flex;width:max-content;will-change:transform}
+.tk-set{display:flex;align-items:center;gap:clamp(22px,3vw,46px);padding-right:clamp(22px,3vw,46px);white-space:nowrap;font:clamp(2.6rem,7vw,6.4rem)/1.05 var(--serif);letter-spacing:-.03em}
+.tk-set b{font-weight:400}
+.tk-set .o{color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.tk-set i{font-style:normal;color:var(--rose);font-size:.5em}
+
+/* ---------- Profundidad: imágenes con cortina + zoom que se asienta + parallax ---------- */
+.anim .has-depth .project-image,.anim .has-depth .journal-image{clip-path:inset(0 0 100% 0)}
+.anim .has-depth .project-image.is-in,.anim .has-depth .journal-image.is-in{clip-path:inset(0 0 0 0);transition:clip-path 1.4s cubic-bezier(.77,0,.18,1)}
+.anim .depth-img{scale:1.42;transition:scale 2s cubic-bezier(.2,.7,.2,1)}
+.anim .is-in .depth-img{scale:1.12}
+
+/* ---------- Trayectoria: la línea de cada fila se dibuja y la fecha se descifra ---------- */
+.journey-row{position:relative}
+.journey-date{font-variant-numeric:tabular-nums}
+.journey-row::before{content:'';position:absolute;left:0;right:0;top:-1px;height:2px;background:linear-gradient(90deg,var(--rose),var(--rose-2));transform:scaleX(0);transform-origin:left;opacity:0;pointer-events:none}
+.journey-row.is-drawn::before{animation:jdraw 1.9s cubic-bezier(.77,0,.18,1) both}
+@keyframes jdraw{0%{transform:scaleX(0);opacity:1}55%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+
+/* ---------- Contacto: las letras del titular reaccionan al cursor ---------- */
+.words-done .w-mask{overflow:visible}
+.lw{display:inline-block;transition:translate .35s cubic-bezier(.2,.8,.2,1),rotate .35s cubic-bezier(.2,.8,.2,1)}

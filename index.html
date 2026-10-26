@@ -25,8 +25,8 @@
   <span class="loader-bar"></span>
 </div>
 <div class="wipe" aria-hidden="true">
-  <div class="wipe-panel wp-a"></div>
-  <div class="wipe-panel wp-b"><span class="wipe-num"></span><span class="wipe-mask"><span class="wipe-label"></span></span></div>
+  <svg class="wipe-svg" preserveAspectRatio="none"><path class="wl-a"/><path class="wl-b"/><g class="wipe-bot"></g></svg>
+  <div class="wipe-text"><span class="wipe-num"></span><span class="wipe-mask"><span class="wipe-label"></span></span></div>
 </div>
 <div class="section-tag" aria-hidden="true"><span class="st-num"><i>01</i></span><span class="st-name"><i>Sobre mí</i></span></div>
 <div class="noise"></div>
@@ -45,7 +45,7 @@
   </nav>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><span></span><span></span></button>
   <a href="documentos/Curriculum_CarlaFernandez.pdf" target="_blank" rel="noopener" class="header-cv">CV <span>↗</span></a>
-  <span class="nav-progress" aria-hidden="true"></span>
+  <span class="nav-progress" aria-hidden="true"></span><span class="nav-bot" aria-hidden="true"></span>
 </header>
 
 <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil">
@@ -131,6 +131,8 @@
     </div>
   </section>
 
+  <section class="ticker" aria-hidden="true"><div class="ticker-track"><span class="tk-set"><b>Software</b><i>✦</i><b class="o">Interfaces</b><i>✦</i><b>Robótica</b><i>✦</i><b class="o">Accesibilidad</b><i>✦</i><b>Premio Nacional</b><i>✦</i></span></div></section>
+
   <section class="work-section" id="work">
     <div class="work-top reveal">
       <div>
@@ -141,7 +143,7 @@
     </div>
 
     <div class="project-bento">
-      <a class="project-feature project-signofy reveal" href="https://carlafdezdh.github.io/CarlaFdezdh/signofy/" target="_blank" rel="noopener">
+      <a class="project-feature project-signofy reveal" href="signofy\index.html" target="_blank" rel="noopener">
         <div class="project-image"><img src="images/signofy.png" alt="SignoFy"></div>
         <div class="project-overlay"></div>
         <div class="project-copy">
