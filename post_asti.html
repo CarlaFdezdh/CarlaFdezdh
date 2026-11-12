@@ -1,186 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASTI Robotic Challenge 2025 - Carla Fernández</title>
-<meta name="description" content="Post de Carla Fernández sobre el ASTI Robotic Challenge 2025, un robot siguelíneas programado en C++ y premiado con distinción nacional.">
-<meta name="theme-color" content="#fbf8f6">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ASTI Robotic Challenge 2025 · Carla Fernández">
-<meta property="og:description" content="Un robot siguelíneas, un algoritmo propio y una distinción nacional.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2321191d'/%3E%3Ctext x='29' y='43' font-family='Georgia,serif' font-size='28' text-anchor='middle' fill='%23fff'%3ECF%3C/text%3E%3Ccircle cx='48' cy='43' r='3.5' fill='%23c95d78'/%3E%3C/svg%3E">
-<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("anim");setTimeout(function(){if(!window.__motionReady)document.documentElement.classList.remove("anim")},3500)}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/post.css">
-<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
-<script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASTI Robotic Challenge 2025 · Carla Fernández</title>
+  <meta name="description" content="Post de Carla Fernández sobre el ASTI Robotic Challenge 2025, un robot siguelíneas programado en C++ y premiado con distinción nacional.">
+  <meta name="theme-color" content="#ffc6d8">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Premio Nacional de Robótica · ASTI Robotic Challenge 2025">
+  <meta property="og:description" content="Un robot siguelíneas, un algoritmo propio y muchas pruebas hasta convertir una idea en una distinción nacional.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23241b22'/%3E%3Ctext x='29' y='43' font-family='Arial Black,sans-serif' font-weight='900' font-size='26' text-anchor='middle' fill='%23fff'%3ECF%3C/text%3E%3Ccircle cx='49' cy='43' r='4' fill='%23e0476f'/%3E%3C/svg%3E">
+  <script>(function(){var r=document.documentElement;if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;r.classList.add("anim");setTimeout(function(){if(!window.__ready)r.classList.remove("anim")},4000)})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/home.css?v=3">
+  <link rel="stylesheet" href="styles/story.css?v=2">
+  <script src="story.js?v=1" defer></script>
 </head>
-<body class="post-page">
-  <div class="post-progress" aria-hidden="true"></div>
-  <a href="index.html#posts" class="post-back" aria-label="Volver al listado de posts">
-    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M10 3L5 8l5 5"/>
-    </svg>
-    Posts
-  </a>
+<body class="story">
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<a class="skip" href="#inicio">Saltar al artículo</a>
 
-  <header class="post-hero">
-    <img class="post-hero-bg" src="images/asti3-hero.jpg" alt="" fetchpriority="high" decoding="async">
-    <div class="post-hero-inner">
-      <span class="post-eyebrow">ASTI Robotic Challenge 24/25</span>
-      <h1 class="post-title">Premio Nacional de Robótica</h1>
-      <p class="post-intro">Un robot siguelíneas, un algoritmo propio y muchas pruebas hasta convertir una idea en una distinción nacional.</p>
-      <div class="post-meta" aria-label="Resumen del post">
-        <span class="post-pill">Distinción nacional 2025</span>
-        <span class="post-pill">C++</span>
-        <span class="post-pill">Arduino + sensores IR</span>
-      </div>
-    </div>
-  </header>
+<!-- ───────── Barra superior ───────── -->
+<header class="nav" id="nav">
+  <a class="logo" href="index.html" aria-label="Carla Fernández, inicio">CF<i>.</i></a>
+  <span class="nav-title">ASTI Robotic Challenge 2025</span>
+  <a class="btn btn-ink nav-back" id="back" href="index.html#journal"><span aria-hidden="true">←</span> Volver</a>
+  <span class="nav-progress" aria-hidden="true"></span><span class="nav-bot" aria-hidden="true"></span>
+</header>
 
-  <main class="post-shell">
-    <section class="post-summary" aria-label="Datos principales">
-      <div class="post-summary-item">
-        <span class="post-summary-label">Reto</span>
-        <div class="post-summary-value">Robot siguelíneas</div>
-      </div>
-      <div class="post-summary-item">
-        <span class="post-summary-label">Código</span>
-        <div class="post-summary-value">C++ sin librerías externas</div>
-      </div>
-      <div class="post-summary-item">
-        <span class="post-summary-label">Resultado</span>
-        <div class="post-summary-value">Distinción nacional</div>
+<main>
+
+<!-- ───────── Portada del artículo ───────── -->
+<header class="s-hero">
+  <div class="s-hero-text">
+    <p class="chips" data-r><span class="chip">ASTI Robotic Challenge 24/25</span><span class="chip">Robótica</span></p>
+    <h1 data-r style="--d:80ms">Premio Nacional de Robótica</h1>
+    <p class="intro" data-r style="--d:160ms">Un robot siguelíneas, un algoritmo propio y muchas pruebas hasta convertir una idea en una distinción nacional.</p>
+    <p class="chips pills" data-r style="--d:240ms"><span class="chip chip-w">Distinción nacional 2025</span><span class="chip chip-w">C++</span><span class="chip chip-w">Arduino + sensores IR</span></p>
+  </div>
+  <div class="s-hero-art" data-r="pop" style="--d:200ms">
+    <figure class="pola drag p-hero" data-rot="3"><img src="images/asti3-700.jpg" alt="Dos personas montando y ajustando el robot sobre una mesa" width="700" height="933" fetchpriority="high" draggable="false"><figcaption>Puesta a punto</figcaption></figure>
+    <span class="sticker drag s-a" data-rot="-9" aria-hidden="true">24/25</span>
+    <span class="sticker drag s-b" data-rot="7" aria-hidden="true">Premio Nacional</span>
+  </div>
+</header>
+
+<!-- Resumen -->
+<section class="sum" aria-label="Resumen">
+  <div class="sum-tile t-mint" data-r="pop"><span>Reto</span><b>Robot siguelíneas</b></div>
+  <div class="sum-tile t-butter" data-r="pop" style="--d:90ms"><span>Código</span><b>C++ sin librerías externas</b></div>
+  <div class="sum-tile t-lav" data-r="pop" style="--d:180ms"><span>Resultado</span><b>Distinción nacional</b></div>
+</section>
+
+<div class="story-grid">
+
+  <nav class="toc-bar" id="toc-bar" aria-label="Secciones del post">
+  <a class="toc-chip" href="#inicio">El inicio</a>
+  <a class="toc-chip" href="#proceso">El proceso</a>
+  <a class="toc-chip" href="#aprendizajes">Lo que me llevé</a>
+  <a class="toc-chip" href="#siguiente">Lo que sigue</a>
+</nav>
+
+  <article class="article">
+
+    <section class="s-sec" id="inicio">
+      <h2 data-r>De código a <span class="mark">pista de competición.</span></h2>
+      <p data-r>Cuando decidí presentarme al <strong>ASTI Robotic Challenge</strong> no tenía ni idea de hasta dónde podíamos llegar. Era un reto nuevo, fuera de mi zona de confort, y eso era exactamente lo que necesitaba.</p>
+      <p data-r>El desafío era construir un robot siguelíneas funcional y programarlo desde cero. Sin librerías externas. Sin atajos. Solo <strong>C++, sensores infrarrojos y un algoritmo de corrección propio</strong> que fuimos ajustando iteración a iteración.</p>
+
+      <figure class="goty" data-r="pop">
+        <div class="goty-img">
+          <img src="images/asti1-700.jpg" alt="Goty, el robot siguelíneas, con una carita de papel lila" width="700" height="933" loading="lazy">
+          <span class="sticker drag" data-rot="-6" style="left:14px;top:14px;background:var(--butter)" aria-hidden="true">Goty</span>
+        </div>
+        <figcaption class="goty-text">
+          <span class="chip chip-w">Hardware + Software</span>
+          <h3>Goty</h3>
+          <p>Robot siguelíneas con Arduino, programado íntegramente en C++ con sensores infrarrojos y algoritmo de corrección diseñado desde cero.</p>
+          <p class="chips"><span class="chip c1">C++</span><span class="chip c2">Arduino</span><span class="chip c3">IR sensors</span><span class="chip c4">H-Bridge</span></p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <aside class="spec spec-inline" aria-label="Ficha técnica"><h2>Ficha técnica</h2>
+      <dl>
+        <div><dt>Competición</dt><dd>ASTI Challenge 24/25</dd></div>
+        <div><dt>Lenguaje</dt><dd>C++</dd></div>
+        <div><dt>Hardware</dt><dd>Arduino + IR</dd></div>
+        <div><dt>Librerías ext.</dt><dd>0</dd></div>
+        <div><dt>Algoritmo</dt><dd>Propio</dd></div>
+        <div><dt>Resultado</dt><dd>Distinción nacional</dd></div>
+      </dl></aside>
+
+    <section class="s-sec" id="proceso">
+      <h2 data-r>Muchos fallos antes <span class="mark">del primer acierto.</span></h2>
+      <p data-r>Lo que desde fuera parece un robot pequeño, por dentro es el resultado de <strong>semanas de pruebas, ajustes y frustraciones</strong>. Cada vez que el robot se salía de la línea aparecía una nueva hipótesis que probar.</p>
+      <p data-r>Aprendí que en robótica, como en desarrollo de software, el debugging no es el enemigo. Es el proceso. La diferencia entre un robot errático y uno preciso son unas pocas líneas de lógica bien pensada.</p>
+
+      <div class="polas-in" aria-label="Fotos del robot y de la pista (arrastrables)">
+        <figure class="pola drag" data-rot="-3"><img src="images/robot-1000.jpg" alt="Robot siguelíneas visto desde arriba con su electrónica" width="1000" height="774" loading="lazy" draggable="false"><figcaption>Por dentro</figcaption></figure>
+        <figure class="pola drag" data-rot="3"><img src="images/asti2-700.jpg" alt="Equipo preparando la prueba junto a la pista" width="700" height="1244" loading="lazy" draggable="false"><figcaption>En la pista</figcaption></figure>
+        <span class="drag-hint" aria-hidden="true">arrastra las fotos</span>
       </div>
     </section>
 
-    <div class="post-layout">
-      <article class="post-content">
-        <section class="post-section" id="inicio">
-          <span class="post-section-label">El inicio</span>
-          <h2>De código a <em>pista de competición.</em></h2>
-          <p>Cuando decidí presentarme al <strong>ASTI Robotic Challenge</strong> no tenía ni idea de hasta dónde podíamos llegar. Era un reto nuevo, fuera de mi zona de confort, y eso era exactamente lo que necesitaba.</p>
-          <p>El desafío era construir un robot siguelíneas funcional y programarlo desde cero. Sin librerías externas. Sin atajos. Solo <strong>C++, sensores infrarrojos y un algoritmo de corrección propio</strong> que fuimos ajustando iteración a iteración.</p>
+    <section class="s-sec" id="aprendizajes">
+      <h2 data-r>Aprendizajes que <span class="mark">se quedan.</span></h2>
+      <div class="learn">
+        <article class="lcard l1" data-r="pop"><b class="ln">01</b><h3>La teoría sin práctica no sirve de nada.</h3><p>Puedes saber C++ de memoria, pero hasta que no lo ejecutas sobre hardware real no entiendes los límites del sistema.</p></article>
+        <article class="lcard l2" data-r="pop" style="--d:80ms"><b class="ln">02</b><h3>Los errores son parte del diseño.</h3><p>Diseñamos el algoritmo fallando primero. Cada caso borde que rompía el robot nos enseñó algo.</p></article>
+        <article class="lcard l3" data-r="pop" style="--d:160ms"><b class="ln">03</b><h3>Salir de la zona de confort merece la pena.</h3><p>Vengo del desarrollo web y las apps. La robótica era territorio desconocido. Ahora es parte de mi historia.</p></article>
+        <article class="lcard l4" data-r="pop" style="--d:240ms"><b class="ln">04</b><h3>El trabajo en equipo multiplica el resultado.</h3><p>Este logro no habría sido posible sin las personas que lo vivieron conmigo.</p></article>
+      </div>
 
-          <div class="post-feature-card">
-            <img src="images/asti1-1000.jpg" alt="Robot siguelíneas en la pista" loading="lazy" decoding="async">
-            <div class="post-feature-body">
-              <span class="post-tagline">Hardware + Software</span>
-              <div class="post-feature-title">Goty</div>
-              <p>Robot siguelíneas con Arduino, programado íntegramente en C++ con sensores infrarrojos y algoritmo de corrección diseñado desde cero.</p>
-              <div class="post-chip-list" aria-label="Tecnologías usadas">
-                <span class="post-chip">C++</span>
-                <span class="post-chip">Arduino</span>
-                <span class="post-chip">IR sensors</span>
-                <span class="post-chip">H-Bridge</span>
-              </div>
-            </div>
-          </div>
-        </section>
+      <blockquote class="pq" data-r="pop">
+        <p>No necesitas ser la más experta para competir. Necesitas curiosidad, constancia y no tenerle miedo al resultado.</p>
+        <footer>Carla Fernández · ASTI Robotic Challenge 2025</footer>
+      </blockquote>
+    </section>
 
-        <section class="post-section" id="proceso">
-          <span class="post-section-label">El proceso</span>
-          <h2>Muchos fallos antes <em>del primer acierto.</em></h2>
-          <p>Lo que desde fuera parece un robot pequeño, por dentro es el resultado de <strong>semanas de pruebas, ajustes y frustraciones</strong>. Cada vez que el robot se salía de la línea aparecía una nueva hipótesis que probar.</p>
-          <p>Aprendí que en robótica, como en desarrollo de software, el debugging no es el enemigo. Es el proceso. La diferencia entre un robot errático y uno preciso son unas pocas líneas de lógica bien pensada.</p>
-        </section>
+    <section class="s-sec" id="siguiente">
+      <h2 data-r>Seguir construyendo <span class="mark">con propósito.</span></h2>
+      <p data-r>Este premio es un punto de inflexión, no un punto final. Sigo estudiando DAM, trabajando en proyectos como <a class="tlink" href="signofy/"><strong>Signofy</strong></a> o <a class="tlink" href="https://github.com/Raul06lp/AutoLog" target="_blank" rel="noopener"><strong>AutoLog</strong></a> y apoyando iniciativas como <strong>STEM Girls</strong> para que más chicas vean la tecnología como un espacio que también es suyo.</p>
+      <p data-r>Si estás pensando en presentarte a una competición y crees que no estás lista: ve. El aprendizaje ocurre exactamente ahí, en el momento de incomodidad.</p>
 
-        <section class="post-section" id="aprendizajes">
-          <span class="post-section-label">Lo que me llevé</span>
-          <h2>Aprendizajes que se quedan.</h2>
-          <div class="post-learnings">
-            <div class="post-learning">
-              <span class="post-learning-num">01</span>
-              <p><strong>La teoría sin práctica no sirve de nada.</strong> Puedes saber C++ de memoria, pero hasta que no lo ejecutas sobre hardware real no entiendes los límites del sistema.</p>
-            </div>
-            <div class="post-learning">
-              <span class="post-learning-num">02</span>
-              <p><strong>Los errores son parte del diseño.</strong> Diseñamos el algoritmo fallando primero. Cada caso borde que rompía el robot nos enseñó algo.</p>
-            </div>
-            <div class="post-learning">
-              <span class="post-learning-num">03</span>
-              <p><strong>Salir de la zona de confort merece la pena.</strong> Vengo del desarrollo web y las apps. La robótica era territorio desconocido. Ahora es parte de mi historia.</p>
-            </div>
-            <div class="post-learning">
-              <span class="post-learning-num">04</span>
-              <p><strong>El trabajo en equipo multiplica el resultado.</strong> Este logro no habría sido posible sin las personas que lo vivieron conmigo.</p>
-            </div>
-          </div>
+      <div class="author" data-r="pop">
+        <img src="images/yo-900.jpg" alt="Carla Fernández" width="900" height="1100" loading="lazy">
+        <div><b>Carla Fernández</b><span>Full-Stack · DAM Student</span></div>
+      </div>
+      <p class="chips tags" data-r><span class="chip">#Robótica</span><span class="chip">#ASTI2025</span><span class="chip">#CPlusPlus</span><span class="chip">#DAM</span><span class="chip">#STEMGirls</span><span class="chip">#Arduino</span></p>
+    </section>
 
-          <div class="post-quote">
-            <p>"No necesitas ser la más experta para competir. Necesitas curiosidad, constancia y no tenerle miedo al resultado."</p>
-            <p>Carla Fernández · ASTI Robotic Challenge 2025</p>
-          </div>
-        </section>
+  </article>
 
-        <section class="post-section" id="siguiente">
-          <span class="post-section-label">Lo que sigue</span>
-          <h2>Seguir construyendo <em>con propósito.</em></h2>
-          <p>Este premio es un punto de inflexión, no un punto final. Sigo estudiando DAM, trabajando en proyectos como <strong>Signofy</strong> o <strong>AutoLog</strong> y apoyando iniciativas como <strong>STEM Girls</strong> para que más chicas vean la tecnología como un espacio que también es suyo.</p>
-          <p>Si estás pensando en presentarte a una competición y crees que no estás lista: ve. El aprendizaje ocurre exactamente ahí, en el momento de incomodidad.</p>
-        </section>
-      </article>
-
-      <aside class="post-sidebar" aria-label="Información del proyecto">
-        <section class="post-side-card post-author">
-          <div class="post-avatar">
-            <img src="images/yo.jpeg" alt="Carla Fernández">
-          </div>
-          <div>
-            <div class="post-author-name">Carla Fernández</div>
-            <div class="post-author-role">Full-Stack · DAM Student</div>
-          </div>
-        </section>
-
-        <section class="post-side-card post-toc">
-          <div class="post-side-title">En este post</div>
-          <nav class="post-toc-list" aria-label="Secciones del post">
-            <span class="post-toc-ind" aria-hidden="true"></span>
-            <a href="#inicio">El inicio</a>
-            <a href="#proceso">El proceso</a>
-            <a href="#aprendizajes">Lo que me llevé</a>
-            <a href="#siguiente">Lo que sigue</a>
-          </nav>
-        </section>
-
-        <section class="post-side-card">
-          <div class="post-side-title">Ficha técnica</div>
-          <div class="post-fact"><span>Competición</span><span>ASTI Challenge 24/25</span></div>
-          <div class="post-fact"><span>Lenguaje</span><span>C++</span></div>
-          <div class="post-fact"><span>Hardware</span><span>Arduino + IR</span></div>
-          <div class="post-fact"><span>Librerías ext.</span><span>0</span></div>
-          <div class="post-fact"><span>Algoritmo</span><span>Propio</span></div>
-          <div class="post-fact"><span>Resultado</span><span>Distinción nacional</span></div>
-        </section>
-
-        <section class="post-side-card post-side-photo">
-          <img src="images/asti3-800.jpg" alt="Robot siguelíneas" loading="lazy" decoding="async">
-          <p>Siguelíneas con algoritmo propio.</p>
-        </section>
-
-        <section class="post-side-card">
-          <div class="post-side-title">Etiquetas</div>
-          <div class="post-tags">
-            <span class="post-small-tag">#Robótica</span>
-            <span class="post-small-tag">#ASTI2025</span>
-            <span class="post-small-tag">#CPlusPlus</span>
-            <span class="post-small-tag">#DAM</span>
-            <span class="post-small-tag">#STEMGirls</span>
-            <span class="post-small-tag">#Arduino</span>
-          </div>
-        </section>
-      </aside>
+  <!-- Barra lateral (solo escritorio) -->
+  <aside class="side" aria-label="Información del post">
+    <div class="card-s c-toc">
+      <h2>En este post</h2>
+      <nav class="toc" id="toc" aria-label="Secciones del post">
+        <a href="#inicio">El inicio</a>
+        <a href="#proceso">El proceso</a>
+        <a href="#aprendizajes">Lo que me llevé</a>
+        <a href="#siguiente">Lo que sigue</a>
+      </nav>
     </div>
-  </main>
+    <div class="spec"><h2>Ficha técnica</h2>
+      <dl>
+        <div><dt>Competición</dt><dd>ASTI Challenge 24/25</dd></div>
+        <div><dt>Lenguaje</dt><dd>C++</dd></div>
+        <div><dt>Hardware</dt><dd>Arduino + IR</dd></div>
+        <div><dt>Librerías ext.</dt><dd>0</dd></div>
+        <div><dt>Algoritmo</dt><dd>Propio</dd></div>
+        <div><dt>Resultado</dt><dd>Distinción nacional</dd></div>
+      </dl></div>
+  </aside>
 
-  <footer class="post-footer">
-    <div class="post-footer-inner">
-      <p><strong>ASTI Robotic Challenge 2025</strong><br>Proyecto de robótica, aprendizaje y competición.</p>
-      <div class="post-footer-badge">Premio Nacional 2025</div>
+</div>
+
+<!-- ───────── Cierre ───────── -->
+<section class="sec sec-ink end" id="contact">
+  <div class="wrap contact">
+    <p class="chips"><span class="chip">Premio Nacional 2025</span><span class="chip">ASTI Robotic Challenge 2025</span></p>
+    <h2 class="big-title">¿Hablamos?</h2>
+    <p class="sub">Proyecto de robótica, aprendizaje y competición. Si quieres comentarlo, colaborar o simplemente decir hola, aquí me tienes.</p>
+    <div class="mail-row">
+      <a class="btn btn-rose btn-xl" href="mailto:carlafdezdh@gmail.com">carlafdezdh@gmail.com <span aria-hidden="true">↗</span></a>
+      <button class="btn btn-ghost-w btn-xl" type="button" id="copy-mail">Copiar email</button>
     </div>
-  </footer>
+    <p class="links"><a href="index.html">← Volver al portfolio</a><a href="signofy/">Ver SignoFy</a></p>
+  </div>
+  <div class="road" aria-hidden="true"><span class="road-line"></span><span class="road-bot"></span></div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>Carla Fernández · Diseñado y desarrollado · 2026</p>
+  <a class="totop" href="#" id="totop">Volver arriba <span aria-hidden="true">↑</span></a>
+</footer>
+
 </body>
 </html>

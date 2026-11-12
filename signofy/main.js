@@ -21,6 +21,7 @@
   burger.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
   $$('#navlinks a').forEach(a => a.addEventListener('click', () => setMenu(false)));
   addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  document.addEventListener('pointerdown', e => { if (nav.classList.contains('open') && !nav.contains(e.target)) setMenu(false); });
 
   // enlace activo según la sección visible (la lista de espera no está en el menú: no marca ninguno)
   const links = $$('#navlinks a[href^="#"]').filter(a => !a.classList.contains('only-m'));

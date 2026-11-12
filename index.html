@@ -1,238 +1,322 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carla Fernández · Developer & Creative Technologist</title>
-<meta name="description" content="Portfolio de Carla Fernández: desarrollo de software, interfaces, robótica y proyectos tecnológicos con propósito.">
-<meta name="theme-color" content="#fbf8f6">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Carla Fernández · Developer & Creative Technologist">
-<meta property="og:description" content="Software, interfaces y robótica con propósito. Premio Nacional de Robótica ASTI 2025.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2321191d'/%3E%3Ctext x='29' y='43' font-family='Georgia,serif' font-size='28' text-anchor='middle' fill='%23fff'%3ECF%3C/text%3E%3Ccircle cx='48' cy='43' r='3.5' fill='%23c95d78'/%3E%3C/svg%3E">
-<script>(function(){var r=document.documentElement;if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;r.classList.add("anim");try{if(!sessionStorage.getItem("cf-seen"))r.classList.add("is-loading")}catch(e){r.classList.add("is-loading")}setTimeout(function(){if(!window.__motionReady)r.classList.remove("anim","is-loading")},6000)})()</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/style.css">
-<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
-<script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carla Fernández · Developer & Creative Technologist</title>
+  <meta name="description" content="Portfolio de Carla Fernández: desarrollo de software, diseño de interfaces y robótica. Premio Nacional de Robótica ASTI 2025.">
+  <meta name="theme-color" content="#fff9f6">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Carla Fernández · Developer & Creative Technologist">
+  <meta property="og:description" content="Software, interfaces y robótica con propósito. Premio Nacional de Robótica ASTI 2025.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23241b22'/%3E%3Ctext x='29' y='43' font-family='Arial Black,sans-serif' font-weight='900' font-size='26' text-anchor='middle' fill='%23fff'%3ECF%3C/text%3E%3Ccircle cx='49' cy='43' r='4' fill='%23e0476f'/%3E%3C/svg%3E">
+  <script>(function(){var r=document.documentElement;if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;r.classList.add("anim");setTimeout(function(){if(!window.__ready)r.classList.remove("anim")},4000)})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/home.css?v=3">
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js" defer></script>
+  <script src="home.js?v=2" defer></script>
 </head>
 <body>
-<div class="loader" aria-hidden="true">
-  <div class="loader-mono"><span class="lm-mask"><span class="lm-in">CF<i>.</i></span></span></div>
-  <div class="loader-meta"><span class="loader-count">000</span><span>Portfolio 2026 · Valencia</span></div>
-  <span class="loader-bar"></span>
-</div>
+
+<!-- Capas de transición (las rellena home.js) -->
 <div class="wipe" aria-hidden="true">
   <svg class="wipe-svg" preserveAspectRatio="none"><path class="wl-a"/><path class="wl-b"/><g class="wipe-bot"></g></svg>
   <div class="wipe-text"><span class="wipe-num"></span><span class="wipe-mask"><span class="wipe-label"></span></span></div>
 </div>
-<div class="section-tag" aria-hidden="true"><span class="st-num"><i>01</i></span><span class="st-name"><i>Sobre mí</i></span></div>
-<div class="noise"></div>
-<div class="page-orb orb-one"></div>
-<div class="page-orb orb-two"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<header class="site-header" id="main-nav">
-  <a href="#top" class="brand" aria-label="Ir al inicio">CF<span>.</span></a>
-  <div class="header-status"><i></i> disponible para nuevos proyectos</div>
-  <nav aria-label="Principal">
-    <span class="nav-pill" aria-hidden="true"></span>
-    <a href="#story">Historia</a>
-    <a href="#work">Trabajo</a>
-    <a href="#journey">Trayectoria</a>
-    <a href="#contact">Contacto</a>
+<a class="skip" href="#about">Saltar al contenido</a>
+
+<!-- ───────── Navegación ───────── -->
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="Carla Fernández, inicio">CF<i>.</i></a>
+  <nav class="nav-links" id="navlinks" aria-label="Principal">
+    <span class="nav-ind" aria-hidden="true"></span>
+    <a href="#about" data-nav="about">Sobre mí</a>
+    <a href="#work" data-nav="work">Trabajo</a>
+    <a href="#journey" data-nav="journey">Trayectoria</a>
+    <a href="#contact" data-nav="contact">Contacto</a>
+    <a class="only-m" href="documentos/Curriculum_CarlaFernandez.pdf">Ver CV</a>
   </nav>
-  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><span></span><span></span></button>
-  <a href="documentos/Curriculum_CarlaFernandez.pdf" target="_blank" rel="noopener" class="header-cv">CV <span>↗</span></a>
+  <a class="btn btn-ink nav-cv" href="documentos/Curriculum_CarlaFernandez.pdf">CV <span aria-hidden="true">↗</span></a>
+  <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="navlinks" aria-label="Abrir menú"><span></span><span></span></button>
   <span class="nav-progress" aria-hidden="true"></span><span class="nav-bot" aria-hidden="true"></span>
 </header>
 
-<nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil">
-  <a href="#story" style="--i:0"><small>01</small>Historia</a>
-  <a href="#work" style="--i:1"><small>02</small>Trabajo</a>
-  <a href="#journey" style="--i:2"><small>03</small>Trayectoria</a>
-  <a href="#contact" style="--i:3"><small>04</small>Contacto</a>
-</nav>
+<main>
 
-<main id="top">
-  <section class="hero-new">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-side-note">VALENCIA · SPAIN<br>SOFTWARE / UI / ROBOTICS</div>
-    <div class="hero-copy">
-      <p class="eyebrow hero-reveal">PORTFOLIO 2026 <span>✦</span></p>
-      <h1 class="hero-title" aria-label="Hola, soy Carla">
-        <span class="hero-line">Hola,</span>
-        <span class="hero-line serif">soy <em>Carla.</em></span>
+<!-- ───────── Portada ───────── -->
+<section class="hero" id="top">
+  <div class="bento">
+
+    <article class="tile t-name" data-r="pop">
+      <p class="chips">
+        <span class="chip">Valencia · Spain</span>
+        <span class="chip">Software / UI / Robotics</span>
+      </p>
+      <h1 class="name" id="name">
+        <span class="w">Hola,</span> <span class="w">soy</span> <span class="w hl">Carla<span class="stop">.</span><svg class="squiggle" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9c14-10 20 8 34 0s20 8 34 0 20 8 34 0 20 8 34 0 20 8 34 0 20 8 24 0"/></svg></span>
       </h1>
-      <p class="hero-description hero-reveal">Desarrollo software y diseño experiencias digitales, combinando código, producto y creatividad para construir soluciones que funcionan de verdad.</p>
-      <div class="hero-actions hero-reveal">
-        <a href="#work" class="magnetic primary-action">Explorar proyectos <span>↓</span></a>
-        <a href="documentos/Curriculum_CarlaFernandez.pdf" target="_blank" rel="noopener" class="text-action">Ver CV <span>↗</span></a>
+      <p class="lead">Desarrollo software y diseño experiencias digitales, combinando código, producto y creatividad para construir soluciones que funcionan de verdad.</p>
+      <div class="cta-row">
+        <a class="btn btn-ink btn-lg" href="#work">Explorar proyectos <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-line btn-lg" href="documentos/Curriculum_CarlaFernandez.pdf">Ver CV <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <figure class="tile t-photo" data-r="pop" style="--d:120ms">
+      <img src="images/yo-900.jpg" alt="Carla Fernández" width="900" height="1100" fetchpriority="high">
+      <span class="sticker st-1 drag" data-rot="-8" aria-hidden="true">siempre aprendiendo</span>
+      <span class="sticker st-2 drag" data-rot="6" aria-hidden="true">Premio Nacional · ASTI 2025</span>
+      <span class="sticker st-3 drag" data-rot="-4" aria-hidden="true">STEM Girls</span>
+      <span class="sticker st-4 drag" data-rot="9" aria-hidden="true">DAM</span>
+      <figcaption class="quote">“Cada error es una oportunidad de mejora.”</figcaption>
+    </figure>
+
+    <article class="tile t-status" data-r="pop" style="--d:220ms">
+      <span class="live"><i></i></span>
+      <p><b>Disponible</b> para nuevos proyectos</p>
+    </article>
+
+    <article class="tile t-clock" data-r="pop" style="--d:300ms">
+      <p class="clock"><span id="clock-h">--</span><span class="colon">:</span><span id="clock-m">--</span></p>
+      <p class="clock-cap">Hora en Valencia · <span id="clock-msg">hola</span></p>
+    </article>
+
+    <button class="tile t-award" id="award" type="button" data-r="pop" style="--d:380ms" aria-label="Premio Nacional de Robótica, ASTI 2025. Pulsa para celebrar">
+      <img src="images/asti1-700.jpg" alt="" width="700" height="933" loading="lazy">
+      <span><b>1er premio</b> de robótica<small>ASTI 2025 · pulsa y celebra</small></span>
+    </button>
+
+    <article class="tile t-stack" data-r="pop" style="--d:460ms" aria-label="Tecnologías">
+      <div class="marq" aria-hidden="true">
+        <div class="marq-track">
+          <span>Kotlin</span><span>Java</span><span>JavaScript</span><span>C++</span><span>Spring Boot</span><span>MySQL</span><span>Node.js</span><span>Git</span><span>Docker</span>
+          <span>Kotlin</span><span>Java</span><span>JavaScript</span><span>C++</span><span>Spring Boot</span><span>MySQL</span><span>Node.js</span><span>Git</span><span>Docker</span>
+        </div>
+      </div>
+      <p>Mi stack, en bucle</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ───────── Sobre mí ───────── -->
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div class="about-text">
+      <h2 class="sec-title">No me limito a escribir código.</h2>
+      <p class="statement" data-scrub>Diseño y construyo productos con un propósito claro.</p>
+      <p class="body">Estudiante de Ingeniería Multimedia y Técnica Superior en Desarrollo de Aplicaciones Multiplataforma, con formación en programación, diseño de producto y experiencia de usuario.</p>
+      <p class="body">Además del desarrollo, colaboro como monitora voluntaria y participo en iniciativas STEM, donde el trabajo en equipo es tan importante como la tecnología.</p>
+    </div>
+
+    <ul class="facts" aria-label="Algunos datos">
+      <li class="fact f-pink" data-r="pop"><b data-count="5">5</b><span>proyectos destacados</span></li>
+      <li class="fact f-lav" data-r="pop" style="--d:90ms"><b data-count="12">12</b><span>tecnologías en mi stack</span></li>
+      <li class="fact f-butter" data-r="pop" style="--d:180ms"><b data-count="1">1</b><span>premio de robótica</span></li>
+      <li class="fact f-mint" data-r="pop" style="--d:270ms"><b>∞</b><span>aprendizaje continuo</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────── Toolbox ───────── -->
+<section class="sec sec-lav" id="tools">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Las herramientas son solo el principio.</h2>
+      <div class="tabs" role="group" aria-label="Filtrar herramientas">
+        <button type="button" class="tab" data-f="all" aria-pressed="true">Todo</button>
+        <button type="button" class="tab" data-f="lang" aria-pressed="false">Lenguajes</button>
+        <button type="button" class="tab" data-f="back" aria-pressed="false">Backend y datos</button>
+        <button type="button" class="tab" data-f="prod" aria-pressed="false">Producto</button>
+        <button type="button" class="tab" data-f="tool" aria-pressed="false">Herramientas</button>
       </div>
     </div>
+    <ul class="tools" id="tools-list">
+      <li class="tool" data-c="lang"><img src="images/icons/kotlin.svg" alt="" width="28" height="28">Kotlin</li>
+      <li class="tool" data-c="lang"><img src="images/icons/java.svg" alt="" width="28" height="28">Java</li>
+      <li class="tool" data-c="lang"><img src="images/icons/javascript.svg" alt="" width="28" height="28">JavaScript</li>
+      <li class="tool" data-c="lang"><img src="images/icons/c.svg" alt="" width="28" height="28">C++</li>
+      <li class="tool" data-c="back"><img src="images/icons/spring.svg" alt="" width="28" height="28">Spring Boot</li>
+      <li class="tool" data-c="back"><img src="images/icons/hibernate.svg" alt="" width="28" height="28">Hibernate</li>
+      <li class="tool" data-c="back"><img src="images/icons/network.svg" alt="" width="28" height="28">Node.js</li>
+      <li class="tool" data-c="back"><img src="images/icons/mysql.svg" alt="" width="28" height="28">MySQL</li>
+      <li class="tool" data-c="prod"><img src="images/icons/ui.svg" alt="" width="28" height="28">UI / UX</li>
+      <li class="tool" data-c="prod"><span class="glyph" aria-hidden="true">A</span>Accesibilidad</li>
+      <li class="tool" data-c="tool"><img src="images/icons/git.svg" alt="" width="28" height="28">Git</li>
+      <li class="tool" data-c="tool"><span class="glyph" aria-hidden="true">D</span>Docker</li>
+    </ul>
+  </div>
+</section>
 
-    <div class="hero-visual">
-      <div class="portrait-frame">
-        <div class="portrait-number">01</div>
-        <div class="portrait-ring"></div>
-        <img src="images/yo.jpeg" alt="Carla Fernández">
-        <div class="portrait-sticker">siempre<br>aprendiendo <b>✦</b></div>
-      </div>
-      <div class="hero-caption">“Cada error es<br>una oportunidad de mejora.”</div>
+<!-- ───────── Trabajo (tarjetas que se apilan) ───────── -->
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Proyectos que hablan por mí.</h2>
+      <p class="sub">Selección de proyectos académicos y personales en los que he trabajado desarrollo, producto, accesibilidad, robótica y diseño de interfaz.</p>
     </div>
 
-    <div class="hero-bottom hero-reveal">
-      <span>SCROLL TO DISCOVER</span>
-      <div class="scroll-line"><i></i></div>
-      <span>01 — 06</span>
-    </div>
-  </section>
+    <div class="stack" id="stack">
 
-  <section class="intro-strip" id="story">
-    <div class="strip-label">01 / SOBRE MÍ</div>
-    <div class="intro-main">
-      <p class="big-statement reveal">No me limito a <em>escribir código.</em><br>Diseño y construyo productos<br>con un <span>propósito claro.</span></p>
-      <div class="intro-aside reveal">
-        <p>Estudiante de Ingeniería Multimedia y Técnica Superior en Desarrollo de Aplicaciones Multiplataforma, con formación en programación, diseño de producto y experiencia de usuario.</p>
-        <p>Además del desarrollo, colaboro como monitora voluntaria y participo en iniciativas STEM, donde el trabajo en equipo es tan importante como la tecnología.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="numbers-section">
-    <div class="section-mini-title reveal">ALGUNOS DATOS</div>
-    <div class="numbers-grid">
-      <div class="number-item reveal"><strong data-count="5">5</strong><span>proyectos<br>destacados</span></div>
-      <div class="number-item reveal"><strong data-count="12">12</strong><span>tecnologías<br>en mi stack</span></div>
-      <div class="number-item reveal"><strong data-count="1">1</strong><span>premio de<br>robótica</span></div>
-      <div class="number-item reveal"><strong>∞</strong><span>aprendizaje<br>continuo</span></div>
-    </div>
-  </section>
-
-  <section class="skills-new">
-    <div class="skills-heading reveal">
-      <div class="strip-label">02 / TOOLBOX</div>
-      <h2>Las herramientas<br>son solo el principio.</h2>
-    </div>
-    <div class="skills-cloud" aria-label="Tecnologías">
-      <span class="skill-pill large reveal"><img src="images/icons/kotlin.svg" alt=""> Kotlin</span>
-      <span class="skill-pill reveal"><img src="images/icons/java.svg" alt=""> Java</span>
-      <span class="skill-pill pink reveal">UI / UX</span>
-      <span class="skill-pill reveal"><img src="images/icons/javascript.svg" alt=""> JavaScript</span>
-      <span class="skill-pill large reveal"><img src="images/icons/c.svg" alt=""> C++</span>
-      <span class="skill-pill reveal"><img src="images/icons/mysql.svg" alt=""> MySQL</span>
-      <span class="skill-pill pink reveal">Accesibilidad</span>
-      <span class="skill-pill reveal"><img src="images/icons/network.svg" alt=""> Node.js</span>
-      <span class="skill-pill large reveal"><img src="images/icons/spring.svg" alt=""> Spring Boot</span>
-      <span class="skill-pill reveal"><img src="images/icons/git.svg" alt=""> Git</span>
-      <span class="skill-pill pink reveal">Docker</span>
-      <span class="skill-pill reveal"><img src="images/icons/hibernate.svg" alt=""> Hibernate</span>
-    </div>
-  </section>
-
-  <section class="ticker" aria-hidden="true"><div class="ticker-track"><span class="tk-set"><b>Software</b><i>✦</i><b class="o">Interfaces</b><i>✦</i><b>Robótica</b><i>✦</i><b class="o">Accesibilidad</b><i>✦</i><b>Premio Nacional</b><i>✦</i></span></div></section>
-
-  <section class="work-section" id="work">
-    <div class="work-top reveal">
-      <div>
-        <div class="strip-label">03 / SELECTED WORK</div>
-        <h2>Proyectos que<br><em>hablan por mí.</em></h2>
-      </div>
-      <p>Selección de proyectos académicos y personales en los que he trabajado desarrollo, producto, accesibilidad, robótica y diseño de interfaz.</p>
-    </div>
-
-    <div class="project-bento">
-      <a class="project-feature project-signofy reveal" href="signofy\index.html" target="_blank" rel="noopener">
-        <div class="project-image"><img src="images/signofy.png" alt="SignoFy"></div>
-        <div class="project-overlay"></div>
-        <div class="project-copy">
-          <span>01 · ACCESIBILIDAD / WEB</span>
+      <a class="pcard c-mint" href="signofy/" target="_blank" rel="noopener" style="--i:0">
+        <div class="pc-text">
+          <span class="pc-n">01 / 05</span>
+          <p class="chips"><span class="chip">Accesibilidad</span><span class="chip">Web</span></p>
           <h3>SignoFy</h3>
           <p>Aprender LSE de forma accesible, visual y gamificada.</p>
-          <b>Ver proyecto ↗</b>
+          <span class="btn btn-ink">Ver proyecto <span aria-hidden="true">↗</span></span>
         </div>
+        <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>signofy</span></div><img src="images/signofy.png" alt="Logo de SignoFy" width="1024" height="541" loading="lazy"></div>
       </a>
 
-      <a class="project-feature project-robot reveal" href="post_asti.html">
-        <div class="project-image"><img src="images/robot.jpeg" alt="ByteMe"></div>
-        <div class="project-overlay"></div>
-        <div class="project-copy">
-          <span>02 · ROBÓTICA / C++</span>
+      <a class="pcard c-lav" href="post_asti.html" style="--i:1">
+        <div class="pc-text">
+          <span class="pc-n">02 / 05</span>
+          <p class="chips"><span class="chip">Robótica</span><span class="chip">C++</span></p>
           <h3>ByteMe</h3>
           <p>Un siguelíneas construido para competir y aprender.</p>
-          <b>Leer historia ↗</b>
+          <span class="btn btn-ink">Leer historia <span aria-hidden="true">↗</span></span>
         </div>
+        <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>goty.cpp</span></div><img src="images/robot-1000.jpg" alt="Robot siguelíneas visto desde arriba" width="1000" height="774" loading="lazy"></div>
       </a>
 
-      <a class="project-mini project-wander reveal" href="https://github.com/CarlaFdezdh/Wonder-Wander-Valencia" target="_blank" rel="noopener">
-        <span class="mini-index">03</span><span class="mini-type">WEB APP</span>
-        <h3>Wonder Wander<br><em>Valencia</em></h3>
-        <span class="mini-arrow">↗</span>
-      </a>
-
-      <a class="project-mini project-travel reveal" href="https://github.com/CarlaFdezdh/CRUD" target="_blank" rel="noopener">
-        <span class="mini-index">04</span><span class="mini-type">FULLSTACK</span>
-        <h3>Diario de<br><em>Viajes</em></h3>
-        <span class="mini-arrow">↗</span>
-      </a>
-
-      <a class="project-wide project-autolog reveal" href="https://github.com/Raul06lp/AutoLog" target="_blank" rel="noopener">
-        <div><span class="mini-type">05 · ANDROID / KOTLIN</span><h3>AutoLog</h3></div>
-        <p>Gestión digital de talleres mecánicos · API REST · Spring Boot · Electron.</p>
-        <span class="mini-arrow">↗</span>
-      </a>
-    </div>
-  </section>
-
-  <section class="journey-section" id="journey">
-    <div class="journey-heading reveal">
-      <div class="strip-label">04 / THE JOURNEY</div>
-      <h2>Lo que me ha traído hasta aquí.</h2>
-    </div>
-    <div class="journey-list">
-      <article class="journey-row reveal"><span class="journey-date">2026 — NOW</span><div><h3>Ingeniería Multimedia · Universitat de València</h3><p>Un siguiente paso para seguir mezclando tecnología, creatividad y producto digital.</p></div><span class="journey-mark">01</span></article>
-      <article class="journey-row reveal"><span class="journey-date">2025 — 2026</span><div><h3>Prácticas · ETSE / Aza Logistics</h3><p>Desarrollo y programación de aplicaciones en entornos profesionales.</p></div><span class="journey-mark">02</span></article>
-      <article class="journey-row highlight reveal"><span class="journey-date">2025</span><div><h3>ASTI Robotic Challenge · Premio al mejor proyecto</h3><p>Diseño, programación y puesta a punto de un robot siguelíneas con Arduino y C++.</p></div><span class="journey-mark">03</span></article>
-      <article class="journey-row reveal"><span class="journey-date">2024 — 2026</span><div><h3>Técnica Superior en DAM · IES Abastos</h3><p>Aplicaciones multiplataforma, bases de datos, APIs, arquitectura y desarrollo web.</p></div><span class="journey-mark">04</span></article>
-      <article class="journey-row reveal"><span class="journey-date">2022 — 2024</span><div><h3>Técnica SMR · IES Serpis</h3><p>El punto de partida: sistemas, redes y la curiosidad que acabaría llevándome al desarrollo.</p></div><span class="journey-mark">05</span></article>
-    </div>
-  </section>
-
-  <section class="human-section">
-    <div class="human-card reveal">
-      <div class="strip-label">05 / BEYOND CODE</div>
-      <div class="human-grid">
-        <h2>Más allá<br><em>del código.</em></h2>
-        <div>
-          <p>Colaboro como monitora voluntaria y participo en iniciativas de educación no formal como STEM Girls: experiencias que me recuerdan que la tecnología, al final, siempre trata de personas.</p>
-          <div class="human-tags"><span>Monitora</span><span>STEM Girls</span><span>Trabajo en equipo</span><span>Aprendizaje continuo</span></div>
+      <a class="pcard c-butter" href="https://github.com/CarlaFdezdh/Wonder-Wander-Valencia" target="_blank" rel="noopener" style="--i:2">
+        <div class="pc-text">
+          <span class="pc-n">03 / 05</span>
+          <p class="chips"><span class="chip">Web app</span></p>
+          <h3>Wonder Wander Valencia</h3>
+          <p>Proyecto web publicado en GitHub.</p>
+          <span class="btn btn-ink">Ver en GitHub <span aria-hidden="true">↗</span></span>
         </div>
+        <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>wonder-wander</span></div><img src="images/www-700.jpg" alt="Icono de Wonder Wander Valencia" width="700" height="448" loading="lazy"></div>
+      </a>
+
+      <a class="pcard c-pink" href="https://github.com/CarlaFdezdh/CRUD" target="_blank" rel="noopener" style="--i:3">
+        <div class="pc-text">
+          <span class="pc-n">04 / 05</span>
+          <p class="chips"><span class="chip">Fullstack</span></p>
+          <h3>Diario de Viajes</h3>
+          <p>Aplicación fullstack para guardar y buscar entradas de viajes.</p>
+          <span class="btn btn-ink">Ver en GitHub <span aria-hidden="true">↗</span></span>
+        </div>
+        <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>mi-diario</span></div><img src="images/crud-1000.jpg" alt="Pantalla de Mi Diario de Viajes" width="1000" height="281" loading="lazy"></div>
+      </a>
+
+      <a class="pcard c-sky" href="https://github.com/Raul06lp/AutoLog" target="_blank" rel="noopener" style="--i:4">
+        <div class="pc-text">
+          <span class="pc-n">05 / 05</span>
+          <p class="chips"><span class="chip">Android</span><span class="chip">Kotlin</span></p>
+          <h3>AutoLog</h3>
+          <p>Gestión digital de talleres mecánicos · API REST · Spring Boot · Electron.</p>
+          <span class="btn btn-ink">Ver en GitHub <span aria-hidden="true">↗</span></span>
+        </div>
+        <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>autolog</span></div><img src="images/autolog-700.jpg" alt="Logo de AutoLog" width="700" height="390" loading="lazy"></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───────── Trayectoria ───────── -->
+<section class="sec sec-butter" id="journey">
+  <div class="wrap split">
+    <div class="split-head">
+      <h2 class="sec-title">Lo que me ha traído hasta aquí.</h2>
+    </div>
+    <ol class="timeline" id="timeline">
+      <span class="tl-rider" aria-hidden="true"></span>
+      <li class="tl" data-r>
+        <span class="tl-year">2026 — now</span>
+        <h3>Ingeniería Multimedia · Universitat de València</h3>
+        <p>Un siguiente paso para seguir mezclando tecnología, creatividad y producto digital.</p>
+      </li>
+      <li class="tl" data-r>
+        <span class="tl-year">2025 — 2026</span>
+        <h3>Prácticas · ETSE / Aza Logistics</h3>
+        <p>Desarrollo y programación de aplicaciones en entornos profesionales.</p>
+      </li>
+      <li class="tl tl-star" data-r>
+        <span class="tl-year">2025</span>
+        <h3>ASTI Robotic Challenge · Premio al mejor proyecto</h3>
+        <p>Diseño, programación y puesta a punto de un robot siguelíneas con Arduino y C++.</p>
+        <span class="award-tag">Premio Nacional</span>
+      </li>
+      <li class="tl" data-r>
+        <span class="tl-year">2024 — 2026</span>
+        <h3>Técnica Superior en DAM · IES Abastos</h3>
+        <p>Aplicaciones multiplataforma, bases de datos, APIs, arquitectura y desarrollo web.</p>
+      </li>
+      <li class="tl" data-r>
+        <span class="tl-year">2022 — 2024</span>
+        <h3>Técnica SMR · IES Serpis</h3>
+        <p>El punto de partida: sistemas, redes y la curiosidad que acabaría llevándome al desarrollo.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ───────── Más allá del código ───────── -->
+<section class="sec sec-mint" id="beyond">
+  <div class="wrap beyond">
+    <div class="beyond-text">
+      <h2 class="sec-title">Más allá del código.</h2>
+      <p class="body">Colaboro como monitora voluntaria y participo en iniciativas de educación no formal como STEM Girls: experiencias que me recuerdan que la tecnología, al final, siempre trata de personas.</p>
+      <p class="chips big"><span class="chip">Monitora</span><span class="chip">STEM Girls</span><span class="chip">Trabajo en equipo</span><span class="chip">Aprendizaje continuo</span></p>
+    </div>
+    <div class="polas" aria-label="Fotos de la competición (arrastrables)">
+      <figure class="pola drag p-1" data-rot="-5"><img src="images/asti3-700.jpg" alt="Montando y ajustando el robot" width="700" height="933" loading="lazy" draggable="false"><figcaption>Puesta a punto</figcaption></figure>
+      <figure class="pola drag p-2" data-rot="4"><img src="images/asti2-700.jpg" alt="Equipos preparando la prueba en la pista" width="700" height="1244" loading="lazy" draggable="false"><figcaption>En la pista</figcaption></figure>
+      <span class="drag-hint" aria-hidden="true">arrastra las fotos</span>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── Journal ───────── -->
+<section class="sec" id="journal">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Historias detrás del código.</h2>
+    </div>
+    <a class="jcard" href="post_asti.html">
+      <div class="j-img"><img src="images/asti3-700.jpg" alt="ASTI Robotic Challenge" width="700" height="933" loading="lazy"></div>
+      <div class="j-text">
+        <p class="chips"><span class="chip">Robótica</span><span class="chip">2025</span></p>
+        <h3>Diseño y desarrollo de un robot siguelíneas premiado a nivel nacional.</h3>
+        <p>El planteamiento del reto, la arquitectura de sensores, el algoritmo de control y las lecciones aprendidas durante la competición.</p>
+        <span class="btn btn-ink">Leer historia completa <span aria-hidden="true">↗</span></span>
       </div>
-    </div>
-  </section>
-
-  <section class="journal-section">
-    <div class="journal-heading reveal">
-      <div><div class="strip-label">06 / JOURNAL</div><h2>Historias detrás<br>del código.</h2></div>
-      <a href="post_asti.html" class="text-action">Ver post <span>↗</span></a>
-    </div>
-    <a href="post_asti.html" class="journal-card reveal">
-      <div class="journal-image"><img src="images/asti3.jpg" alt="ASTI Robotic Challenge"></div>
-      <div class="journal-copy"><span>ROBÓTICA · 2025</span><h3>Diseño y desarrollo de un robot siguelíneas premiado a nivel nacional.</h3><p>El planteamiento del reto, la arquitectura de sensores, el algoritmo de control y las lecciones aprendidas durante la competición.</p><b>Leer historia completa ↗</b></div>
     </a>
-  </section>
+  </div>
+</section>
 
-  <section class="contact-new" id="contact">
-    <div class="contact-number">07</div>
-    <div class="strip-label">HABLEMOS</div>
-    <h2>¿Tienes un proyecto<br>en <em>mente?</em></h2>
-    <p>Estoy abierta a nuevas oportunidades, colaboraciones y proyectos donde pueda aportar valor y seguir creciendo profesionalmente.</p>
-    <a href="mailto:carlafdezdh@gmail.com" class="magnetic contact-button">carlafdezdh@gmail.com <span>↗</span></a>
-    <div class="contact-socials"><a href="https://github.com/CarlaFdezdh" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/" target="_blank" rel="noopener">LinkedIn</a><a href="documentos/Curriculum_CarlaFernandez.pdf" target="_blank" rel="noopener">CV</a></div>
-  </section>
+<!-- ───────── Contacto ───────── -->
+<section class="sec sec-ink" id="contact">
+  <div class="wrap contact">
+    <h2 class="big-title">¿Tienes un proyecto <span class="hl">en mente?</span></h2>
+    <p class="sub">Estoy abierta a nuevas oportunidades, colaboraciones y proyectos donde pueda aportar valor y seguir creciendo profesionalmente.</p>
+    <div class="mail-row">
+      <a class="btn btn-rose btn-xl" href="mailto:carlafdezdh@gmail.com">carlafdezdh@gmail.com <span aria-hidden="true">↗</span></a>
+      <button class="btn btn-ghost-w btn-xl" type="button" id="copy-mail">Copiar email</button>
+    </div>
+    <p class="links">
+      <a href="https://github.com/CarlaFdezdh" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/carla-fern%C3%A1ndez-de-haro-14a232276/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="documentos/Curriculum_CarlaFernandez.pdf">CV</a>
+    </p>
+  </div>
+  <div class="road" aria-hidden="true"><span class="road-line"></span><span class="road-bot"></span></div>
+</section>
+
 </main>
 
-<footer><span>CARLA FERNÁNDEZ</span><span>DISEÑADO Y DESARROLLADO · 2026</span></footer>
+<footer class="foot">
+  <p>Carla Fernández · Diseñado y desarrollado · 2026</p>
+  <a class="totop" href="#top">Volver arriba <span aria-hidden="true">↑</span></a>
+</footer>
+
 </body>
 </html>
